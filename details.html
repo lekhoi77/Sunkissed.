@@ -22,7 +22,7 @@
     <title>Ecommerce Website</title>
   </head>
   <body>
-    <!--=============== HEADER ===============-->
+    <!--=============== Thanh HEADER ===============-->
     <header class="header">
       <div class="header__top">
         <div class="header__container container">
@@ -38,8 +38,9 @@
           </a>
         </div>
       </div>
-
+          <!--========= Ô chứa thanh điều hướng ============-->
       <nav class="nav container">
+              <!--==== Logo ====-->
         <a href="index.html" class="nav__logo">
           <img
             class="nav__logo-img"
@@ -47,6 +48,7 @@
             alt="website logo"
           />
         </a>
+            <!--====== Menu điều hướng ======-->
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
@@ -65,17 +67,20 @@
               <a href="login-register.html" class="nav__link">Login</a>
             </li>
           </ul>
+                <!--==== Ô tìm kiếm sản phẩm ====-->
           <div class="header__search">
             <input
               type="text"
               placeholder="Search For Items..."
               class="form__input"
             />
+                    <!--== Nút tìm kiếm ==-->
             <button class="search__btn">
               <img src="assets/img/search.png" alt="search icon" />
             </button>
           </div>
         </div>
+        <!--====== Mục người dùng (Wishlist + Cart) ======-->
         <div class="header__user-actions">
           <a href="wishlist.html" class="header__action-btn" title="Wishlist">
             <img src="assets/img/icon-heart.svg" alt="" />
@@ -105,12 +110,15 @@
       <!--=============== DETAILS ===============-->
       <section class="details section--lg">
         <div class="details__container container grid">
+          <!--==== Hình ảnh sản phẩm ====-->
           <div class="details__group">
+            <!--== Hình ảnh bự ==-->
             <img
               src="./assets/img/product-8-1.jpg"
               alt=""
               class="details__img"
             />
+            <!--== Hình ảnh nhỏ (3 tấm) ==-->
             <div class="details__small-images grid">
               <img
                 src="./assets/img/product-8-2.jpg"
@@ -129,20 +137,20 @@
               />
             </div>
           </div>
+          <!--==== Mục mô tả sản phẩm ====-->
           <div class="details__group">
             <h3 class="details__title">Henley Shirt</h3>
-            <p class="details__brand">Brand: <span>adidas</span></p>
+            <p class="details__brand">Brand: <span>Sunkissed</span></p>
             <div class="details__price flex">
               <span class="new__price">$116</span>
               <span class="old__price">$200.00</span>
               <span class="save__price">25% Off</span>
             </div>
+                  <!--== Mô tả ngắn gọn sản phẩm ==-->
             <p class="short__description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptate, fuga. Quo blanditiis recusandae facere nobis cum optio,
-              inventore aperiam placeat, quis maxime nam officiis illum? Optio
-              et nisi eius, inventore impedit ratione sunt, cumque, eligendi
-              asperiores iste porro non error?
+              Sunkissed vị cam – thức uống giải khát sảng khoái với nước ép cam tự nhiên, 
+              giàu vitamin C, mang đến hương vị tươi mát, ngọt dịu. Thiết kế lon 330ml tiện lợi, 
+              dễ mang theo, lý tưởng cho mọi hoạt động hàng ngày. Đặt hàng ngay để tận hưởng sự tươi mới từ thiên nhiên!
             </p>
             <ul class="products__list">
               <li class="list__item flex">
@@ -155,6 +163,7 @@
                 <i class="fi-rs-credit-card"></i> Cash on Delivery available
               </li>
             </ul>
+                  <!--== Danh sách màu sản phẩm ==-->
             <div class="details__color flex">
               <span class="details__color-title">Color</span>
               <ul class="color__list">
@@ -195,6 +204,7 @@
                 </li>
               </ul>
             </div>
+                  <!--== Danh sách size sản phẩm ==-->
             <div class="details__size flex">
               <span class="details__size-title">Size</span>
               <ul class="size__list">
