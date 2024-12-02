@@ -266,6 +266,7 @@ table {
 }
 
 .search__btn {
+  width:20px;
   position: absolute;
   top: 24%;
   right: 1.25rem;
