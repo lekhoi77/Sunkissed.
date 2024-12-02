@@ -8,7 +8,7 @@
   /*========== Colors ==========*/
   --first-color: #931515;
   --first-color-alt: hsl(129, 44%, 94%);
-  --second-color: hsl(34, 94%, 87%);
+  --second-color: #F6EED5;
   --title-color: hsl(0, 0%, 13%);
   --text-color: hsl(154, 13%, 32%);
   --text-color-light: hsl(60, 1%, 56%);
@@ -188,7 +188,7 @@ table {
 
 /*=============== HEADER & NAV ===============*/
 .header__top {
-  background-color: var(--first-color-alt);
+  background-color: var(--second-color);
   border-bottom: 1px solid var(--first-color);
   padding-block: 0.875rem;
 }
