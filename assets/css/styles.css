@@ -1,6 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Spartan:wght@400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 4rem;
@@ -18,8 +18,9 @@
   --border-color-alt: hsl(113, 15%, 90%);
   --btn-color: 	hsl(46, 75%, 81%);
 
+
   /*========== Font and typography ==========*/
-  --body-font: "nunito", sans-serif;
+  --body-font: "Lato", sans-serif;
   --second-font: "League Spartan" sans-serif;
   --big-font-size: 3.5rem;
   --h1-font-size: 2.75rem;
@@ -30,7 +31,7 @@
   --normal-font-size: 1rem;
   --small-font-size: 0.875rem;
   --smaller-font-size: 0.75rem;
-  --tiny-f-size: 0.6875rem;
+  --tiny-font-size: 0.6875rem;
 
   /*========== Font weight ==========*/
   --weight-400: 400;
@@ -189,8 +190,8 @@ table {
 
 /*=============== HEADER & NAV ===============*/
 .header__top {
-  background-color: var(--second-color);
-  /* border-bottom: 1px solid var(--first-color); */
+  background-color: var(--first-color-alt);
+  border-bottom: 1px solid var(--first-color);
   padding-block: 0.875rem;
 }
 
@@ -267,7 +268,6 @@ table {
 }
 
 .search__btn {
-  width:20px;
   position: absolute;
   top: 24%;
   right: 1.25rem;
@@ -843,84 +843,63 @@ table {
 }
 
 /*=============== NEW ARRIVALS ===============*/
-
-/*=============== PRODUCT ITEM ===============*/
-.product__banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: none; /* Loại bỏ đường viền bao quanh */
-  box-shadow: none; /* Loại bỏ bóng nếu có */
-}
-
-.product__images img {
-  width: 80%; /* Giảm kích thước hình ảnh */
-  height: auto;
-  object-fit: contain; /* Đảm bảo hình ảnh không bị méo */
-  border: none; /* Xóa đường viền */
-  transition: transform 0.3s ease; /* Hiệu ứng thu phóng khi hover */
-}
-
-.product__images img:hover {
-  transform: scale(1.1); /* Hiệu ứng phóng to nhẹ khi hover */
+.new__arrivals {
+  overflow: hidden;
 }
 
 /*=============== SHOWCASE ===============*/
-.new__container .swiper-wrapper {
+.showcase__container {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.showcase__wrapper .section__title {
+  font-size: var(--normal-font-size);
+  border-bottom: 1px solid var(--border-color-alt);
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.showcase__wrapper .section__title::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  left: 0;
+  bottom: -1.5px;
+  background-color: var(--first-color);
+}
+
+.showcase__item {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 20px; /* Tăng khoảng cách giữa các sản phẩm */
+  column-gap: 1.5rem;
 }
 
-.product__item {
-  flex: 1;
-  max-width: 200px; /* Giới hạn kích thước sản phẩm */
-  margin: 0 auto;
-  transition: transform 0.6s ease; /* Thêm hiệu ứng chuyển đổi */
+.showcase__item:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 
-/* Tên sản phẩm */
-.product-name {
-  text-align: center;
-  margin-top: 20px;
+.showcase__img {
+  width: 86px;
 }
 
-.product-name .type {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
+.showcase__content {
+  width: calc(100% - 110px);
 }
 
-.product-name .flavor {
-  font-size: 1.2rem;
-  color: #777;
-  transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
+.showcase__title {
+  font-size: var(--small-font-size);
+  font-weight: var(--weight-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
 }
-
-/*=============== SWIPER SLIDE STATES ===============*/
-/* Thu nhỏ các lon không phải lon giữa */
-.swiper-slide {
-  transition: transform 0.6s ease, opacity 0.6s ease; /* Tăng hiệu ứng mượt */
-}
-
-.swiper-slide-active {
-  transform: scale(1.35); /* Phóng to lon ở giữa */
-  opacity: 1; /* Hiển thị rõ ràng lon ở giữa */
-}
-
-.swiper-slide:not(.swiper-slide-active) {
-  transform: scale(0.9); /* Thu nhỏ các lon không phải lon giữa */
-  opacity: 0.8; /* Làm mờ các lon không phải lon giữa */
-}
-
-
-
 
 /*=============== NEWSLETTER ===============*/
 .newsletter {
-  background-color: hsl(166, 68%, 52%);
+  background-color: hsl(166, 23%, 74%);
 }
 
 .home__newsletter {
