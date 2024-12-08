@@ -16,9 +16,10 @@
   --container-color: hsl(0, 0%, 93%);
   --border-color: hsl(129, 36%, 85%);
   --border-color-alt: hsl(113, 15%, 90%);
+  --btn-color: 	hsl(46, 75%, 81%);
 
   /*========== Font and typography ==========*/
-  --body-font: "Nunito", sans-serif;
+  --body-font: "nunito", sans-serif;
   --second-font: "League Spartan" sans-serif;
   --big-font-size: 3.5rem;
   --h1-font-size: 2.75rem;
