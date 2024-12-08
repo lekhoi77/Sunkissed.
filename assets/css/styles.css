@@ -6,10 +6,10 @@
   --header-height: 4rem;
 
   /*========== Colors ==========*/
-  --first-color: #931515;
+  --first-color: 	hsl(0, 75%, 33%);
   --first-color-alt: hsl(129, 44%, 94%);
-  --second-color: #F6EED5;
-  --title-color: hsl(0, 0%, 13%);
+  --second-color: hsl(45, 65%, 90%);
+  --title-color: hsl(115, 67%, 13%);
   --text-color: hsl(154, 13%, 32%);
   --text-color-light: hsl(60, 1%, 56%);
   --body-color: hsl(0, 0%, 100%);
