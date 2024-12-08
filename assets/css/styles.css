@@ -843,63 +843,84 @@ table {
 }
 
 /*=============== NEW ARRIVALS ===============*/
-.new__arrivals {
-  overflow: hidden;
+
+/*=============== PRODUCT ITEM ===============*/
+.product__banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none; /* Loại bỏ đường viền bao quanh */
+  box-shadow: none; /* Loại bỏ bóng nếu có */
+}
+
+.product__images img {
+  width: 80%; /* Giảm kích thước hình ảnh */
+  height: auto;
+  object-fit: contain; /* Đảm bảo hình ảnh không bị méo */
+  border: none; /* Xóa đường viền */
+  transition: transform 0.3s ease; /* Hiệu ứng thu phóng khi hover */
+}
+
+.product__images img:hover {
+  transform: scale(1.1); /* Hiệu ứng phóng to nhẹ khi hover */
 }
 
 /*=============== SHOWCASE ===============*/
-.showcase__container {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.showcase__wrapper .section__title {
-  font-size: var(--normal-font-size);
-  border-bottom: 1px solid var(--border-color-alt);
-  padding-bottom: 0.75rem;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.showcase__wrapper .section__title::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  left: 0;
-  bottom: -1.5px;
-  background-color: var(--first-color);
-}
-
-.showcase__item {
+.new__container .swiper-wrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
-  column-gap: 1.5rem;
+  gap: 20px; /* Tăng khoảng cách giữa các sản phẩm */
 }
 
-.showcase__item:not(:last-child) {
-  margin-bottom: 1.5rem;
+.product__item {
+  flex: 1;
+  max-width: 200px; /* Giới hạn kích thước sản phẩm */
+  margin: 0 auto;
+  transition: transform 0.6s ease; /* Thêm hiệu ứng chuyển đổi */
 }
 
-.showcase__img {
-  width: 86px;
+/* Tên sản phẩm */
+.product-name {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.showcase__content {
-  width: calc(100% - 110px);
+.product-name .type {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
 }
 
-.showcase__title {
-  font-size: var(--small-font-size);
-  font-weight: var(--weight-500);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 0.5rem;
+.product-name .flavor {
+  font-size: 1.2rem;
+  color: #777;
+  transition: color 0.3s ease; /* Hiệu ứng chuyển đổi màu */
 }
+
+/*=============== SWIPER SLIDE STATES ===============*/
+/* Thu nhỏ các lon không phải lon giữa */
+.swiper-slide {
+  transition: transform 0.6s ease, opacity 0.6s ease; /* Tăng hiệu ứng mượt */
+}
+
+.swiper-slide-active {
+  transform: scale(1.35); /* Phóng to lon ở giữa */
+  opacity: 1; /* Hiển thị rõ ràng lon ở giữa */
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.9); /* Thu nhỏ các lon không phải lon giữa */
+  opacity: 0.8; /* Làm mờ các lon không phải lon giữa */
+}
+
+
+
 
 /*=============== NEWSLETTER ===============*/
 .newsletter {
-  background-color: hsl(166, 23%, 74%);
+  background-color: hsl(166, 68%, 52%);
 }
 
 .home__newsletter {
