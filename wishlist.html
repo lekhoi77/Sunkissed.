@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== FLATICON ===============-->
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== SWIPER CSS ===============-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+  <!--=============== FLATICON ===============-->
+  <link rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="./assets/css/style_cart.css" />
-    <link rel="stylesheet" href="assets/css/breakpoint.css" />
+  <!--=============== SWIPER CSS ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <title>Ecommerce Website</title>
-  </head>
-  <body>
-    <!--=============== HEADER ===============-->
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="./assets/css/style_cart.css" />
+  <link rel="stylesheet" href="assets/css/breakpoint.css" />
+
+  <title>Ecommerce Website</title>
+</head>
+
+<body>
+  <!--=============== HEADER ===============-->
   <header class="header">
     <div class="header__top">
       <div class="header__container container">
@@ -31,7 +28,7 @@
           <span>(+84) - 0335993276</span>
         </div>
         <p class="header__alert-news">
-         Giảm 15% cho sản phẩm "Tropical Drinks" mới ra mắt 
+          Giảm 15% cho sản phẩm "Tropical Drinks" mới ra mắt
         </p>
         <a href="login-register.html" class="header__top-action">
           Đăng nhập / Đăng kí
@@ -39,7 +36,7 @@
       </div>
     </div>
 
-  <!-- Thanh Navigation -->
+    <!-- Thanh Navigation -->
     <nav class="nav container">
       <a href="index.html" class="nav__logo">
         <img class="nav__logo-img" src="assets/img/logo_red.svg" alt="website logo" />
@@ -77,9 +74,7 @@
         <!-- Hộp tìm kiếm -->
         <div class="header__search">
           <input type="text" placeholder="Tìm kiếm sản phẩm" class="form__input" />
-          <button class="search__btn">
-            <img src="assets/img/search.png" alt="search icon" />
-          </button>
+
         </div>
       </div>
 
@@ -100,110 +95,107 @@
     </nav>
   </header>
 
-    <!--=============== MAIN ===============-->
-    <main class="main">
-      <!--=============== BREADCRUMB ===============-->
-      <section class="breadcrumb">
-        <ul class="breadcrumb__list flex container">
-          <li><a href="index.html" class="breadcrumb__link">Trang chủ</a></li>
-          <li><span class="breadcrumb__link"></span>></li>
-          <li><span class="breadcrumb__link">Cửa hàng</span></li>
-          <li><span class="breadcrumb__link"></span>></li>
-          <li><span class="breadcrumb__link">Wishlist</span></li>
-        </ul>
-      </section>
+  <!--=============== MAIN ===============-->
+  <main class="main">
+    <!--=============== BREADCRUMB ===============-->
+    <section class="breadcrumb">
+      <ul class="breadcrumb__list flex container">
+        <li><a href="index.html" class="breadcrumb__link">Trang chủ</a></li>
+        <li><span class="breadcrumb__link"></span>></li>
+        <li><span class="breadcrumb__link">Cửa hàng</span></li>
+        <li><span class="breadcrumb__link"></span>></li>
+        <li><span class="breadcrumb__link">Wishlist</span></li>
+      </ul>
+    </section>
 
-      <!--=============== WISHLIST ===============-->
-      <section class="wishlist section--lg container">
-        <div class="table__container">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Stock Status</th>
-                <th>Action</th>
-                <th>Rename</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <img
-                    src="./assets//img/product-1-2.jpg"
-                    alt=""
-                    class="table__img"
-                  />
-                </td>
-                <td>
-                  <h3 class="table__title">
-                    J.Crew Mercantile Women's Short-Sleeve
-                  </h3>
-                  <p class="table__description">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                </td>
-                <td>
-                  <span class="table__price">$110</span>
-                </td>
-                <td><span class="table__stock">In Stock</span></td>
-                <td><a href="#" class="btn btn--sm">Add to Cart</a></td>
-                <td><i class="fi fi-rs-trash table__trash"></i></td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="./assets//img/product-7-1.jpg"
-                    alt=""
-                    class="table__img"
-                  />
-                </td>
-                <td>
-                  <h3 class="table__title">Amazon Essentials Women's Tank</h3>
-                  <p class="table__description">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                </td>
-                <td>
-                  <span class="table__price">$110</span>
-                </td>
-                <td><span class="table__stock">In Stock</span></td>
-                <td><a href="#" class="btn btn--sm">Add to Cart</a></td>
-                <td><i class="fi fi-rs-trash table__trash"></i></td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="./assets//img/product-2-1.jpg"
-                    alt=""
-                    class="table__img"
-                  />
-                </td>
-                <td>
-                  <h3 class="table__title">
-                    Amazon Brand - Daily Ritual Women's Jersey
-                  </h3>
-                  <p class="table__description">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                </td>
-                <td>
-                  <span class="table__price">$110</span>
-                </td>
-                <td><span class="table__stock">In Stock</span></td>
-                <td><a href="#" class="btn btn--sm">Add to Cart</a></td>
-                <td><i class="fi fi-rs-trash table__trash"></i></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+    <!--=============== Khung chứa sản phẩm yêu thích ===============-->
+    <section class="wishlist section--lg container">
+      <div class="table__container">
+        <table class="table">
+          <!-- Tiêu đề các cột -->
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Stock Status</th>
+              <th>Action</th>
+              <th>Rename</th>
+            </tr>
+          </thead>
+           <!-- n/ Tiêu đề các cột -->
+        
+          <!-- Dữ liệu bên trong bảng -->
+          <tbody>
+            <!-- Sản phẩm yêu thích thứ 1 -->
+            <tr>
+              <td>
+                <img src="./assets//img/product-1-2.jpg" alt="" class="table__img" />
+              </td>
+              <td>
+                <h3 class="table__title">
+                  J.Crew Mercantile Women's Short-Sleeve
+                </h3>
+                <p class="table__description">
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+              </td>
+              <td>
+                <span class="table__price">$110</span>
+              </td>
+              <td><span class="table__stock">In Stock</span></td>
+              <td><a href="#" class="btn btn--sm">Add to Cart</a></td>
+              <td><i class="fi fi-rs-trash table__trash"></i></td>
+            </tr>
+            <!-- Sản phẩm yêu thích thứ 2 -->
+            <tr>
+              <td>
+                <img src="./assets//img/product-7-1.jpg" alt="" class="table__img" />
+              </td>
+              <td>
+                <h3 class="table__title">Amazon Essentials Women's Tank</h3>
+                <p class="table__description">
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+              </td>
+              <td>
+                <span class="table__price">$110</span>
+              </td>
+              <td><span class="table__stock">In Stock</span></td>
+              <td><a href="#" class="btn btn--sm">Add to Cart</a></td>
+              <td><i class="fi fi-rs-trash table__trash"></i></td>
+            </tr>
 
-      
-    </main>
+            <!-- Sản phẩm yêu thích thứ 3 -->
+            <tr>
+              <td>
+                <img src="./assets//img/product-2-1.jpg" alt="" class="table__img" />
+              </td>
+              <td>
+                <h3 class="table__title">
+                  Amazon Brand - Daily Ritual Women's Jersey
+                </h3>
+                <p class="table__description">
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+              </td>
+              <td>
+                <span class="table__price">$110</span>
+              </td>
+              <td><span class="table__stock">In Stock</span></td>
+              <td><a href="#" class="btn btn--sm">Add to Cart</a></td>
+              <td><i class="fi fi-rs-trash table__trash"></i></td>
+            </tr>
+          </tbody>
+          <!-- n/ Dữ liệu bên trong bảng -->
+        </table>
+      </div>
+    </section>
 
-    <!-- =============== FOOTER ===============-->
+
+  </main>
+
+  <!-- =============== FOOTER ===============-->
   <footer class="footer container">
     <div class="footer__container grid">
       <div class="footer__content">
@@ -213,7 +205,7 @@
         <h4 class="footer__subtitle">LIÊN HỆ</h4>
         <p class="footer__description">
           <span>Địa chỉ:</span> 279 Nguyễn Tri Phương, Quận 10, Tp. Hồ Chí Minh
-          
+
         </p>
         <p class="footer__description">
           <span>Điện thoại:</span> +84 0335993276
@@ -273,13 +265,14 @@
       <p class="copyright">&copy; 2024 Sunkissed. All right reserved</p>
       <span class="designer">Thiết kế bởi Nhóm 5 Coop.</span>
     </div>
-  </footer> 
+  </footer>
   <!-- =============== n/FOOTER ===============-->
 
-    <!--=============== SWIPER JS ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!--=============== SWIPER JS ===============-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-  </body>
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
