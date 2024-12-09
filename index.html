@@ -17,8 +17,9 @@
     />
 
     <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/style_snow.css" />
     <link rel="stylesheet" href="assets/css/style_index.css" />
-    <link rel="stylesheet" href="assets/css/breakpoint.css" />
+    
 
     <title>Sunkissed.</title>
   </head>
@@ -39,7 +40,8 @@
           </a>
         </div>
       </div>
-
+  <!--=============== n/HEADER ===============-->
+  <!-- Navigation -->
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
           <img
@@ -100,22 +102,26 @@
 
     <!--=============== MAIN ===============-->
     <main class="main">
-      <!--=============== HOME ===============-->
-      <section class="home section--lg">
-        <div class="home__container container grid">
-          <div class="home__content">
-            <span class="home__subtitle">Hot Promotions</span>
-            <h1 class="home__title">
-              Fashion Trending <span>Great Collection</span>
-            </h1>
-            <p class="home__description">
-              Save more with coupons & up tp 20% off
-            </p>
-            <a href="shop.html" class="btn">Shop Now</a>
+      
+      <section>
+        <div class="sunkissed_hero">
+          <canvas id="canvas"></canvas>
+          <div class="cans-container">
+            <div class="cans-row"> <img src="./assets/img/cf_p1.png" alt="Ca_phe" class="can rotate-left loncaphe"> 
+              <img src="./assets/img/td_p1.png" alt="Cam" class="can middle1 loncam"> 
+                <img src="./assets/img/ht_p1.png" alt="Chanh" class="can rotate-right lonchanh"> </div>
+            <div class="hero-content">
+              <div class="title"><span>ƯU ĐÃI</span><BR> &nbsp;MÙA NOEL</div> 
+              <a href="#" class="shop-button">MUA NGAY</a>
+              <div class="tagline">Giảm 15% cho toàn bộ đơn hàng từ ngày 20-25/12!</div>
+            </div>
+            <div class="cans-row"> 
+              <img src="./assets/img/mi_p2.png" alt="Viet_quat" class="can rotate-right lonvq"> 
+          
+                 <img src="./assets/img/td_p3.png" alt="Dua_hau" class="can rotate-left londuahau"> </div>
           </div>
-          <img src="assets/img/home-img.png" class="home__img" alt="hats" />
         </div>
-      </section>
+        </section>
 
       <!--=============== CATEGORIES ===============-->
       <section class="categories container section">
@@ -2266,7 +2272,6 @@
         </div>
       </section>
 
-     
     </main>
 
     <!--=============== FOOTER ===============-->
@@ -2338,7 +2343,7 @@
         <div class="footer__content">
           <h3 class="footer__title">Cổng thanh toán bảo mật</h3>
           <img
-            src="./assets/img/thanhtoan.svg"
+            src="./assets/img/payment-method.png"
             alt=""
             class="payment__img"
           />
@@ -2354,6 +2359,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/ct_main.js"></script>
+    <script src="assets/js/snow.js"></script>
   </body>
 </html>
