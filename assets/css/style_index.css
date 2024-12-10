@@ -441,6 +441,78 @@ img {
     display:none;
   }
 }
+/*===============n/ HERO===============*/
+/* Giới thiệu thương hiệu */
+/* Giới thiệu thương hiệu */
+.brandintro {
+  display: flex;
+  justify-content: space-between; /* Đảm bảo các phần tử nằm ngang và cách đều nhau */
+  align-items: center;
+  padding: 20px;
+  margin: 20px 0; /* Thêm khoảng cách 20px trên và dưới */
+  margin-top: 125px;
+  overflow: hidden;
+  position: relative; /* Thêm thuộc tính này để sử dụng position: absolute; cho các phần tử con */
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+.content {
+  display: flex;
+  flex-direction: column; /* Đảm bảo nội dung và hình phẩm màu xếp theo đường thẳng */
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Điều chỉnh chiều cao theo ý muốn */
+  position: relative; /* Đảm bảo nội dung không bị ảnh hưởng bởi các phần tử tuyệt đối */
+  z-index: 1; /* Đảm bảo nội dung nằm trên các hình ảnh */
+}
+.brandintro .text {
+
+  font-size: 21px;
+  width: 500px; 
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--second-color);
+  transform: translateY(-150px);
+  transition: transform 0.6s ease-in-out; /* Thêm thuộc tính transition */
+  
+}
+span{
+  color:var(--first-color);
+  font-size: 22px;
+ 
+}
+.image {
+  margin-top: 20px;
+}
+.image-item {
+  
+  height: auto; /* Đảm bảo tỷ lệ hình ảnh không bị thay đổi */
+}
+.left-hand {
+  width: 2000px;
+  position: relative;
+  transform: translateX(-150px) ;
+  transition: transform 0.6s ease-in-out; /* Thêm thuộc tính transition */
+}
+
+.right-hand {
+  width: 2200px;
+  position: relative;
+  transform: translateX(120px) ;
+  transition: transform 0.6s ease-in-out; /* Thêm thuộc tính transition */
+}
+.image-no-color {
+ width: 800px;
+ transition: transform 0.3s ease;
+ transform: translateY(110px);
+}
+/* n/Giới thiệu thương hiệu */
 
 /*=============== BUTTONS ===============*/
 .btn {
