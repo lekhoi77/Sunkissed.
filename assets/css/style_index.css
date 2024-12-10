@@ -11,16 +11,15 @@
 
   /*========== Colors ==========*/
   --first-color: hsl(0, 75%, 33%);
-  --first-color-alt: hsl(129, 44%, 94%);
-  --second-color: hsl(45, 65%, 90%);
+  --second-color:  hsl(115, 67%, 13%);
   --title-color: hsl(115, 67%, 13%);
-  --text-color: hsl(154, 13%, 32%);
+  --text-color: hsl(114, 19%, 60%);
   --text-color-light: hsl(60, 1%, 56%);
-  --body-color: hsl(0, 0%, 100%);
+  --body-color: hsl(46, 100%, 91%);
   --container-color: hsl(0, 0%, 93%);
   --border-color: hsl(129, 36%, 85%);
   --border-color-alt: hsl(113, 15%, 90%);
-  --btn-color: hsl(46, 100%, 91%);
+  --btn-color: hsl(0, 75%, 33%);
 
 
   /*========== Font and typography ==========*/
@@ -84,7 +83,7 @@ body {
 }
 
 body {
-  background-color: var(--btn-color);
+  background-color: var(--body-color);
 }
 
 h1,
@@ -184,7 +183,7 @@ img {
 
 /*=============== HEADER & NAV ===============*/
 .header__top {
-  background-color: var(--first-color-alt);
+  background-color: var(--first-color);
   border-bottom: 1px solid var(--first-color);
   padding-block: 0.875rem;
 }
@@ -197,21 +196,23 @@ img {
 
 .header__contact span:first-child {
   margin-right: 2rem;
+  color: #fefefe;
 }
 
 .header__contact span,
 .header__alert-news,
 .header__alert-top-action {
   font-size: var(--small-font-size);
+
 }
 
 .header__alert-news {
-  color: var(--text-color-light);
+  color: #fefefe;
   font-weight: var(--weight-600);
 }
 
 .header__top-action {
-  color: var(--text-color);
+  color: #fefefe;
 }
 
 .nav,
@@ -312,7 +313,7 @@ img {
 /*=============== HOME ===============*/
 /*=============== HERO===============*/
 .sunkissed_hero {
-  font-family: Arial, sans-serif;
+  
   text-align: center;
   padding: 30px;
 }
@@ -344,7 +345,7 @@ img {
 .can {
   width: 120px;
   margin: 0 40px;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.3s linear;
   position: relative;
 }
 
@@ -403,67 +404,41 @@ img {
   margin: 10px 0;
   font-family: var(--body-font);
   text-align: center;
+  color: hsl(115, 11%, 40%);
 }
 
 .shop-button {
-  font-family: var(--body-font);
+  font-family: var(--body-font);  
   background-color: var(--first-color);
   color: white;
-  padding: 10px;
+  padding: 15px;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 25px;
   font-size: 0.9em;
   display: inline-block;
   text-align: center;
   margin-top: 10px;
-  width: auto;
 }
-
+/* CSS cho màn hình nhỏ */
 @media (max-width: 780px) {
   .cans-row {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-
-  .can {
-    width: 100px;
-    margin: 10px;
-  }
-
-  .rotate-left,
-  .rotate-right,
-  .middle1,
-  .middle2 {
-    transform: rotate(0deg) translateY(0);
-  }
-
-  .hero-content {
-    margin: 20px 0;
-  }
-
-  .coffee-can {
-    left: 0;
-    top: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .can {
-    width: 80px;
+    display: none;
   }
 
   .title {
-    font-size: 1.2em;
+    font-size: 4em;
   }
 
   .tagline {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 
   .shop-button {
-    padding: 6px 12px;
+    padding: 10px 20px;
     font-size: 0.8em;
+  }
+  #canvas{
+    display:none;
   }
 }
 
