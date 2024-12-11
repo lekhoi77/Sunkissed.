@@ -9,18 +9,17 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
     />
+ <!--=============== SWIPER CSS ===============-->
 
-    <!--=============== SWIPER CSS ===============-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-     <!--===============n/SWIPER CSS ===============-->
+
+ <!--=============== CSS ===============-->
+
 
     <!--=============== SNOW CSS ===============-->
     <link rel="stylesheet" href="assets/css/style_snow.css" />
      <!--=============== INDEX CSS ===============-->
     <link rel="stylesheet" href="assets/css/style_index.css" />
+    <link rel="stylesheet" href="./assets/css/swiperlk.css" />
     
 
     <title>Sunkissed.</title>
@@ -143,88 +142,55 @@
             </div>
         </div>
     </section>
-      <!--=============== CATEGORIES ===============-->
-      <!-- <section class="categories container section">
-        <h3 class="section__title"><span>Popular</span> Categories</h3>
-        <div class="categories__container swiper">
-          <div class="swiper-wrapper">
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-1.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">T-Shirt</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-2.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Bags</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-3.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Sandal</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-4.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Scarf Cap</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-5.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Shoes</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-6.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Pillowcase</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-7.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Jumpsuit</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-8.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Hats</h3>
-            </a>
+      <!--=============== SẢn phẩm sale ===============-->
+    
+      
+      <section>
+        <div class="spnb">
+          <div class="spnb_banner">
+            <img src="./assets/img/tamcabanner.svg" alt="spnb_banner"/>
           </div>
+          <div class="spnb_container">
+      
+            <div class="spnb_content">
+              <div class="image loncam_spnb">
+                <img src="./assets/img/td_p1.png" alt="loncam_spnb" />
+                <div class="can_name tencam"><Strong>Tropical</Strong><br>Cam<br><span class ="giacu">55.000 vnđ</span><br><span class="giamoi">35.000 vnđ</span></div>
+              </div>
+            </div>
+      
+            <div class="spnb_content">
+              <div class="image loncaphe_spnb">
+                <img src="./assets/img/cf_p1.png" alt="loncaphe_spnb" />
+              </div>
+              <div class="can_name tencaphe"><strong>Cà Phê</strong><br>Vị Sài Gòn<br><span class ="giacu">55.000 vnđ</span><br><span class="giamoi">35.000 vnđ</span></div>
+            </div>
+      
+            <div class="spnb_content">
+      
+              <div class="image lonchanh_spnb">
+                <img src="./assets/img/ht_p1.png" alt="lonchanh_spnb" />
+              </div>
+              <div class="can_name tenchanh "><strong>Trà Thảo Mộc</strong><br>Chanh<br><span class ="giacu">55.000 vnđ</span><br><span class="giamoi">35.000 vnđ</span></div>
+            </div>
+          </div>
+      
 
-          <div class="swiper-button-prev">
-            <i class="fi fi-rs-angle-left"></i>
-          </div>
-          <div class="swiper-button-next">
-            <i class="fi fi-rs-angle-right"></i>
-          </div>
-        </div>
-      </section> -->
+            <div class="switch_btn">
+              <div class="btn_prev">
+                <img src="assets/img/pre.svg" alt="Prev" class="icon">
+              </div>
+              <div class="btn_next">
+                <img src="assets/img/next.svg" alt="Next" class="icon" />
+              </div>
+            </div>
+         
+      </div>
+      </section>
+      
 
       <!--=============== PRODUCTS ===============-->
-      <!-- <section class="products container section">
+        <section class="products container section"> 
         <div class="tab__btns">
           <span class="tab__btn active-tab" data-target="#featured"
             >Featured</span
@@ -1588,7 +1554,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section> 
 
       <!-- =============== DEALS ===============
       <section class="deals section">
@@ -2376,13 +2342,16 @@
     </footer>
 
     <!--=============== SWIPER JS ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/ct_main.js"></script>
 
     <!--=============== Custom JS ===============-->
-    <script src="assets/js/ct_main.js"></script>
+
+   
       <!--=============== Custom JS ===============-->
       <!-- Snow JS -->
     <script src="assets/js/snow.js"></script>
     <!-- Snow js -->
+ 
+ 
   </body>
 </html>
