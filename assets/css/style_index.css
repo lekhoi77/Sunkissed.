@@ -135,11 +135,16 @@ img {
   padding-block: 2rem;
   margin-bottom: 50px;
 }
+.new__price {
+  color: var(--first-color);
+  font-weight: var(--weight-600);
+}
 
-
-
-
-
+.old__price {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  text-decoration: line-through;
+}
 
 .form__input {
   border: 1px solid var(--border-color-alt);
