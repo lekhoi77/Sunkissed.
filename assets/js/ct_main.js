@@ -90,11 +90,33 @@ window.addEventListener('scroll', function() {
   const canNames = document.querySelectorAll('.can_name');
   const spnbRect = spnbSection.getBoundingClientRect();
 
-  if (spnbRect.top <= window.innerHeight / 4 && spnbRect.bottom >= 0) {
+  if (spnbRect.top <= window.innerHeight / 6.5 && spnbRect.bottom >= 0) {
       // Hiện tên sản phẩm khi cuộn đến một nửa section .spnb
       canNames.forEach(canName => {
           canName.style.opacity = '1';
           canName.style.transform = 'translateY(0)';
       });
   }
+});
+
+/*=============== PRODUCTS TABS ===============*/
+const tabs = document.querySelectorAll("[data-target]"),
+  tabsContents = document.querySelectorAll("[content]");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
+
+    tabsContents.forEach((tabsContent) => {
+      tabsContent.classList.remove("active-tab");
+    });
+
+    target.classList.add("active-tab");
+
+    tabs.forEach((tab) => {
+      tab.classList.remove("active-tab");
+    });
+
+    tab.classList.add("active-tab");
+  });
 });
