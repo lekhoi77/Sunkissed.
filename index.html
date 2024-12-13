@@ -49,16 +49,12 @@
   <!-- Navigation -->
   <nav class="nav container">
     <a href="index.html" class="nav__logo">
-      <img
-        class="nav__logo-img"
-        src="assets/img/logo_red.svg"
-        alt="website logo"
-      />
+      <img class="nav__logo-img" src="assets/img/logo_red.svg" alt="website logo" />
     </a>
     <div class="nav__menu" id="nav-menu">
       <div class="nav__menu-top">
         <a href="index.html" class="nav__menu-logo">
-          <img src="./assets/img/logo.svg" alt="">
+          <img src="./assets/img/logo_red.svg" alt="">
         </a>
         <div class="nav__close" id="nav-close">
           <i class="fi fi-rs-cross-small"></i>
@@ -80,29 +76,32 @@
         <li class="nav__item">
           <a href="login-register.html" class="nav__link">Hỗ trợ</a>
         </li>
+        <li class="nav__item">
+          <a href="login-register.html" class="nav__link">Tài khoản</a>
+        </li>
       </ul>
+
+      <!-- Hộp tìm kiếm -->
       <div class="header__search">
-        <input
-          type="text"
-          placeholder="Tìm kiếm sản phẩm"
-          class="form__input"
-        />
+        <input type="text" placeholder="Tìm kiếm sản phẩm" class="form__input" />
       </div>
     </div>
-    <div class="header__user-actions">
-      <a href="wishlist.html" class="header__action-btn" title="Wishlist">
-        <img src="assets/img/icon-heart.svg" alt="" />
-        <span class="count">3</span>
-      </a>
-      <a href="cart.html" class="header__action-btn" title="Cart">
-        <img src="assets/img/icon-cart.svg" alt="" />
-        <span class="count">3</span>
-      </a>
-      <div class="header__action-btn nav__toggle" id="nav-toggle">
-        <img src="./assets//img/menu-burger.svg" alt="">
+
+      <!-- Wishlist và Giỏ hàng -->
+      <div class="header__user-actions">
+        <a href="wishlist.html" class="header__action-btn" title="Wishlist">
+          <img src="assets/img/icon-heart.svg" alt="" />
+          <span class="count">3</span>
+        </a>
+        <a href="cart.html" class="header__action-btn" title="Cart">
+          <img src="assets/img/icon-cart.svg" alt="" />
+          <span class="count">2</span>
+        </a>
+        <div class="header__action-btn nav__toggle" id="nav-toggle">
+          <img src="./assets//img/menu-burger.svg" alt="">
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
     </header>
 
     <!--=============== MAIN ===============-->
@@ -1237,7 +1236,10 @@
     </footer>
 
     <!--=============== Main JS ===============-->
+   
+    <!-- <script src="assets/js/main.js"></script> -->
     <script src="assets/js/ct_main.js"></script>
+  
     <!--=============== SNOW ===============-->
     <script src="assets/js/snow.js"></script>
     
@@ -1245,6 +1247,7 @@
     <!--===============bgdoikhiscroll ===============-->
     <script src="./assets/js/jquery.scrollie.min.js"></script>
     <script src="./assets/js/bgdoikhiscroll.js"></script>
+    
 </body>
  
   </body>

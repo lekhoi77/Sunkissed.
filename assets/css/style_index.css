@@ -232,6 +232,8 @@ img {
   margin-left: 2.5rem;
 }
 
+
+
 .nav__list {
   column-gap: 2.5rem;
   margin-right: auto;
@@ -246,7 +248,10 @@ img {
   -ms-transform: all 0.3s var(--transition);
   -o-transform: all 0.3s var(--transition);
 }
-
+.nav__menu-top,
+.nav__toggle {
+  display: none;
+}
 .header__search {
   width: 340px;
   position: relative;
