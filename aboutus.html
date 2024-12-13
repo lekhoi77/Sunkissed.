@@ -108,8 +108,117 @@
        <!--=============== n/Thanh định vị vị trí trang ===============-->
     
     <!-- Nội dung bên trong nghi làm -->
+    <!--Giới thiệu sản phẩm Sunkissed-->
+    <section>
+      <div class="info_container">
+        <div class="tieude">
+          <div class="title">Hơn cả việc khoẻ mạnh</div>
+        </div>
+        <div class="content">
+          <div class="ben_trai">
+            <div class="thanh_phan">
+              <h3>Thành phần hữu cơ</h3>
+              <p>Sự tươi mát thuần khiết với nước ép 100% hữu cơ, được làm từ những nguyên liệu tinh túy nhất của thiên nhiên, mang đến cho bạn nguồn năng lượng khỏe mạnh và thơm ngon.</p>
+            </div>
+            <div class="dong_goi">
+              <h3>Đóng gói bền vững</h3>
+              <p>Sản phẩm của chúng tôi được thiết kế bằng các vật liệu thân thiện với môi trường, giúp giảm thiểu rác thải và hướng tới một tương lai xanh hơn.</p>
+            </div>
+          </div>
+          <div class="lon_cam">
+            <img id="lonImage" src="assets/img/td_p1.png" alt="Sunkissed Latte Can">
+          </div>
+          <div class="ben_phai">
+            <div class="tac_dong">
+              <h3>Tác động đến sức khoẻ</h3>
+              <p>Khám phá hương vị tươi mát từ sản phẩm của chúng tôi, chứa đựng các thành phần tự nhiên giúp bạn duy trì lối sống lành mạnh hơn.</p>
+            </div>
+            <div class="social">
+              <h3>Kết nối với chúng tôi qua</h3>
+              <img src="assets/img/ig_icon.svg" alt="Instagram">
+              <img src="assets/img/fb_icon.svg" alt="Facebook">
+              <img src="assets/img/ytb_icon.svg" alt="YouTube">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
-
+    <style>
+      h3 {
+        transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+      }
+    
+      h3:hover {
+        color: #ff6600; /* Màu sắc khi hover */
+      }
+    
+      .lon_cam img {
+        transition: transform 0.3s ease, filter 0.3s ease; /* Hiệu ứng chuyển đổi cho hình ảnh */
+      }
+    
+      .lon_cam img:hover {
+        transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+        filter: brightness(1.1); /* Tăng độ sáng hình ảnh khi hover */
+      }
+    </style>
+    
+    <script>
+      const images = [
+        'assets/img/td_p1.png', // Hình đầu tiên
+        'assets/img/td_p2.png', // Hình thứ hai
+        'assets/img/td_p3.png', // Hình thứ ba
+        'assets/img/td_p4.png'  // Hình thứ tư
+      ];
+    
+      let currentIndex = 0;
+    
+      function changeImage() {
+        currentIndex = (currentIndex + 1) % images.length; // Cập nhật chỉ số
+        document.getElementById("lonImage").src = images[currentIndex]; // Thay đổi hình ảnh
+      }
+    
+      setInterval(changeImage, 2000); // Thay đổi hình ảnh mỗi 2000 ms (2 giây)
+    </script>
+    <!--n/ Giới thiệu sản phẩm Sunkissed-->
+    <!--Giới thiệu thành viên-->
+<section>
+  <div class="introduce_mem">
+    <h2>Thành Viên Của Chúng Tôi</h2>
+  </div>
+    <div class="tong_thanh_vien">
+      <div class="ba_thanh_vien_1">
+        <div id="le_khoi">
+          <img src="assets\img\Khoi.png" alt="Lê Khôi" class="profile-image">
+          <h3>Võ Xuân Lê Khôi</h3>
+        </div>
+        <div id="quoc_bao">
+          <img src="assets\img\Bao.png" alt="Quốc Bảo" class="profile-image">
+          <h3>Nguyễn Đình Quốc Bảo</h3>
+        </div>
+        <div id="huu_khai">
+          <img src="assets\img\Khai.png" alt="Hữu Khải" class="profile-image">
+          <h3>Nguyễn Hồ Hữu Khải</h3>
+        </div>
+      </div>
+      <div class="ba_thanh_vien_2">
+        <div id="minh_nhat">
+          <img src="assets\img\Nhat.png" alt="Minh Nhật" class="profile-image">
+          <h3>Trần Minh Nhật</h3>
+        </div>
+        <div id="thanh_phat">
+          <img src="assets\img\Phat.png" alt="Thành Phát" class="profile-image">
+          <h3>Nguyễn La Thành Phát</h3>
+        </div>
+        <div id="vinh_nghi">
+          <img src="assets\img\Nghi.png" alt="Vinh Nghi" class="profile-image">
+          <h3>Nguyễn Vĩnh Nghi</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--n/ Giới thiệu thành viên-->
 
       <!--=============== FOOTER ===============-->
     <footer class="footer container">
