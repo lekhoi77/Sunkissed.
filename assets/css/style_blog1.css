@@ -493,6 +493,7 @@ form {
     border-radius: 5px; /* Bo góc cho nút */
     cursor: pointer; /* Hiển thị con trỏ khi hover */
 }
+
 /*n/ Điền bình luận */
 /* Responsive layout cho màn hình nhỏ hơn 738px */
 @media (max-width: 738px) {
