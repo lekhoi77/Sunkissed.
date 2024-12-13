@@ -232,6 +232,8 @@ img {
   margin-left: 2.5rem;
 }
 
+
+
 .nav__list {
   column-gap: 2.5rem;
   margin-right: auto;
@@ -246,7 +248,10 @@ img {
   -ms-transform: all 0.3s var(--transition);
   -o-transform: all 0.3s var(--transition);
 }
-
+.nav__menu-top,
+.nav__toggle {
+  display: none;
+}
 .header__search {
   width: 340px;
   position: relative;
@@ -1149,12 +1154,11 @@ img {
   
   justify-content: center;
   width: 2000x;
-  height: 520px;
+  height: 620px;
   margin: 50px 0px;
- 
-
+  margin-top: 70px;
   background-image: url("/assets/img/wave.svg") ;
-  position: relative;
+ 
 }
 
 
@@ -1175,15 +1179,15 @@ img {
 }
 
 .blkh_title {
-  position:absolute;
-  font-size: 35px;
+display: flex;
+justify-content: center;
+  font-size: 30px;
   text-align: center;
   font-weight: bold;
   color: var(--first-color);
   margin-bottom: 20px;
-  top: -60px;;
-  left: 50%; /* Dịch chuyển về giữa theo chiều ngang */ 
-  transform: translateX(-50%); /* Căn chính xác vào giữa */
+  transform: translateY(-45px);
+ 
 }
 
 .nguoidanhgia span {}
@@ -1202,15 +1206,17 @@ img {
 }
 
 /* Media Queries */
+@media (max-width: 1440px){
+.blkh_content .mck {
+  display: none;
+}
+}
 @media (max-width: 768px) {
   .blkh{
     display:flex;
     flex-direction: column;
     gap: 30px;
     margin-top: 80px;
-  }
-.blkh_content .mck {
-      display: none;
   }
 .blkh{
   background-image: none;
@@ -1231,6 +1237,9 @@ img {
   }
   .blkh_title{
     font-size: 28px;
+    transform: none;
+    transform: translateY(70px);
+  
   }
 }
 
@@ -1264,7 +1273,7 @@ img {
   text-align: center;
   font-family: var(--body-font);
   color:var(--first-color);
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -1341,6 +1350,82 @@ img {
 
 /*=============== n/ FAQ ===============*/
 
+/* ĐIỀN CÂU HỎI */
+.comment-form {
+
+  padding: 0 250px; /* Khoảng cách bên trong *
+  border-radius: 8px; /* Bo góc cho form */
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: column; /* Đặt chiều dọc cho các phần tử */
+  
+}
+
+.comment-form h2 {
+  font-size: 30px; /* Kích thước chữ cho tiêu đề form */
+  margin-bottom: 15px; /* Khoảng cách dưới tiêu đề */
+  margin-top: 60px; /* Khoảng cách với phần bình luận */
+}
+form {
+margin-bottom: 60px;
+}
+.form-row {
+  display: flex; /* Sử dụng flexbox cho dòng */
+  gap: 20px; /* Khoảng cách giữa các trường nhập */
+  margin-bottom: 15px; /* Khoảng cách dưới mỗi dòng */
+}
+
+.comment-form label {
+  display: block; /* Đảm bảo mỗi label trên một dòng */
+  flex: 1; /* Chiều rộng đều cho label */
+}
+
+.comment-form input, .comment-form textarea {
+  flex: 2; /* Chiều rộng gấp đôi cho trường nhập */
+  padding: 10px; /* Khoảng cách bên trong */
+  border: 1px solid #ccc; /* Đường viền cho input */
+  border-radius: 5px; /* Bo góc cho input */
+}
+
+.comment-form button {
+  background-color:var(--first-color); /* Màu nền cho nút */
+  color: white; /* Màu chữ cho nút */
+  padding: 13px 15px; /* Khoảng cách bên trong nút */
+  border: none; /* Không có đường viền */
+  border-radius: 10px; /* Bo góc cho nút */
+  cursor: pointer; /* Hiển thị con trỏ khi hover */
+}
+/* Responsive cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .comment-form {
+      padding: 20px; /* Thu hẹp khoảng cách bên trong */
+  }
+
+  .form-row {
+      flex-direction: column; /* Chuyển các phần tử thành chiều dọc */
+      gap: 10px; /* Giảm khoảng cách giữa các trường nhập */
+  }
+
+  .comment-form label {
+      flex: unset; /* Bỏ flex để label không chiếm diện tích cố định */
+      width: 100%; /* Chiếm toàn bộ chiều rộng */
+  }
+
+  .comment-form input,
+  .comment-form textarea {
+      flex: unset; /* Bỏ flex để các input không bị bó buộc kích thước */
+      width: 100%; /* Chiếm toàn bộ chiều rộng */
+  }
+
+  .comment-form button {
+      width: 100%; /* Nút gửi chiếm toàn bộ chiều rộng */
+      text-align: center; /* Căn giữa nội dung trong nút */
+  }
+}
+
+
+
+/*N/ ĐIỀN CÂU HỎI */
+
 /* BLOG */
 .blog-section {
   max-width: 1200px;
@@ -1399,15 +1484,11 @@ img {
 .blog-content a {
   display: inline-block;
   padding: 10px 15px;
-  background-color:var(--first-color);
+  
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
-}
-
-.blog-content a:hover {
-  background-color:var(--second-color);
 }
 
 @media (max-width: 768px) {
