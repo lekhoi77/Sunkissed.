@@ -467,6 +467,15 @@ img {
 
 /* CSS cho màn hình nhỏ */
 @media (max-width: 768px) {
+
+  .sunkissed_hero {
+
+    text-align: center;
+    
+    padding-bottom: 160px ;
+    margin-top: 150px;
+    margin-bottom: 120px;
+  }
   .cans-row {
     display: none;
   }
@@ -596,7 +605,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+  
   }
 
   .content {
