@@ -13,8 +13,8 @@
   /*========== Colors ==========*/
   --first-color: hsl(0, 75%, 33%);
   --second-color: hsl(115, 67%, 13%);
-  --title-color: hsl(115, 67%, 13%);
-  --text-color: hsl(114, 19%, 60%);
+  --title-color:hsl(115, 67%, 13%);
+  --text-color: hsl(115, 67%, 13%);
   --text-color-light: hsl(60, 1%, 56%);
   --body-color: hsl(46, 100%, 91%);
   --container-color: hsl(0, 0%, 93%);
@@ -293,6 +293,7 @@ img {
   -o-border-radius: 50%;
 }
 
+
 .nav__menu-top,
 .nav__toggle {
   display: none;
@@ -465,7 +466,7 @@ img {
 }
 
 /* CSS cho màn hình nhỏ */
-@media (max-width: 780px) {
+@media (max-width: 768px) {
   .cans-row {
     display: none;
   }
@@ -502,7 +503,6 @@ img {
   margin: 5px 0;
   /* Thêm khoảng cách 20px trên và dưới */
   margin-top: 200px;
-  overflow: hidden;
   position: relative;
   
 
@@ -589,6 +589,37 @@ img {
   transform: translateY(110px);
 }
 
+@media (max-width: 768px) {
+
+  .brandintro {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .content {
+      height: auto;
+      padding: 5px;
+  }
+
+  .brandintro .text {
+      font-size: 16px;
+      width: 300px;
+      transform: translateY(-50px);
+  }
+
+  .brandintro .image {
+      margin-top: 10px;
+  }
+
+  .left-hand, .right-hand {
+      
+  }
+}
+
+
 /* n/Giới thiệu thương hiệu */
 
 
@@ -603,11 +634,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .spnb_banner img {
-  width: 450px;
+  width: 400px;
 
 }
 
@@ -726,32 +757,53 @@ img {
   color: var(--first-color);
 
 }
+/* Responsive cho màn hình dưới 780px */
+@media screen and (max-width: 780px) {
+  .spnb {
+    margin-bottom: 100px; /* Điều chỉnh margin */
+  }
 
-.switch_btn {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-}
+  .spnb_banner {
+    margin-bottom: 20px; /* Giữ khoảng cách với container */
+  }
 
-.btn_prev,
-.btn_next {
-  width: 90px;
-  top: -300px;
+  .spnb_banner img {
+    width: 90%; /* Giảm kích thước ảnh cho phù hợp màn hình nhỏ */
+  }
 
-}
+  .spnb_container {
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+    align-items: center;
+    gap: 30px; /* Khoảng cách giữa các phần tử */
+    height: auto; /* Để container co giãn theo nội dung */
+  }
 
-.btn_next {
-  position: absolute;
-  right: 10px;
-  /* Di chuyển nút sang bên phải */
-  /* Di chuyển nút lên trên */
-  right: 80px;
-}
+  .spnb_content {
+    width: 90%; /* Đảm bảo nội dung không bị tràn màn hình */
+    height: auto; /* Tự động thay đổi theo nội dung */
+    gap: 20px; /* Khoảng cách giữa hình ảnh và tên */
+  }
 
-.btn_prev {
-  position: absolute;
-  left: 80px;
+  .spnb_content .image img {
+    width: 100px; /* Giảm kích thước ảnh */
+  }
 
+  .can_name {
+    font-size: 16px; /* Giảm kích thước chữ để phù hợp */
+  }
+
+  .tencam strong, .tencaphe strong, .tenchanh strong {
+    font-size: 20px; /* Giảm kích thước tên sản phẩm */
+  }
+
+  .giacu {
+    font-size: 14px; /* Điều chỉnh kích thước giá cũ */
+  }
+
+  .giamoi {
+    font-size: 18px; /* Điều chỉnh kích thước giá mới */
+  }
 }
 
 /*=============== DANH MỤC SẢN PHẨM ===============*/
@@ -786,6 +838,7 @@ img {
 
 .products__container {
   grid-template-columns: repeat(4, 1fr);
+  
 }
 
 .product__item {
@@ -1029,6 +1082,44 @@ img {
   color: var(--body-color);
 }
 
+/* Responsive cho các màn hình nhỏ hơn */
+
+@media (max-width: 768px) {
+  .products__container {
+    grid-template-columns: 2fr; /* 1 cột cho màn hình điện thoại */
+    align-items: center; /* Căn giữa theo chiều ngang */
+  text-align: center; /* Căn giữa chữ */
+  }
+
+
+/* Các thay đổi khác cho .tab__btns và các phần tử khác */
+.tab__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center; /* Đảm bảo các button căn giữa */
+  margin-bottom: 2rem;
+}
+
+.tab__btn {
+  padding: 12px 12px;
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+.dmsp_title {
+  font-size: 30px; /* Giảm kích thước cho tiêu đề */
+  margin-bottom: 30px;
+}
+
+
+
+.product__img {
+  height: auto; /* Giảm chiều cao của hình ảnh */
+  width: 100%; /* Đảm bảo hình ảnh chiếm hết chiều rộng của ô */
+}
+}
+
 /*===============n/ DANH MỤC SẢN PHẨM ===============*/
 
 
@@ -1038,9 +1129,10 @@ img {
   justify-content: center;
   width: 2000x;
   height: 520px;
-  margin-top: 150px;
-  margin-bottom: 50px;
-  background-image: url("/sunkissedg5/assets/img/wave.svg") ;
+  margin: 50px 0px;
+ 
+
+  background-image: url("/assets/img/wave.svg") ;
   position: relative;
 }
 
@@ -1088,139 +1180,212 @@ img {
   font-style: italic;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+  
+  .blkh_content .mck {
+      display: none;
+  }
+.blkh{
+  background-image: none;
+}
+  .blkh_content {
+      flex-direction: column; /* Hiển thị dạng cột */
+      gap: 20px; /* Giảm khoảng cách giữa các bài */
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+  }
+ 
+  .blkh_content .khach img {
+      width: 120px; /* Giảm kích thước ảnh */
+  }
 
-
-
-
-
-
-/*=============== SHOWCASE ===============*/
-.showcase__container {
-  grid-template-columns: repeat(4, 1fr);
+  .nguoidanhgia {
+      font-size: 14px; /* Giảm kích thước văn bản */
+  }
 }
 
-.showcase__wrapper .section__title {
-  font-size: var(--normal-font-size);
-  border-bottom: 1px solid var(--border-color-alt);
-  padding-bottom: 0.75rem;
-  margin-bottom: 2rem;
-  position: relative;
+
+
+
+/*=============== FAQ ===============*/
+
+
+
+.chtg {
+  padding: 20px;
+  height: auto;
 }
 
-.showcase__wrapper .section__title::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 2px;
-  left: 0;
-  bottom: -1.5px;
-  background-color: var(--first-color);
-}
+.faq_container {
 
-.showcase__item {
   display: flex;
+  justify-content: center;
   align-items: center;
-  column-gap: 1.5rem;
+  gap: 120px;
 }
 
-.showcase__item:not(:last-child) {
-  margin-bottom: 1.5rem;
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.showcase__img {
-  width: 86px;
+.faq h2 {
+  text-align: center;
+  font-family: var(--body-font);
+  color:var(--first-color);
+  font-size: 35px;
+  font-weight: bold;
 }
 
-.showcase__content {
-  width: calc(100% - 110px);
+.faq-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  cursor: pointer;
 }
 
-.showcase__title {
-  font-size: var(--small-font-size);
-  font-weight: var(--weight-500);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 0.5rem;
+.faq-item:hover {
+  background-color: #a0b193;
+  color:#fefefe;
+  transition: transform 0.5s ease;
 }
 
-/*=============== NEWSLETTER ===============*/
-.newsletter {
-  background-color: hsl(166, 23%, 74%);
+.faq-item p {
+  display: none;
 }
 
-.home__newsletter {
-  margin-top: 2rem;
+.faq-item.active p {
+  display: block;
 }
 
-.newsletter__container {
-  grid-template-columns: repeat(2, 3.5fr) 5fr;
-  align-items: center;
-  column-gap: 3rem;
-}
-
-.newsletter__title {
-  column-gap: 1rem;
-  font-size: var(--large-font-size);
-}
-
-.newsletter__icon {
-  width: 40px;
-}
-
-.newsletter__description {
-  color: var(--title-color);
-  font-family: var(--second-font);
-  font-size: var(--small-font-size);
-  font-weight: var(--weight-600);
+.faq_thumb {
+ 
   text-align: center;
 }
 
-.newsletter__form {
-  display: flex;
-}
-
-.newsletter__input,
-.newsletter__btn {
-  font-size: var(--small-font-size);
-}
-
-.newsletter__input {
-  background-color: var(--body-color);
-  padding-inline: 1.23rem;
+.faq_thumb img {
   width: 100%;
-  height: 48px;
-  border-radius: 0.25rem 0 0 0.25rem;
-  -webkit-border-radius: 0.25rem 0 0 0.25rem;
-  -moz-border-radius: 0.25rem 0 0 0.25rem;
-  -ms-border-radius: 0.25rem 0 0 0.25rem;
-  -o-border-radius: 0.25rem 0 0 0.25rem;
+ 
+}
+.faq_item .cauhoi{
+  font-weight: bold;
+}
+.faq-item p{
+  font-style: italic;
+}
+.faq-item p span{
+  color: var(--first-color);
+  font-style: normal;
+}
+/* Responsive: Đối với màn hình nhỏ (tablet, mobile) */
+@media screen and (max-width: 768px) {
+  .faq_container {
+    gap: 40px;
+    flex-direction: column; /* Xếp theo cột khi màn hình nhỏ */
+    margin: 50px;
+  }
+
+  .faq_thumb {
+    margin-top: 30px;
+  }
+
+  .faq h2 {
+    font-size: 28px;
+  }
+
+  .faq-item {
+    padding: 12px;
+  }
+
+  .faq-item .cauhoi {
+    font-size: 18px;
+  }
+
+  .faq-item p {
+    font-size: 14px;
+  }
 }
 
-.newsletter__btn {
-  background-color: var(--title-color);
-  color: var(--body-color);
-  padding-inline: 2rem;
-  font-family: var(--second-font);
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.3s var(--transition);
-  border-radius: 0 0.25rem 0.25rem 0;
-  -webkit-border-radius: 0 0.25rem 0.25rem 0;
-  -moz-border-radius: 0 0.25rem 0.25rem 0;
-  -ms-border-radius: 0 0.25rem 0.25rem 0;
-  -o-border-radius: 0 0.25rem 0.25rem 0;
-  -webkit-transition: all 0.3s var(--transition);
-  -moz-transition: all 0.3s var(--transition);
-  -ms-transition: all 0.3s var(--transition);
-  -o-transition: all 0.3s var(--transition);
+/*=============== n/ FAQ ===============*/
+
+/* BLOG */
+.blog-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
 }
 
-.newsletter__btn:hover {
-  background-color: var(--first-color);
+.blog-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--second-color);
+  margin-bottom: 30px;
 }
 
+.blog-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blog-card {
+  flex: 1 1 calc(50% - 20px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.blog-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.blog-content a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color:var(--first-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.blog-content a:hover {
+  background-color:var(--second-color);
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+      flex: 1 1 100%;
+  }
+}
 /*=============== FOOTER ===============*/
 .footer__container {
   grid-template-columns: 4.5fr repeat(2, 2fr) 3.5fr;

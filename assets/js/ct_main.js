@@ -99,9 +99,9 @@ window.addEventListener('scroll', function() {
   }
 });
 
-/*=============== PRODUCTS TABS ===============*/
+/*=============== FAQ ===============*/
 const tabs = document.querySelectorAll("[data-target]"),
-  tabsContents = document.querySelectorAll("[content]");
+      tabsContents = document.querySelectorAll("[content]");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -119,4 +119,21 @@ tabs.forEach((tab) => {
 
     tab.classList.add("active-tab");
   });
+});
+
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
+});
+/*=============== n/FAQ ===============*/
+
+// BLOG
+document.querySelectorAll('.blog-card').forEach(card => {
+    card.addEventListener('mouseover', () => {
+        card.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.2)';
+    });
+    card.addEventListener('mouseout', () => {
+        card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    });
 });
