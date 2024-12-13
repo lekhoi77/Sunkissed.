@@ -204,22 +204,25 @@ table {
 
 .header__contact span:first-child {
   margin-right: 2rem;
+  color: #fefefe;
 }
 
 .header__contact span,
 .header__alert-news,
 .header__alert-top-action {
   font-size: var(--small-font-size);
+
 }
 
 .header__alert-news {
-  color: var(--text-color-light);
+  color: #fefefe;
   font-weight: var(--weight-600);
 }
 
 .header__top-action {
-  color: var(--text-color);
+  color: #fefefe;
 }
+
 
 .nav,
 .nav__menu,
