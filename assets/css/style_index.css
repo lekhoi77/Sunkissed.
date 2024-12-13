@@ -1146,6 +1146,7 @@ img {
 
 /*=============== bÌNH LUẬT KHÁCH HÀNG ===============*/
 .blkh {
+  
   justify-content: center;
   width: 2000x;
   height: 520px;
@@ -1202,8 +1203,13 @@ img {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  
-  .blkh_content .mck {
+  .blkh{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 80px;
+  }
+.blkh_content .mck {
       display: none;
   }
 .blkh{
@@ -1222,6 +1228,9 @@ img {
 
   .nguoidanhgia {
       font-size: 14px; /* Giảm kích thước văn bản */
+  }
+  .blkh_title{
+    font-size: 28px;
   }
 }
 
