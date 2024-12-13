@@ -259,6 +259,9 @@
   }
   
   @media screen and (max-width: 768px) {
+    main{
+      overflow: hidden;
+    }
     .container {
       max-width: 570px;
     }
