@@ -221,6 +221,7 @@ table {
 
 .header__top-action {
   color: #fefefe;
+  visibility: hidden;
 }
 
 
