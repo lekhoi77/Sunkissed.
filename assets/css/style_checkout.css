@@ -9,15 +9,16 @@
   /*========== Colors ==========*/
   --first-color: 	hsl(0, 75%, 33%);
   --first-color-alt: hsl(129, 44%, 94%);
-  --second-color: hsl(45, 65%, 90%);
-  --title-color: hsl(115, 67%, 13%);
-  --text-color: hsl(154, 13%, 32%);
+  --title-color:hsl(115, 67%, 13%);
+  --title-color:hsl(115, 67%, 13%);
+  --text-color: hsl(115, 67%, 13%);
   --text-color-light: hsl(60, 1%, 56%);
   --body-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 93%);
   --border-color: hsl(129, 36%, 85%);
   --border-color-alt: hsl(113, 15%, 90%);
-  --btn-color: 	hsl(46, 75%, 81%);
+  --btn-color: hsl(0, 75%, 33%);
+  --title-colos: hsl(33, 93%, 66%);
 
 
   /*========== Font and typography ==========*/
@@ -191,7 +192,7 @@ table {
 
 /*=============== HEADER & NAV ===============*/
 .header__top {
-  background-color: var(--first-color-alt);
+  background-color: var(--first-color);
   border-bottom: 1px solid var(--first-color);
   padding-block: 0.875rem;
 }
@@ -204,21 +205,23 @@ table {
 
 .header__contact span:first-child {
   margin-right: 2rem;
+  color: #fefefe;
 }
 
 .header__contact span,
 .header__alert-news,
 .header__alert-top-action {
   font-size: var(--small-font-size);
+
 }
 
 .header__alert-news {
-  color: var(--text-color-light);
+  color: #fefefe;
   font-weight: var(--weight-600);
 }
 
 .header__top-action {
-  color: var(--text-color);
+  color: #fefefe;
 }
 
 .nav,
@@ -1158,12 +1161,22 @@ table {
    .section__intro {
     margin-bottom: 46px;
   }
+
+
+
+
+/*=============== SẢN PHẨM MUA KÈM ===============*/
+
+
+
   /* Format intro của sản phẩm mua kèm */
   .row3 {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 10vh; /* Chiều cao của hàng */
+    margin-top: 100px;
+    font-family:var(--body-font);
   }
   
   .section__text-wrap {
@@ -1178,7 +1191,7 @@ table {
     color: var(--first-color); /* Màu bạn muốn áp dụng */
   }
   .section__span {
-    color: grey;
+
   }
   /* Kết thúc format intro sản phẩm mua kèm */
 .product-carousel {
@@ -1191,8 +1204,8 @@ table {
 .product-item {
     width: 22%;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     position: relative;
@@ -1281,15 +1294,16 @@ table {
 { color: var(--first-color); /* Màu đỏ */ }
 
 .product-name a {
-    font-size: 1.2em;
+    font-size: 18px;
     color: #333;
-    margin: 10px 0;
+    margin: 40px 0;
     text-decoration: none;
     font-weight: bold;
+   
 }
 
 .price {
-    font-size: 1.5em;
+    font-size: 18px;
     color: #e74c3c;
     margin: 10px 0;
 }
@@ -1312,3 +1326,5 @@ table {
     font-size: 0.9em;
     margin-left: 5px;
 }
+
+/*===============N/ SẢN PHẨM MUA KÈM ===============*/

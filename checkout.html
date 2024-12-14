@@ -23,83 +23,89 @@
     <title>Sunkissed</title>
   </head>
   <body>
-    <!--=============== HEADER ===============-->
-    <header class="header">
-      <div class="header__top">
-        <div class="header__container container">
-          <div class="header__contact">
-            <span>(+01) - 2345 - 6789</span>
-            <span>Our location</span>
-          </div>
-          <p class="header__alert-news">
-            Super Values Deals - Save more coupons
-          </p>
-          <a href="login-register.html" class="header__top-action">
-            Log In / Sign Up
-          </a>
+   <!--=============== HEADER ===============-->
+   <header class="header">
+    <div class="header__top">
+      <div class="header__container container">
+        <div class="header__contact">
+          <span>(+84)335993276</span>
+          <span></span>
         </div>
-      </div>
-
-      <nav class="nav container">
-        <a href="index.html" class="nav__logo">
-          <img
-            class="nav__logo-img"
-            src="assets/img/logo.svg"
-            alt="website logo"
-          />
+        <p class="header__alert-news">
+         Giảm 15% trên mọi đơn hàng từ 20-24/12
+        </p>
+        <a href="login-register.html" class="header__top-action">
+         Đăng nhập/ Đăng kí
         </a>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="index.html" class="nav__link">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="shop.html" class="nav__link">Shop</a>
-            </li>
-            <li class="nav__item">
-              <a href="accounts.html" class="nav__link">My Account</a>
-            </li>
-            <li class="nav__item">
-              <a href="compare.html" class="nav__link">Compare</a>
-            </li>
-            <li class="nav__item">
-              <a href="login-register.html" class="nav__link active-link"
-                >Login</a
-              >
-            </li>
-          </ul>
-          <div class="header__search">
-            <input
-              type="text"
-              placeholder="Search For Items..."
-              class="form__input"
-            />
-          
-          </div>
-        </div>
-        <div class="header__user-actions">
-          <a href="wishlist.html" class="header__action-btn" title="Wishlist">
-            <img src="assets/img/icon-heart.svg" alt="" />
-            <span class="count">3</span>
-          </a>
-          <a href="cart.html" class="header__action-btn" title="Cart">
-            <img src="assets/img/icon-cart.svg" alt="" />
-            <span class="count">3</span>
-          </a>
-        </div>
-      </nav>
-    </header>
+      </div>
+    </div>
+<!--=============== n/HEADER ===============-->
+<!-- Navigation -->
+<nav class="nav container">
+  <a href="index.html" class="nav__logo">
+    <img class="nav__logo-img" src="assets/img/logo_red.svg" alt="website logo" />
+  </a>
+  <div class="nav__menu" id="nav-menu">
+    <div class="nav__menu-top">
+      <a href="index.html" class="nav__menu-logo">
+        <img src="./assets/img/logo_red.svg" alt="">
+      </a>
+      <div class="nav__close" id="nav-close">
+        <i class="fi fi-rs-cross-small"></i>
+      </div>
+    </div>
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link active-link">Trang chủ</a>
+      </li>
+      <li class="nav__item">
+        <a href="shop.html" class="nav__link">Cửa hàng</a>
+      </li>
+      <li class="nav__item">
+        <a href="aboutus.html" class="nav__link">Về chúng tôi</a>
+      </li>
+      
+      <li class="nav__item">
+        <a href="lienhe.html" class="nav__link">Liên hệ</a>
+      </li>
+      <li class="nav__item">
+        <a href="accounts.html" class="nav__link">Tài khoản</a>
+      </li>
+    </ul>
+
+    <!-- Hộp tìm kiếm -->
+    <div class="header__search">
+      <input type="text" placeholder="Tìm kiếm sản phẩm" class="form__input" />
+    </div>
+  </div>
+
+    <!-- Wishlist và Giỏ hàng -->
+    <div class="header__user-actions">
+      <a href="wishlist.html" class="header__action-btn" title="Wishlist">
+        <img src="assets/img/icon-heart.svg" alt="" />
+        <span class="count">3</span>
+      </a>
+      <a href="cart.html" class="header__action-btn" title="Cart">
+        <img src="assets/img/icon-cart.svg" alt="" />
+        <span class="count">2</span>
+      </a>
+      <div class="header__action-btn nav__toggle" id="nav-toggle">
+        <img src="./assets//img/menu-burger.svg" alt="">
+      </div>
+    </div>
+  </nav>
+  </header>
 
     <!--=============== MAIN ===============-->
     <main class="main">
       <!--=============== BREADCRUMB ===============-->
       <section class="breadcrumb">
         <ul class="breadcrumb__list flex container">
-          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+          <li><a href="index.html" class="breadcrumb__link">Trang chủ</a></li>
           <li><span class="breadcrumb__link">></span></li>
-          <li><span class="breadcrumb__link">Shop</span></li>
+          <li><span class="breadcrumb__link">Giỏ hàng</span></li>
           <li><span class="breadcrumb__link">></span></li>
-          <li><span class="breadcrumb__link">Checkout</span></li>
+          <li><span class="breadcrumb__link">Thanh Toán</span></li>
         </ul>
       </section>
       <!-- FONT AWSOME -->
@@ -792,7 +798,7 @@
             <div class="container">
                 <div class="carousel-container">
                     <div class="product-carousel owl-carousel" data-item="4">
-                        <div class="product-item margin-bottom">
+                        <div class="product-item ">
                             <div class="product-card hover-effect">
                                 <div class="image-wrap">
                                     <a class="aspect aspect-square bg-grey display-block" href="product-detail-variable.html">
@@ -801,16 +807,16 @@
                                     <div class="action-wrap">
                                         <ul class="action-list">
                                             <li>
-                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a>
+                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem"><i class="fas fa-search-plus"></i></a>
                                             </li>
                                             <li>
-                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Add to Cart"><i class="fas fa-plus-circle"></i></a>
+                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Thêm vào giỏ hàng"><i class="fas fa-plus-circle"></i></a>
                                             </li>
                                             <li>
-                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="fas fa-heart"></i></a>
+                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Thêm vào Wishlist"><i class="fas fa-heart"></i></a>
                                             </li>
                                             <li>
-                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email me When the price drops"><i class="fas fa-envelope"></i></a>
+                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Gửi tôi thông tin qua email"><i class="fas fa-envelope"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -986,101 +992,71 @@
 </body>
 </html>
     </main>
-  <!--=============== FOOTER ===============-->
-  <footer class="footer container">
-    <div class="footer__container grid">
-      <div class="footer__content">
-        <a href="index.html" class="footer__logo">
-          <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
-        </a>
-        <h4 class="footer__subtitle">Contact</h4>
-        <p class="footer__description">
-          <span>Address:</span> 13 Tlemcen Road, Street 32, Beb-Wahren
-        </p>
-        <p class="footer__description">
-          <span>Phone:</span> +01 2222 365 /(+91) 01 2345 6789
-        </p>
-        <p class="footer__description">
-          <span>Hours:</span> 10:00 - 18:00, Mon - Sat
-        </p>
-        <div class="footer__social">
-          <h4 class="footer__subtitle">Follow Me</h4>
-          <div class="footer__links flex">
-            <a href="#">
-              <img
-                src="./assets/img/icon-facebook.svg"
-                alt=""
-                class="footer__social-icon"
-              />
+     <!--=============== FOOTER ===============-->
+     <footer class="footer container">
+        <div class="footer__container grid">
+          <div class="footer__content">
+            <a href="index.html" class="footer__logo">
+              <img src="./assets/img/logo_red.svg" alt="" class="footer__logo-img" />
             </a>
-            <a href="#">
-              <img
-                src="./assets/img/icon-twitter.svg"
-                alt=""
-                class="footer__social-icon"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="./assets/img/icon-instagram.svg"
-                alt=""
-                class="footer__social-icon"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="./assets/img/icon-pinterest.svg"
-                alt=""
-                class="footer__social-icon"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="./assets/img/icon-youtube.svg"
-                alt=""
-                class="footer__social-icon"
-              />
-            </a>
+            <h4 class="footer__subtitle">Liên hệ</h4>
+            <p class="footer__description">
+              <span>Địa chỉ:</span> 279 Nguyễn Tri Phương, Quận 10, Tp. Hồ Chí Minh
+            </p>
+            <p class="footer__description">
+              <span>Điện thoại:</span> +84 335993276
+            </p>
+            <p class="footer__description">
+              <span>Giờ làm việc:</span> 8:00 - 21:00, Thứ 2 - Thứ 7
+            </p>
+            <div class="footer__social">
+              <h4 class="footer__subtitle">Follow ngay</h4>
+              <div class="footer__links flex">
+                <a href="#">
+                  <img src="./assets/img/icon-facebook.svg" alt="" class="footer__social-icon" />
+                </a>
+                <a href="#">
+                  <img src="./assets/img/icon-instagram.svg" alt="" class="footer__social-icon" />
+                </a>
+                <a href="#">
+                  <img src="./assets/img/icon-youtube.svg" alt="" class="footer__social-icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__content">
+            <h3 class="footer__title">Thông tin</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Về chúng tôi</a></li>
+              <li><a href="#" class="footer__link">Thông tin giao hàng</a></li>
+              <li><a href="#" class="footer__link">Chính sách</a></li>
+              <li><a href="#" class="footer__link">Điều khoản & Điều Kiện </a></li>
+              <li><a href="#" class="footer__link">Liên hệ chúng tôi</a></li>
+              <li><a href="#" class="footer__link">Trung tâm hỗ trợ</a></li>
+            </ul>
+          </div>
+          <div class="footer__content">
+            <h3 class="footer__title">Tài khoản</h3>
+            <ul class="footer__links">
+              <li><a href="#" class="footer__link">Đăng nhập</a></li>
+              <li><a href="#" class="footer__link">Xem giỏ hàng</a></li>
+              <li><a href="#" class="footer__link">Wishlist</a></li>
+              <li><a href="#" class="footer__link">Theo dõi đơn hàng</a></li>
+              <li><a href="#" class="footer__link">Trợ giúp</a></li>
+              <li><a href="#" class="footer__link">Đơn hàng</a></li>
+            </ul>
+          </div>
+          <div class="footer__content">
+            <h3 class="footer__title">Cổng thanh toán bảo mật</h3>
+            <img src="./assets/img/thanhtoan.svg" style="width: 250px;" alt="" class="payment__img" />
           </div>
         </div>
-      </div>
-      <div class="footer__content">
-        <h3 class="footer__title">Address</h3>
-        <ul class="footer__links">
-          <li><a href="#" class="footer__link">About Us</a></li>
-          <li><a href="#" class="footer__link">Delivery Information</a></li>
-          <li><a href="#" class="footer__link">Privacy Policy</a></li>
-          <li><a href="#" class="footer__link">Terms & Conditions</a></li>
-          <li><a href="#" class="footer__link">Contact Us</a></li>
-          <li><a href="#" class="footer__link">Support Center</a></li>
-        </ul>
-      </div>
-      <div class="footer__content">
-        <h3 class="footer__title">My Account</h3>
-        <ul class="footer__links">
-          <li><a href="#" class="footer__link">Sign In</a></li>
-          <li><a href="#" class="footer__link">View Cart</a></li>
-          <li><a href="#" class="footer__link">My Wishlist</a></li>
-          <li><a href="#" class="footer__link">Track My Order</a></li>
-          <li><a href="#" class="footer__link">Help</a></li>
-          <li><a href="#" class="footer__link">Order</a></li>
-        </ul>
-      </div>
-      <div class="footer__content">
-        <h3 class="footer__title">Secured Payed Gateways</h3>
-        <img
-          src="./assets/img/payment-method.png"
-          alt=""
-          class="payment__img"
-        />
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="copyright">&copy; 2024 Evara. All right reserved</p>
-      <span class="designer">Designer by Crypticalcoder</span>
-    </div>
-  </footer>
-
+        <div class="footer__bottom">
+          <p class="copyright">&copy; 2024 Sunkissed. All right reserved</p>
+          <span class="designer">Thiết kế bởi Nhóm 5 Coop.</span>
+        </div>
+      </footer>
+   <!--=============== n/FOOTER ===============-->
 
     <!--=============== SWIPER JS ===============-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
