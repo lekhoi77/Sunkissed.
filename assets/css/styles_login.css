@@ -536,6 +536,7 @@ table {
   animation: moveText 4s linear infinite; /* Hiệu ứng di chuyển */
 }
 
+/* Tạo hiệu ứng di chuyển */
 @keyframes 
 moveText { 
   0% { 

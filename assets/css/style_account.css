@@ -440,79 +440,79 @@ table {
 
 /*=============== ACCOUNTS ===============*/
 .accounts__container {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Sử dụng layout flexbox */
+  flex-direction: column; /* Chia thành các mục dọc */
   gap: 1rem; /* Khoảng cách giữa các mục */
-  align-items: center;
+  align-items: center; /* Căn giữa các mục theo chiều ngang */
   background-color: #ffffff; /* Màu nền trắng */
   border-radius: 1rem; /* Tạo góc bo mềm */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
-  margin-top: 10px;
-  width: 100%;
+  margin-top: 10px; /* Khoảng cách trên */
+  width: 100%; /* Chiều rộng 100% */
   max-width: 1200px; /* Giới hạn chiều rộng */
 }
 
 .account__tabs {
-  display: flex;
-  justify-content: space-around;
-  gap: 1rem;
+  display: flex; /* Sử dụng layout flexbox */
+  justify-content: space-around; /* Căn đều khoảng cách giữa các tab */
+  gap: 1rem; /* Khoảng cách giữa các mục */
   background-color: #f9f9f9; /* Màu nền của tab */
-  padding: 0.5rem;
-  border-radius: 1rem;
-  border: 1px solid var(--border-color-alt);
+  padding: 0.5rem; /* Khoảng cách bên trong */
+  border-radius: 1rem; /* Tạo góc bo mềm */
+  border: 1px solid var(--border-color-alt); /* Đường viền */
   flex-wrap: nowrap; /* Đảm bảo các tab nằm trên một hàng */
-  width: 100%;
-  overflow: hidden;
+  width: 100%; /* Chiều rộng 100% */
+  overflow: hidden; /* Ẩn phần tràn ra ngoài */
 }
 
 .account__tab {
-  padding: 1rem 2rem;
-  color: var(--title-color);
-  font-size: var(--small-font-size);
+  padding: 1rem 2rem; /* Khoảng cách bên trong */
+  color: var(--title-color);  /* Màu chữ */
+  font-size: var(--small-font-size); /* Kích thước chữ */
   display: inline-flex; /* Hiển thị các mục trong cùng một hàng */
   align-items: center; /* Căn giữa theo chiều dọc */
   gap: 0.5rem; /* Khoảng cách giữa các mục */
-  cursor: pointer;
+  cursor: pointer; /* Con trỏ chuột khi hover */
   transition: all 0.2s var(--transition);
-  border-radius: 15px;
+  border-radius: 15px; /* Tạo góc bo mềm */
   white-space: nowrap; /* Ngăn không cho chữ xuống dòng */
   text-align: center; /* Căn giữa văn bản bên trong */
 }
 
 .account__tab.active-tab {
-  background-color: var(--first-color);
-  color: var(--body-color);
+  background-color: var(--first-color); /* Màu nền khi active */
+  color: var(--body-color); /* Màu chữ khi active */
 }
 
 .account__tab:not(:last-child) {
-  margin-inline-start: 0.3rem;
+  margin-inline-start: 0.3rem; /* Khoảng cách giữa các tab */
 }
 
 .menu-toggle {
-  display: none;
-  background-color: var(--first-color);
-  color: var(--body-color);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0.5rem 0;
+  display: none; /* Ẩn đi mặc định */
+  background-color: var(--first-color); /* Màu nền */
+  color: var(--body-color); /* Màu chữ */
+  padding: 0.5rem 1rem; /* Khoảng cách bên trong */
+  border: none; /* Không có đường viền */
+  border-radius: 5px; /* Tạo góc bo mềm */
+  cursor: pointer; /* Con trỏ chuột khi hover */
+  margin: 0.5rem 0; /* Khoảng cách trên và dưới */
 }
 
 
 .tabs__content {
   width: 100%; /* Chiều rộng đầy đủ */
   max-width: 1300px; /* Giới hạn chiều rộng */
-  border: 1px solid var(--border-color-alt); 
-  background-color: #ffffff;
+  border: 1px solid var(--border-color-alt); /* Đường viền */
+  background-color: #ffffff; /* Màu nền */
   border-radius: 1rem; /* Tạo góc bo mềm cho nội dung tab */
-  padding: 1rem;
+  padding: 1rem; /* Khoảng cách bên trong */
 }
 
 .tab__content {
   display: none; /* Ẩn nội dung tab mặc định, chỉ hiển thị khi active */
-  width: 100%;
-  background-color: #ffffff;
+  width: 100%; /* Chiều rộng 100% */
+  background-color: #ffffff; /* Màu nền */
 }
 
 .tab__content.active-tab {
@@ -520,124 +520,124 @@ table {
 }
 
 .tab__header {
-  background-color: var(--container-color);
-  border-bottom: 1px solid var(--border-color-alt);
-  padding: 1rem;
-  font-size: var(--small-font-size);
+  background-color: var(--container-color); /* Màu nền của header */
+  border-bottom: 1px solid var(--border-color-alt); /* Đường viền dưới */
+  padding: 1rem; /* Khoảng cách bên trong */
+  font-size: var(--small-font-size); /* Kích thước chữ */
 }
 
 .tab__body {
-  padding: 1rem;
+  padding: 1rem; /* Khoảng cách bên trong */
   border-top: 1px solid var(--border-color-alt); /* Đảm bảo viền trên khớp với header */
 }
 
 .centered-text {
-  text-align: center;
-  color: var(--first-color);
-  margin-bottom: 20px;
+  text-align: center; /* Căn giữa văn bản */
+  color: var(--first-color); /* Màu chữ */
+  margin-bottom: 20px; /* Khoảng cách dưới */
 }
 
 .tab__details {
-  display: flex;
+  display: flex; /* Sử dụng layout flexbox */
   flex-direction: row; /* Chia thành 2 cột */
   gap: 2rem; /* Khoảng cách giữa các mục email và password */
-  width: 100%;
+  width: 100%; /* Chiều rộng 100% */
 }
 
 /* Email và mật khẩu trong tab tài khoản */
 .tab__email, 
 .tab__password { 
   display: flex; 
-  flex-direction: column; 
-  margin-bottom: 1rem; 
+  flex-direction: column; /* Chia thành các mục dọc */
+  margin-bottom: 1rem; /* Khoảng cách dưới */ 
 }
 
 .tab__email label, 
 .tab__password label { 
-  font-weight: bold; 
-  margin-bottom: 0.5rem; 
+  font-weight: bold; /* Chữ đậm */
+  margin-bottom: 0.5rem; /* Khoảng cách dưới chữ */
 } 
 
 .tab__email div, 
 .tab__password div { 
-  padding: 0.5rem; 
-  border: 1px solid #ccc; 
-  border-radius: 5px; 
-  font-size: 1rem; 
+  padding: 0.5rem; /* Khoảng cách bên trong */
+  border: 1px solid #ccc; /* Đường viền */
+  border-radius: 5px; /* Tạo góc bo mềm */
+  font-size: 1rem; /* Kích thước chữ */
   background-color: #f5f5f5; /* Màu nền cho ô email và mật khẩu */ 
 } 
 
 .edit-email, 
 .edit-password { 
-  color: var(--first-color); 
-  text-decoration: none;
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
+  color: var(--first-color); /* Màu chữ */
+  text-decoration: none; /* Không gạch chân */
+  margin-top: 0.5rem; /* Khoảng cách trên */
+  font-size: 0.875rem; /* Kích thước chữ nhỏ */
 }
 .form__btn  .btn--md{
-  border-radius: 6px;
-  padding: 10px 16px; 
-  background-color: var(--first-color);
-  color: #fefefe;
+  border-radius: 6px; /* Tạo góc bo mềm */
+  padding: 10px 16px; /* Khoảng cách bên trong */
+  background-color: var(--first-color); /* Màu nền */
+  color: #fefefe; /* Màu chữ */
 }
 .tab__info, 
 .tab__credentials { 
   display: flex; 
   flex-direction: column; 
   gap: 1rem; /* Khoảng cách giữa các mục thông tin cá nhân */
-  width: 50%; 
+  width: 50%; /* Chiều rộng 50% */
 } 
 
 .tab__info-item { 
   display: flex; 
-  flex-direction: column; 
+  flex-direction: column; /* Chia thành các mục dọc */
 }
 
 .tab__info label, 
 .tab__email label, 
 .tab__password label { 
-  font-weight: bold; 
-  margin-bottom: 0.5rem; 
+  font-weight: bold; /* Chữ đậm */
+  margin-bottom: 0.5rem; /* Khoảng cách dưới chữ */
 }
 
 .tab__info div, 
 .tab__email div, 
 .tab__password div { 
-  padding: 0.5rem; 
-  border: 1px solid #ccc; 
-  border-radius: 5px; 
-  font-size: 1rem; 
+  padding: 0.5rem; /* Khoảng cách bên trong */
+  border: 1px solid #ccc; /* Đường viền */
+  border-radius: 5px; /* Tạo góc bo mềm */
+  font-size: 1rem; /* Kích thước chữ */
   background-color: #f5f5f5; /* Màu nền cho ô thông tin cá nhân và email, mật khẩu */
 }
 
 /* Bảng đơn hàng */
 .filter__orders {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  display: flex; /* Sử dụng layout flexbox */
+  justify-content: flex-start; /* Căn về phía trước */
+  align-items: center; /* Căn giữa theo chiều dọc */
   margin: 1rem; /* Khoảng cách dưới thanh lọc */
 }
 
 .filter__label {
-  font-size: 1rem;
-  margin-right: 0.5rem;
-  font-family: var(--body-font);
+  font-size: 1rem; /* Kích thước chữ */
+  margin-right: 0.5rem; /* Khoảng cách bên phải */
+  font-family: var(--body-font); /* Font chữ */
 }
 
 .filter__dropdown {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: auto;
-  background-color: #fff;
+  padding: 0.5rem; /* Khoảng cách bên trong */
+  font-size: 1rem; /* Kích thước chữ */
+  border: 1px solid #ccc; /* Đường viền */
+  border-radius: 4px; /* Tạo góc bo mềm */
+  width: auto; /* Chiều rộng tự động */
+  background-color: #fff; /* Màu nền */
 }
 .order__image {
   width: 50px; /* Đặt chiều rộng cho hình ảnh */
   height: 50px; /* Đặt chiều cao cho hình ảnh */
   object-fit: cover; /* Cắt và căn chỉnh hình ảnh đẹp */
   border-radius: 4px; /* Bo tròn nhẹ */
-  display: block;
+  display: block; /* Hiển thị như một khối */
   margin: 0 auto; /* Căn giữa hình ảnh */
 }
 
@@ -647,8 +647,8 @@ table {
   vertical-align: middle; /* Căn giữa theo chiều dọc */
 }
 .placed__order-table thead tr th {
-  color: var(--title-color);
-  text-align: middle;
+  color: var(--title-color); /* Màu chữ của tiêu đề cột */
+  text-align: middle; /* Căn giữa nội dung tiêu đề cột */
 }
 
 .placed__order-table thead tr th,
@@ -683,14 +683,14 @@ table {
   .account__tabs {
     display: none; /* Ẩn tab mặc định */
     flex-direction: column; /* Chuyển thành dọc nếu cần */
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    z-index: 1000;
+    position: absolute; /* Vị trí tuyệt đối */
+    top: 4rem; /* Cách trên 4rem */
+    left: 0; /* Cách trái 0 */
+    right: 0; /* Cách phải 0 */
+    background-color: #ffffff; /* Màu nền trắng */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    border-radius: 8px; /* Tạo góc bo mềm */
+    z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
   }
 
   .account__tabs.active {
@@ -699,13 +699,13 @@ table {
 
   .menu-toggle {
     display: block; /* Hiển thị nút mở menu */
-    background-color: var(--first-color);
-    color: var(--body-color);
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: var(--small-font-size);
+    background-color: var(--first-color); /* Màu nền */
+    color: var(--body-color); /* Khoảng cách bên trong */
+    padding: 0.8rem 1.5rem; /* Khoảng cách bên trong */
+    border: none; /* Không có đường viền */
+    border-radius: 8px; /* Tạo góc bo mềm */
+    cursor: pointer; /* Con trỏ chuột khi hover */
+    font-size: var(--small-font-size); /* Kích thước chữ */
   }
 
   .tab__email div {
@@ -727,4 +727,4 @@ table {
     width: 100%; /* Đảm bảo chiếm đủ chiều rộng container */
   }
 }
-}
+
