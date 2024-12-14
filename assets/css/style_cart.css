@@ -712,48 +712,100 @@ table {
 /* Responsive cho các thiết bị di động */
 
 /* Điều chỉnh cho các thiết bị có màn hình nhỏ hơn hoặc bằng 768px (tablet, điện thoại lớn) */
+/* Responsive cho màn hình dưới 768px */
 @media (max-width: 768px) {
-  .w-r__price-wrapper {
-    gap: 15px; /* Thêm khoảng cách giữa giá gốc và các nút hành động */
+  .giohang {
+    margin: 0 10px;
   }
 
-  .container {
-    width: 90%;
+  .giohang_title {
+    font-size: 18px;
+    margin-top: 20px;
   }
 
   .w-r__container {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 10px;
+    padding: 10px;
+    gap: 15px;
   }
 
   .w-r__img-wrap {
     width: 80px;
     height: 80px;
-    margin-bottom: 10px;
+    margin: 0 auto;
   }
 
   .w-r__info {
-    flex: none;
-    margin-left: 0;
+    width: 100%;
+    text-align: center;
   }
 
-  .cart__group {
-    grid-template-columns: 1fr;
+  .w-r__name {
+    font-size: 16px;
   }
 
-  .cart__total-table tr td {
-    padding: 0.5rem;
+  .w-r__details {
+    justify-content: center;
+    gap: 5px;
   }
 
   .w-r__price-wrapper {
     flex-direction: column;
+    align-items: center;
     gap: 5px;
   }
 
-  .cart__actions {
-    justify-content: center;
+  .w-r__wrap-2 {
     flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .quantity-control {
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  .cart__actions {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .divider {
+    margin-block: 2rem;
+  }
+
+  .cart__group {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cart__total {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .cart__total-table tr td {
+    padding: 5px;
+  }
+
+  .cart__total-price {
+    font-size: 16px;
+  }
+
+  .cart__total .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .quantity-control {
+    width: 110px;
+    margin: auto;
+    padding: 5px;
+    font-size: 14px;
   }
 }
 
