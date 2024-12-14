@@ -1187,7 +1187,7 @@ justify-content: center;
   font-weight: bold;
   color: var(--first-color);
   margin-bottom: 20px;
-  transform: translateY(-45px);
+  transform: translateY(50px);
  
 }
 
