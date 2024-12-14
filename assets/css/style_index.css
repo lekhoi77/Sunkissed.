@@ -50,6 +50,14 @@
 
 /* Responsive typography */
 @media screen and (max-width: 1200px) {
+  .brandintro {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+  
+  }
   :root {
     --big-font-size: 2.25rem;
     --h1-font-size: 2rem;
@@ -218,9 +226,14 @@ img {
 }
 
 .nav {
+ 
   height: calc(var(--header-height) + 2.5rem);
-  justify-content: space-between;
+ 
   column-gap: 1rem;
+
+  justify-content: center;
+  
+  
 }
 
 .nav__logo-img {
@@ -615,15 +628,6 @@ img {
 
 @media (max-width: 768px) {
 
-  .brandintro {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
-  
-  }
-
   .content {
       height: auto;
       padding: 5px;
@@ -639,9 +643,6 @@ img {
       margin-top: 10px;
   }
 
-  .left-hand, .right-hand {
-      
-  }
 }
 
 
@@ -1496,6 +1497,45 @@ margin-bottom: 60px;
       flex: 1 1 100%;
   }
 }
+
+/*===============Nút lên đầu trang ===============*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 60px; /* Khoảng cách từ dưới */
+  right: 60px; /* Khoảng cách từ phải */
+  background-color: transparent; /* Màu nền của nút */
+  
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(169, 65, 65, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  opacity: 0; /* Ban đầu ẩn nút */
+  pointer-events: none; /* Không thể tương tác khi ẩn */
+  z-index: 1000; /* Đảm bảo nút luôn ở trên các phần tử khác */
+  width: 60px; /* Đặt chiều rộng cố định */
+  height: 60px; /* Đặt chiều cao cố định */
+}
+
+.scroll-to-top img {
+  width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ nút */
+  height: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ nút */
+  object-fit: contain; /* Giữ tỷ lệ hình ảnh */
+}
+
+/* Khi hover vào nút */
+.scroll-to-top:hover {
+  background-color: var(--title-colos); /* Màu nền khi hover */
+}
+
+/* Khi nút hiện ra */
+.scroll-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+/*=============== n/ Nút lên đầu trang ===============*/
+
 /*=============== FOOTER ===============*/
 .footer__container {
   grid-template-columns: 4.5fr repeat(2, 2fr) 3.5fr;
