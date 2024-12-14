@@ -452,6 +452,7 @@ table {
   max-width: 1200px; /* Giới hạn chiều rộng */
 }
 
+/* Các tab của trang tài khoản */
 .account__tabs {
   display: flex; /* Sử dụng layout flexbox */
   justify-content: space-around; /* Căn đều khoảng cách giữa các tab */
@@ -465,6 +466,7 @@ table {
   overflow: hidden; /* Ẩn phần tràn ra ngoài */
 }
 
+/* Các tab riêng lẻ của trang tài khoản */
 .account__tab {
   padding: 1rem 2rem; /* Khoảng cách bên trong */
   color: var(--title-color);  /* Màu chữ */
@@ -479,15 +481,18 @@ table {
   text-align: center; /* Căn giữa văn bản bên trong */
 }
 
+/* Tab được nhấn vào */
 .account__tab.active-tab {
   background-color: var(--first-color); /* Màu nền khi active */
   color: var(--body-color); /* Màu chữ khi active */
 }
 
+/* Những tab mà không phải tab cuối cùng */
 .account__tab:not(:last-child) {
-  margin-inline-start: 0.3rem; /* Khoảng cách giữa các tab */
+  margin-inline-start: 0.3rem; /* Khoảng cách giữa các tab trừ tab cuối */
 }
 
+/* Menu responsive ở mobile */
 .menu-toggle {
   display: none; /* Ẩn đi mặc định */
   background-color: var(--first-color); /* Màu nền */
@@ -499,7 +504,7 @@ table {
   margin: 0.5rem 0; /* Khoảng cách trên và dưới */
 }
 
-
+/* Các thông tin bên trong các tab */
 .tabs__content {
   width: 100%; /* Chiều rộng đầy đủ */
   max-width: 1300px; /* Giới hạn chiều rộng */
@@ -509,16 +514,19 @@ table {
   padding: 1rem; /* Khoảng cách bên trong */
 }
 
+/* Thông tin bên trong một tab */
 .tab__content {
   display: none; /* Ẩn nội dung tab mặc định, chỉ hiển thị khi active */
   width: 100%; /* Chiều rộng 100% */
   background-color: #ffffff; /* Màu nền */
 }
 
+/* Nội dung tab được chọn */
 .tab__content.active-tab {
   display: block; /* Hiển thị nội dung tab khi active */
 }
 
+/* Tiêu đề nội dung bên trong tab được chọn */
 .tab__header {
   background-color: var(--container-color); /* Màu nền của header */
   border-bottom: 1px solid var(--border-color-alt); /* Đường viền dưới */
@@ -526,6 +534,7 @@ table {
   font-size: var(--small-font-size); /* Kích thước chữ */
 }
 
+/* Body nội dung bên trong tab được chọn */
 .tab__body {
   padding: 1rem; /* Khoảng cách bên trong */
   border-top: 1px solid var(--border-color-alt); /* Đảm bảo viền trên khớp với header */
@@ -537,6 +546,7 @@ table {
   margin-bottom: 20px; /* Khoảng cách dưới */
 }
 
+/* Nội dung tab thông tin */
 .tab__details {
   display: flex; /* Sử dụng layout flexbox */
   flex-direction: row; /* Chia thành 2 cột */
