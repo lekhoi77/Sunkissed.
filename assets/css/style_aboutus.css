@@ -523,7 +523,7 @@ h3:hover {
   }
 
   .lon_cam img {
-    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng */
+    max-width: 200px; /* Đảm bảo hình ảnh không vượt quá chiều rộng */
     height: auto; /* Giữ tỷ lệ khung hình */
     
  
@@ -615,11 +615,19 @@ h3:hover {
   gap: 20px; /* Khoảng cách giữa các thành viên */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .profile-image {
     width: 80px; /* Kích thước hình ảnh nhỏ hơn */
     height: 80px; /* Kích thước hình ảnh nhỏ hơn */
   }
+  .ba_thanh_vien_1, .ba_thanh_vien_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
 }
 
 
