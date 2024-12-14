@@ -1944,7 +1944,7 @@ td:nth-child(2) {
 
 /* Áp dụng hiệu ứng chuyển màu cho sk-prd và wave-section */
 .section-colorfade-transition {
-  animation: colorFade 1.1s ease-in-out forwards;
+  animation: colorFade 1.5s ease-in-out forwards;
 }
 
 /* Responsive Layout for 768px */
