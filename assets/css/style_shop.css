@@ -191,7 +191,7 @@ table {
 
 /*=============== HEADER & NAV ===============*/
 .header__top {
-  background-color: var(--first-color-alt);
+  background-color: var(--first-color);
   border-bottom: 1px solid var(--first-color);
   padding-block: 0.875rem;
 }
@@ -204,21 +204,23 @@ table {
 
 .header__contact span:first-child {
   margin-right: 2rem;
+  color: #fefefe;
 }
 
 .header__contact span,
 .header__alert-news,
 .header__alert-top-action {
   font-size: var(--small-font-size);
+
 }
 
 .header__alert-news {
-  color: var(--text-color-light);
+  color: #fefefe;
   font-weight: var(--weight-600);
 }
 
 .header__top-action {
-  color: var(--text-color);
+  color: #fefefe;
 }
 
 .nav,
@@ -244,6 +246,8 @@ table {
   margin-left: 2.5rem;
 }
 
+
+
 .nav__list {
   column-gap: 2.5rem;
   margin-right: auto;
@@ -258,7 +262,10 @@ table {
   -ms-transform: all 0.3s var(--transition);
   -o-transform: all 0.3s var(--transition);
 }
-
+.nav__menu-top,
+.nav__toggle {
+  display: none;
+}
 .header__search {
   width: 340px;
   position: relative;
@@ -304,6 +311,7 @@ table {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
 
 .nav__menu-top,
 .nav__toggle {
