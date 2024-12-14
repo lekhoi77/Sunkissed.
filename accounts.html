@@ -17,7 +17,9 @@
     />
 
     <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/breakpoint.css" />
     <link rel="stylesheet" href="./assets/css/style_account.css" />
+    
 
     <title>Sunkissed</title>
   </head>
@@ -97,6 +99,7 @@
 
     <!--=============== MAIN ===============-->
     <main class="main">
+
       <!--=============== Breadcrumb ===============-->
       <section class="breadcrumb">
         <ul class="breadcrumb__list flex container">
@@ -106,6 +109,9 @@
         </ul>
       </section>
       <!--===============n/Breadcrumb ===============-->
+      
+
+      <!--=============== TÀI KHOẢN===============-->
 
       <!-- Dòng chữ Hồ sơ người dùng --> 
        <div class="user-profile-title-container"> 
@@ -115,10 +121,7 @@
       <!--=============== Trung tâm tài khoản ===============-->
       <section class="accounts section--lg">
         <div class="accounts__container container grid">
-
-          <!-- Button to toggle menu --> 
-           <button id="menu-toggle" class="menu-toggle">Menu</button>
-
+          <button class="menu-toggle">Menu</button>
           <!-- Khung các tab của trang tài khoản -->
           <div class="account__tabs">
             <p class="account__tab active-tab" data-target="#dashboard">
@@ -128,26 +131,23 @@
               <i class="fi fi-rs-shopping-bag"></i> Đơn hàng
             </p>
             <p class="account__tab" data-target="#update-profile">
-              <i class="fi fi-rs-user"></i> Cập nhật 
+              <i class="fi fi-rs-user"></i> Cập nhật
             </p>
-            <p class="account__tab" data-target="#address">
-              <i class="fi fi-rs-marker"></i> Địa chỉ của tôi
-            </p>
+      
             <p class="account__tab" data-target="#change-password">
               <i class="fi fi-rs-settings-sliders"></i> Đổi mật khẩu
             </p>
-            <p class="account__tab"><i class="fi fi-rs-exit"></i> Đăng xuất</p>
+            <a href="index.html">
+              <p class="account__tab"><i class="fi fi-rs-exit"></i> Đăng xuất</p>
+            </a>
           </div>
           <!-- n/Khung các tab của trang tài khoản -->
-
+      
           <!-- Nội dung tab Content -->
           <div class="tabs__content">
-            <div class="tab__content active-tab" id="dashboard">
-              <h3 class="tab__header">Hello Khải</h3>
+            <div class="tab__content active-tab" content id="dashboard">
+              <h3 class="tab__header">THÔNG TIN CỦA BẠN</h3>
               <div class="tab__body">
-                <h2 class="tab__description centered-text">
-                  Thông tin của bạn
-                </h2>
                 <div class="tab__details">
                   <div class="tab__info">
                     <div class="tab__info-item">
@@ -158,15 +158,13 @@
                       <label for="dob">Ngày tháng năm sinh:</label>
                       <div id="dob">04/11/2004</div>
                     </div>
+      
                     <div class="tab__info-item">
-                      <label for="job">Nghề nghiệp:</label>
-                      <div id="job">Sinh viên</div>
-                    </div>
-                    <div class="tab__info-item">
-                      <label for="address">Địa chỉ:</label>
+                      <label for="address">Địa chỉ giao hàng</label>
                       <div id="address">135 Trần Hưng Đạo, Phường Cầu Ông Lãnh, Quận 1, TPHCM</div>
                     </div>
                   </div>
+      
                   <div class="tab__credentials">
                     <div class="tab__email">
                       <label for="email">Email:</label>
@@ -183,117 +181,104 @@
               </div>
             </div>
           </div>
-            <!-- n/Nội dung tab Content -->
-
-            <!-- Nội dung tab Orders -->
-            <div class="tab__content" content id="orders">
-              <h3 class="tab__header">Đơn hàng của bạn</h3>
-              <div class="tab__body">
-                <table class="placed__order-table">
-                  <thead>
-                    <tr>
-                      <th>Đơn hàng</th>
-                      <th>Thời gian</th>
-                      <th>Trạng thái</th>
-                      <th>Tổng cộng</th>
-                      <th>Hành động</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>#1357</td>
-                      <td>March 19, 2022</td>
-                      <td>Processing</td>
-                      <td>$125.00</td>
-                      <td><a href="#" class="view__order">View</a></td>
-                    </tr>
-                    <tr>
-                      <td>#2468</td>
-                      <td>June 29, 2022</td>
-                      <td>Completed</td>
-                      <td>$364.00</td>
-                      <td><a href="#" class="view__order">View</a></td>
-                    </tr>
-                    <tr>
-                      <td>#2366</td>
-                      <td>August 02, 2022</td>
-                      <td>Completed</td>
-                      <td>$280.00</td>
-                      <td><a href="#" class="view__order">View</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+          <!-- n/Nội dung tab Content -->
+      
+          <!-- Nội dung tab Orders -->
+          <div class="tab__content" content id="orders">
+            <h3 class="tab__header">ĐƠN HÀNG CỦA BẠN</h3>
+            
+            <!-- Thanh lọc đơn hàng -->
+            <div class="filter__orders">
+              <label for="order-filter" class="filter__label">Xếp theo:</label>
+              <select id="order-filter" class="filter__dropdown">
+                <option value="5">5 Đơn gần nhất</option>
+                <option value="15">15 Ngày gần nhất</option>
+                <option value="30">30 Ngày gần nhất</option>
+                <option value="6months">6 Tháng gần nhất</option>
+                <option value="2022">Đơn hàng năm 2022</option>
+                <option value="all">Tất cả đơn hàng</option>
+              </select>
             </div>
-            <!--n/Nội dung tab Orders -->
-
-            <!-- Nội dung tab Update Profile -->
-            <div class="tab__content" content id="update-profile">
-              <h3 class="tab__header">Cập nhật thông tin</h3>
-              <div class="tab__body">
-                <form class="form grid">
-                  <input
-                    type="text"
-                    placeholder="Username"
-                    class="form__input"
-                  />
-                  <div class="form__btn">
-                    <button class="btn btn--md">Lưu</button>
-                  </div>
-                </form>
-              </div>
+          
+            <div class="tab__body">
+              <table class="placed__order-table">
+                <thead>
+                  <tr>
+                    <th>Đơn hàng</th>
+                    <th>Hình ảnh</th> <!-- Thêm cột hình ảnh sau cột đơn hàng -->
+                    <th>Thời gian</th>
+                    <th>Trạng thái</th>
+                    <th>Tổng cộng</th>
+                    <th>Hành động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#1357</td>
+                    <td><img src="./assets/img/pack6_mi_p3.png" alt="Product Image" class="order__image"></td> <!-- Thêm hình ảnh -->
+                    <td>14/5/2023</td>
+                    <td>Đang chờ xác nhận</td>
+                    <td>140.000 vnđ</td>
+                    <td><a href="#" class="view__order">Xem</a></td>
+                  </tr>
+                  <tr>
+                    <td>#2468</td>
+                    <td><img src="./assets/img/pack6_cf_p2.png" alt="Product Image" class="order__image"></td> <!-- Thêm hình ảnh -->
+                    <td>23/11/2024</td>
+                    <td>Đã giao</td>
+                    <td>70.000 vnđ</td>
+                    <td><a href="#" class="view__order">Xem</a></td>
+                  </tr>
+                  <tr>
+                    <td>#2366</td>
+                    <td><img src="./assets/img/pack6_td_p1.png" alt="Product Image" class="order__image"></td> <!-- Thêm hình ảnh -->
+                    <td>14/12/2024</td>
+                    <td>Huỷ</td>
+                    <td>23.000 vnđ</td>
+                    <td><a href="#" class="view__order">Xem</a></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <!-- n/Nội dung tab Update Profile -->
-
-            <!-- Nội dung tab địa chỉ -->
-            <div class="tab__content" content id="address">
-              <h3 class="tab__header">Địa chỉ giao hàng</h3>
-              <div class="tab__body">
-                <address class="address">
-                  279 Nguyễn Tri Phương, <br />
-                  Phường 5, <br />
-                  Quận 10, <br />
-                  
-                </address>
-                <p class="city">TP HCM</p>
-                <a href="#" class="edit">Edit</a>
-              </div>
-            </div>
-            <!-- n/Nội dung tab địa chỉ -->
-
-            <!-- Nội dung tab quên mật khẩu -->
-            <div class="tab__content" content id="change-password">
-              <h3 class="tab__header">Change Password</h3>
-              <div class="tab__body">
-                <form class="form grid">
-                  <input
-                    type="password"
-                    placeholder="Current Password"
-                    class="form__input"
-                  />
-                  <input
-                    type="password"
-                    placeholder="New Password"
-                    class="form__input"
-                  />
-                  <input
-                    type="password"
-                    placeholder="Confirm Password"
-                    class="form__input"
-                  />
-                  <div class="form__btn">
-                    <button class="btn btn--md">Save</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <!-- n/Nội dung tab quên mật khẩu -->
-
           </div>
+          
+          
+          <!--n/Nội dung tab Orders -->
+      
+          <!-- Nội dung tab Update Profile -->
+          <div class="tab__content" content id="update-profile">
+            <h3 class="tab__header">CẬP NHẬT THÔNG TIN</h3>
+            <div class="tab__body">
+              <form class="form grid">
+                <input type="text" placeholder="Tên người dùng" class="form__input" />
+                <div class="form__btn">
+                  <button class="btn btn--md">Lưu</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- n/Nội dung tab Update Profile -->
+      
+          <!-- Nội dung tab quên mật khẩu -->
+          <div class="tab__content" content id="change-password">
+            <h3 class="tab__header">ĐỔI MẬT KHẨU</h3>
+            <div class="tab__body">
+              <form class="form grid">
+                <input type="password" placeholder="Mật khẩu hiện tại" class="form__input" />
+                <input type="password" placeholder="Mật khẩu mới" class="form__input" />
+                <input type="password" placeholder="Xác nhận mật khẩu" class="form__input" />
+                <div class="form__btn">
+                  <button class="btn btn--md">Lưu</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- n/Nội dung tab quên mật khẩu -->
+        </div>
         </div>
       </section>
 
-
+<!--===============n/ Trung tâm tài khoản ===============-->
 
       <!--=============== FOOTER ===============-->
       <footer class="footer container">
