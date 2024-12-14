@@ -523,16 +523,16 @@
   <!-- ============== Đánh giá khách hàng ==================== -->
   <script>
     const reviews = [
-        { name: "Ngọc Anh", time: "13 ngày trước", stars: 5, content: "Tôi rất thích Coca-Cola nhưng không muốn uống vì lượng đường cao. Sunkissed là lựa chọn thay thế hoàn hảo, giòn, ngon và lành mạnh!" },
-        { name: "Hà My", time: "2 tháng trước", stars: 5, content: "Hương vị này là số một! Tôi từng nghiện Coca-Cola, nhưng Sunkissed đã khiến tôi hoàn toàn thay đổi!" },
-        { name: "Hoàng Dương", time: "1 tuần trước", stars: 4, content: "Hương vị khá ngon, nhưng giá hơi cao so với sản phẩm khác." },
-        { name: "Minh Thư", time: "3 tuần trước", stars: 4, content: "Tôi thích sản phẩm này, nhưng không phải ai cũng hợp khẩu vị." },
-        { name: "Quang Huy", time: "1 tháng trước", stars: 3, content: "Không tệ, nhưng tôi thích sản phẩm khác hơn." },
-        { name: "Lan Anh", time: "2 tháng trước", stars: 3, content: "Hương vị không tệ nhưng không đủ nổi bật để tôi mua lại." },
-        { name: "Trung Hiếu", time: "5 ngày trước", stars: 2, content: "Không hợp khẩu vị của tôi, nhưng có thể người khác sẽ thích." },
-        { name: "Thu Ngân", time: "1 tháng trước", stars: 2, content: "Hơi thất vọng, không như kỳ vọng ban đầu của tôi." },
-        { name: "Phương Linh", time: "2 tuần trước", stars: 1, content: "Tôi không thích hương vị này chút nào." },
-        { name: "Bảo Khang", time: "3 ngày trước", stars: 1, content: "Không ngon và không đáng tiền." },
+      { name: "Ngọc Anh", time: "13 ngày trước", stars: 5, content: "Tôi rất thích Coca-Cola nhưng không muốn uống vì lượng đường cao. Sunkissed là lựa chọn thay thế hoàn hảo, giòn, ngon và lành mạnh!" },
+      { name: "Hà My", time: "2 tháng trước", stars: 5, content: "Hương vị này là số một! Tôi từng nghiện Coca-Cola, nhưng Sunkissed đã khiến tôi hoàn toàn thay đổi!" },
+      { name: "Hoàng Dương", time: "1 tuần trước", stars: 4, content: "Hương vị khá ngon, nhưng giá hơi cao so với sản phẩm khác." },
+      { name: "Minh Thư", time: "3 tuần trước", stars: 4, content: "Tôi thích sản phẩm này, nhưng không phải ai cũng hợp khẩu vị." },
+      { name: "Quang Huy", time: "1 tháng trước", stars: 3, content: "Không tệ, nhưng tôi thích sản phẩm khác hơn." },
+      { name: "Lan Anh", time: "2 tháng trước", stars: 3, content: "Hương vị không tệ nhưng không đủ nổi bật để tôi mua lại." },
+      { name: "Trung Hiếu", time: "5 ngày trước", stars: 2, content: "Không hợp khẩu vị của tôi, nhưng có thể người khác sẽ thích." },
+      { name: "Thu Ngân", time: "1 tháng trước", stars: 2, content: "Hơi thất vọng, không như kỳ vọng ban đầu của tôi." },
+      { name: "Phương Linh", time: "2 tuần trước", stars: 1, content: "Tôi không thích hương vị này chút nào." },
+      { name: "Bảo Khang", time: "3 ngày trước", stars: 1, content: "Không ngon và không đáng tiền." },
     ];
 
     const reviewsPerPage = 3;
@@ -540,195 +540,193 @@
     let filteredReviews = reviews;
 
     function renderReviews() {
-        const container = document.getElementById("reviews-container");
-        container.innerHTML = "";
+      const container = document.getElementById("reviews-container");
+      container.innerHTML = "";
 
-        const start = currentPage * reviewsPerPage;
-        const end = start + reviewsPerPage;
-        const currentReviews = filteredReviews.slice(start, end);
+      const start = currentPage * reviewsPerPage;
+      const end = start + reviewsPerPage;
+      const currentReviews = filteredReviews.slice(start, end);
 
-        currentReviews.forEach(review => {
-            const reviewElement = document.createElement("div");
-            reviewElement.className = "review";
-            reviewElement.innerHTML = `
-                <div class="review-header">
-                    <h3>${review.name}</h3>
-                    <span>${review.time}</span>
-                </div>
-                <div class="stars">${'★'.repeat(review.stars)}${'☆'.repeat(5 - review.stars)}</div>
-                <div class="review-content">
-                    <p>${review.content}</p>
-                </div>
-            `;
-            container.appendChild(reviewElement);
-        });
+      currentReviews.forEach(review => {
+        const reviewElement = document.createElement("div");
+        reviewElement.className = "review";
+        reviewElement.innerHTML = `
+                  <div class="review-header">
+                      <h3>${review.name}</h3>
+                      <span>${review.time}</span>
+                  </div>
+                  <div class="stars">${'★'.repeat(review.stars)}${'☆'.repeat(5 - review.stars)}</div>
+                  <div class="review-content">
+                      <p>${review.content}</p>
+                  </div>
+              `;
+        container.appendChild(reviewElement);
+      });
 
-        const totalPages = Math.ceil(filteredReviews.length / reviewsPerPage);
-        document.getElementById("page-info").textContent = `Trang ${currentPage + 1} / ${totalPages}`;
+      const totalPages = Math.ceil(filteredReviews.length / reviewsPerPage);
+      document.getElementById("page-info").textContent = `Trang ${currentPage + 1} / ${totalPages}`;
 
-        document.getElementById("prev-page").disabled = currentPage === 0;
-        document.getElementById("next-page").disabled = end >= filteredReviews.length;
+      document.getElementById("prev-page").disabled = currentPage === 0;
+      document.getElementById("next-page").disabled = end >= filteredReviews.length;
     }
 
     document.getElementById("prev-page").addEventListener("click", () => {
-        currentPage--;
-        renderReviews();
+      currentPage--;
+      renderReviews();
     });
 
     document.getElementById("next-page").addEventListener("click", () => {
-        currentPage++;
-        renderReviews();
+      currentPage++;
+      renderReviews();
     });
 
-</script>
-<script>
-      //Lọc các đánh giá có số sao tương tự khi chọn vào thanh đánh giá
-  document.querySelectorAll(".review-bar").forEach(bar => {
-    bar.addEventListener("click", () => {
+  </script>
+
+  <script>
+    //Lọc các đánh giá có số sao tương tự khi chọn vào thanh đánh giá
+    document.querySelectorAll(".review-bar").forEach(bar => {
+      bar.addEventListener("click", () => {
         const stars = parseInt(bar.getAttribute("data-stars"));
         filteredReviews = reviews.filter(review => review.stars === stars);
         currentPage = 0;
         renderReviews();
+      });
     });
-});
 
-renderReviews();
-</script>
-
-
-
-<script>
-  function switchTab(event, tabId) {
-    // Remove active class from all tabs
-    const tabs = document.querySelectorAll('.tab-button');
-    tabs.forEach(tab => tab.classList.remove('active'));
+    renderReviews();
+  </script>
   
-    // Add active class to clicked tab
-    event.currentTarget.classList.add('active');
+  <script>
+    function switchTab(event, tabId) {
+      // Remove active class from all tabs
+      const tabs = document.querySelectorAll('.tab-button');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Add active class to clicked tab
+      event.currentTarget.classList.add('active');
+
+      // Hide all tab contents
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      // Show selected tab content
+      document.getElementById(tabId).classList.add('active');
+    }
+
+  </script>
   
-    // Hide all tab contents
-    const contents = document.querySelectorAll('.tab-content');
-    contents.forEach(content => content.classList.remove('active'));
-  
-    // Show selected tab content
-    document.getElementById(tabId).classList.add('active');
-  }
-  
-</script>
+  <script>
+    // Thêm sự kiện click cho các sản phẩm
+    document.querySelectorAll('.variety, .pack').forEach(item => {
+      item.addEventListener('click', () => {
+        // Xóa trạng thái 'selected' khỏi tất cả các sản phẩm
+        document.querySelectorAll('.variety, .pack').forEach(i => i.classList.remove('selected'));
 
-
-
-<script>
-  // Thêm sự kiện click cho các sản phẩm
-document.querySelectorAll('.variety, .pack').forEach(item => {
-  item.addEventListener('click', () => {
-    // Xóa trạng thái 'selected' khỏi tất cả các sản phẩm
-    document.querySelectorAll('.variety, .pack').forEach(i => i.classList.remove('selected'));
-    
-    // Thêm trạng thái 'selected' cho sản phẩm được chọn
-    item.classList.add('selected');
-  });
-});
-</script>
-
-<script>
-  // Tự động cuộn xuống phần Review khi nhấn vào ô Đánh giá trung bình
-  document.querySelector('.product-review-average').addEventListener('click', () => {
-    document.getElementById('review-section').scrollIntoView({
-      behavior: 'smooth'
+        // Thêm trạng thái 'selected' cho sản phẩm được chọn
+        item.classList.add('selected');
+      });
     });
-  });
-</script>
+  </script>
 
-<script>
-  //Tăng giảm số lượng sản phẩm khi nhấn vào dấu + hoặc -
-  document.addEventListener('DOMContentLoaded', () => {
-    const decreaseBtn = document.querySelector('.decrease-btn');
-    const increaseBtn = document.querySelector('.increase-btn');
-    const quantityInput = document.querySelector('.quantity-input');
+  <script>
+    // Tự động cuộn xuống phần Review khi nhấn vào ô Đánh giá trung bình
+    document.querySelector('.product-review-average').addEventListener('click', () => {
+      document.getElementById('review-section').scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+  <script>
+    //Tăng giảm số lượng sản phẩm khi nhấn vào dấu + hoặc -
+    document.addEventListener('DOMContentLoaded', () => {
+      const decreaseBtn = document.querySelector('.decrease-btn');
+      const increaseBtn = document.querySelector('.increase-btn');
+      const quantityInput = document.querySelector('.quantity-input');
+
+      // Sự kiện giảm số lượng
+      decreaseBtn.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        if (currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+        }
+      });
+
+      // Sự kiện tăng số lượng
+      increaseBtn.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value, 10);
+        quantityInput.value = currentValue + 1;
+      });
+    });  
+  </script>
   
-    // Sự kiện giảm số lượng
-    decreaseBtn.addEventListener('click', () => {
-      let currentValue = parseInt(quantityInput.value, 10);
-      if (currentValue > 1) {
-        quantityInput.value = currentValue - 1;
+  <!-- TÍNH NĂNG ZOOM -->
+  <script type="text/javascript" src="assets\js\jquery.min.js"></script>
+  <script type="text/javascript" src="assets\js\jquery.ez-plus.js"></script>
+  <script>
+    $('#zoom_05').ezPlus({
+      zoomType: 'inner',
+      cursor: 'crosshair',
+    });
+  </script>
+  <div id="notification" class="notification hidden"></div>
+  
+  <!-- ========== Thông báo sản phẩm đã được thêm/xóa khỏi giỏ hàng ========== -->
+  <script>
+    // Lấy các phần tử
+    const favoriteBtn = document.querySelector(".favorite-btn");
+    const addToCartBtn = document.querySelector(".add-to-cart-btn");
+    const notification = document.getElementById("notification");
+
+    // Xử lý sự kiện cho nút Favorite
+    favoriteBtn.addEventListener("click", () => {
+      const favoriteContainer = favoriteBtn.closest(".favorite");
+      const isSelected = favoriteContainer.classList.contains("selected");
+
+      if (!isSelected) {
+        favoriteContainer.classList.add("selected");
+        showNotification("Sản phẩm đã được thêm vào Wishlist!", "favorite");
+      } else {
+        favoriteContainer.classList.remove("selected");
+        showNotification("Sản phẩm đã được gỡ khỏi Wishlist!", "favorite");
       }
     });
-  
-    // Sự kiện tăng số lượng
-    increaseBtn.addEventListener('click', () => {
-      let currentValue = parseInt(quantityInput.value, 10);
-      quantityInput.value = currentValue + 1;
+
+    // Xử lý sự kiện cho nút Add to Cart
+    addToCartBtn.addEventListener("click", () => {
+      // Luôn thêm sản phẩm vào giỏ hàng
+      const cartContainer = addToCartBtn.closest(".add-to-cart");
+      if (!cartContainer.classList.contains("selected")) {
+        cartContainer.classList.add("selected");
+      }
+
+      // Hiển thị thông báo thêm vào giỏ hàng
+      showNotification("Sản phẩm đã được thêm vào giỏ hàng!", "add-to-cart");
     });
-  });  
-</script>
-<!-- TÍNH NĂNG ZOOM -->
-<script type="text/javascript" src="assets\js\jquery.min.js"></script>
-<script type="text/javascript" src="assets\js\jquery.ez-plus.js"></script>
-<script>
-  $('#zoom_05').ezPlus({
-    zoomType: 'inner',
-    cursor: 'crosshair',
-});
-</script>
-<div id="notification" class="notification hidden"></div>
 
-  <!-- ========== Thông báo sản phẩm đã được thêm/xóa khỏi giỏ hàng ========== -->
-   <script>
-    // Lấy các phần tử
-const favoriteBtn = document.querySelector(".favorite-btn");
-const addToCartBtn = document.querySelector(".add-to-cart-btn");
-const notification = document.getElementById("notification");
+    // Hàm hiển thị thông báo
+    function showNotification(message, type) {
+      notification.textContent = message;
+      notification.className = `notification ${type} show`; // Thêm lớp dựa trên loại thông báo
 
-// Xử lý sự kiện cho nút Favorite
-favoriteBtn.addEventListener("click", () => {
-  const favoriteContainer = favoriteBtn.closest(".favorite");
-  const isSelected = favoriteContainer.classList.contains("selected");
+      // Ẩn thông báo sau 3 giây
+      setTimeout(() => {
+        notification.classList.remove("show");
+        notification.classList.add("hidden");
+      }, 3000);
+    }
+  </script>
+  
+  <!-- ========== Cuộn trang lại từ đầu ========== -->
+  <script>// Lấy phần tử nút Tiếp tục cuộc dạo chơi
+    const continueBtn = document.querySelector(".continue-btn");
 
-  if (!isSelected) {
-    favoriteContainer.classList.add("selected");
-    showNotification("Sản phẩm đã được thêm vào Wishlist!", "favorite");
-  } else {
-    favoriteContainer.classList.remove("selected");
-    showNotification("Sản phẩm đã được gỡ khỏi Wishlist!", "favorite");
-  }
-});
-
-// Xử lý sự kiện cho nút Add to Cart
-addToCartBtn.addEventListener("click", () => {
-  // Luôn thêm sản phẩm vào giỏ hàng
-  const cartContainer = addToCartBtn.closest(".add-to-cart");
-  if (!cartContainer.classList.contains("selected")) {
-    cartContainer.classList.add("selected");
-  }
-
-  // Hiển thị thông báo thêm vào giỏ hàng
-  showNotification("Sản phẩm đã được thêm vào giỏ hàng!", "add-to-cart");
-});
-
-// Hàm hiển thị thông báo
-function showNotification(message, type) {
-  notification.textContent = message;
-  notification.className = `notification ${type} show`; // Thêm lớp dựa trên loại thông báo
-
-  // Ẩn thông báo sau 3 giây
-  setTimeout(() => {
-    notification.classList.remove("show");
-    notification.classList.add("hidden");
-  }, 3000);
-}
-   </script>
-
-   <!-- ========== Cuộn trang lại từ đầu ========== -->
-    <script>// Lấy phần tử nút Tiếp tục cuộc dạo chơi
-      const continueBtn = document.querySelector(".continue-btn");
-      
-      // Xử lý sự kiện click
-      continueBtn.addEventListener("click", () => {
-        // Cuộn lên phần sk-prd
-        const skPrdSection = document.querySelector(".sk-prd");
-        skPrdSection.scrollIntoView({ behavior: "smooth" });
-      });
-      </script>
+    // Xử lý sự kiện click
+    continueBtn.addEventListener("click", () => {
+      // Cuộn lên phần sk-prd
+      const skPrdSection = document.querySelector(".sk-prd");
+      skPrdSection.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>

@@ -192,6 +192,7 @@ table {
 }
 
 /*=============== HEADER & NAV ===============*/
+
 .header__top {
   background-color: var(--first-color);
   border-bottom: 1px solid var(--first-color);
@@ -1931,4 +1932,373 @@ td:nth-child(2) {
 
 .rate__product {
   margin-bottom: 2rem;
+}
+/* Responsive Layout for 738px */
+@media (max-width: 738px) {
+
+   /*LƯỚI SẢN PHẨM */
+  .product-page-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .left-part {
+    align-items: center;
+  }
+
+  .product-and-feature {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-feature {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+.product-img{
+  padding: 0px 5px;
+  height: auto;
+}
+  .feature {
+    width: 120px;
+    height: 120px;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .product-landscape {
+  display: none;
+  }
+
+  .product-square {
+  display: none;
+  }
+
+  .right-part {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .product-top-description {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .product-variety-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Luôn xếp theo row và tự điều chỉnh */
+    gap: 20px;
+  }
+
+  .variety {
+    width: 100%; /* Chiều rộng tự co dãn theo cột */
+    height: auto; /* Chiều cao tự động */
+  }
+  .variety img {
+    height: auto; /* Giảm chiều cao hình ảnh */
+  }
+  .variety span {
+    font-size: 14px; /* Giảm kích thước chữ */
+  }
+
+
+  /* CHỈNH SỬA CHO SẢN PHẨM MUA KÈM */
+  .product-pack-grid {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr; /* Xếp thành 1 cột dọc */
+    gap: 50px; /* Khoảng cách giữa các phần tử */
+    width: auto;
+    justify-items: center; /* Căn giữa phần tử con */
+    align-items: center;
+  }
+
+  .pack {
+    width: 100%;
+    max-width: 200px; /* Giới hạn chiều rộng */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    background-color: white; /* Đảm bảo nền trắng */
+    border: 1px solid #ddd; /* Đường viền nhẹ */
+    border-radius: 8px; /* Bo góc */
+  }
+
+  .pack img {
+    max-width: 100%; /* Ảnh co dãn hợp lý */
+    height: auto;
+  }
+
+  .pack span {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .product-details {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-quantity {
+    justify-content: center;
+  }
+
+  .add-to-cart {
+    margin: 0;
+  }
+
+  .favorite {
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .product-name {
+    font-size: 30px;
+  }
+
+  .product-cost {
+    font-size: 30px;
+  }
+  .product-details {
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+    gap: 10px; /* Tạo khoảng cách giữa các phần tử */
+    align-items: center; /* Căn giữa các phần tử con */
+  }
+
+  .product-quantity {
+    display: flex;
+    gap: 5px; /* Khoảng cách giữa nút và input */
+    justify-content: center;
+  }
+
+  .product-quantity button {
+    width: 30px; /* Giảm kích thước nút */
+    height: 30px;
+    padding: 0; /* Loại bỏ padding dư thừa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-quantity img {
+    width: 12px; /* Giảm kích thước icon trong nút */
+    height: auto;
+  }
+
+  .quantity-input {
+    width: 40px; /* Thu nhỏ ô input */
+    text-align: center;
+    font-size: 14px; /* Giảm kích thước chữ */
+  }
+
+  .add-to-cart .add-to-cart-btn {
+    font-size: 14px; /* Giảm kích thước chữ của nút */
+    padding: 8px 12px; /* Giảm padding */
+    width: auto;
+    max-width: 200px; /* Giới hạn chiều rộng */
+  }
+
+  .favorite button {
+    width: 30px; /* Thu nhỏ nút yêu thích */
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .favorite img {
+    width: 20px; /* Giảm kích thước icon yêu thích */
+    height: auto;
+  }
+ /* N/LƯỚI SẢN PHẨM */
+
+
+ .prd-info{
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-top: 30px;
+ }
+ .sk-prd-details {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.prd-details-container {
+  flex-direction: column;
+  padding: 0 20px;
+  align-items: flex-start;
+}
+
+.prd-details-info {
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.prd-info {
+  align-items: flex-start;
+}
+
+.prd-name {
+  font-size: 24px;
+}
+
+.prd-info-content {
+  font-size: 16px;
+  line-height: 24px;
+ 
+}
+
+.short-feature-container {
+
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 20px;
+ justify-content: center;
+
+}
+
+.short-feature-img {
+  width: 50px;
+}
+
+.short-feature-content {
+  font-size: 16px;
+}
+
+.nutrition-facts {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+.table-small-data {
+  font-size: 12px;
+}
+
+table {
+  font-size: 12px;
+}
+
+th,
+td {
+  padding: 3px;
+}
+
+.sub-nutrition {
+  padding-left: 15px;
+}
+
+/* Đánh giá khách hàng */
+.sk-review {
+  padding: 20px;
+}
+
+.sk-review-container {
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-name {
+  font-size: 24px;
+}
+
+#write-review-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.review-popup {
+  padding: 10px;
+}
+
+.review-form-container {
+  width: 90%;
+  max-width: 350px;
+  padding: 15px;
+}
+
+.review-form-container h2 {
+  font-size: 20px;
+}
+
+.review-form-container label {
+  font-size: 14px;
+}
+
+.review-form-container input,
+.review-form-container select,
+.review-form-container textarea {
+  font-size: 14px;
+  padding: 8px;
+}
+
+.review-form-container button[type="submit"] {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.review-summary {
+  width: 100%;
+  padding: 15px;
+  height: auto;
+}
+
+.average-rating {
+  font-size: 28px;
+}
+
+.star-summary-container {
+  margin-bottom: 15px;
+}
+
+.star {
+  font-size: 20px;
+}
+
+.review-bar {
+
+}
+
+.review-bar span {
+  font-size: 16px;
+}
+
+.bar {
+  height: 8px;
+}
+
+.reviews-container {
+  padding: 10px;
+}
+
+.pagination {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pagination button {
+  font-size: 14px;
+  padding: 8px;
+}
+
+.continue-exploring {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.continue-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
 }
