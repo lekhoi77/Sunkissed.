@@ -17,16 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
       loginForm.classList.remove('show');
   });
 });
-// Click vào bạn có muốn tạo tk mới
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleLink = document.querySelector('.gl-link');
-  const collapsibleDiv = document.querySelector('#create-account');
-
-  toggleLink.addEventListener('click', function (event) {
-      event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ `<a>`
-      collapsibleDiv.classList.toggle('show');
-  });
-});
 
 // Adding some CSS for smooth transitions
 const style = document.createElement('style');
