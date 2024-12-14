@@ -479,7 +479,7 @@ table {
 }
 
 /*=============== CHECKOUT ===============*/
-
+    /* CHECKOUT CSS */
 /* General Styles */
 .u-s-p-b-60 {
   padding-bottom: 40px;
@@ -514,7 +514,6 @@ table {
    /* Thêm viền để phân biệt các hộp */
    border-radius: 2px;
 }
-
 
 .o-summary__box {
   padding: 20px; /* Tạo khoảng cách bên trong các hộp */
@@ -1162,6 +1161,10 @@ table {
     margin-bottom: 46px;
   }
 
+/*END  CHECKOUT CSS */
+
+
+
 /*=============== SẢN PHẨM MUA KÈM ===============*/
 
 
@@ -1324,8 +1327,55 @@ table {
     margin-left: 5px;
 }
 
-/*===============N/ SẢN PHẨM MUA KÈM ===============*/
+/*===============2 FORM THÔNG TIN VÀ ÁP MÃ GIẢM GIÁ ===============*/
+
+
 @media (max-width: 738px) {
+  .u-s-p-b-60 {
+    padding-bottom: 20px; /* Giảm padding để phù hợp màn hình nhỏ hơn */
+  }
+
+  .section__content {
+    padding: 5px 0; /* Thu gọn khoảng cách dọc */
+  }
+
+  .container {
+    padding: 0 10px; /* Giảm padding ngang */
+  }
+
+  .row1 {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo cột trên màn hình nhỏ */
+  }
+
+  .col-lg-12 {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    padding: 0; /* Loại bỏ khoảng cách thừa */
+  }
+
+  .msg__text {
+    font-size: 14px; /* Thu nhỏ kích thước chữ */
+    line-height: 1.5; /* Tăng khoảng cách dòng */
+  }
+
+  .input-text {
+    width: 100%; /* Các trường input chiếm toàn bộ chiều rộng */
+    font-size: 14px; /* Điều chỉnh kích thước chữ */
+    padding: 8px; /* Tăng/giảm padding cho cảm giác thoải mái */
+  }
+
+  .btn {
+    width: 100%; /* Nút bấm chiếm toàn bộ chiều rộng */
+    padding: 10px; /* Tăng độ lớn của nút bấm */
+    font-size: 16px; /* Dễ đọc hơn trên màn hình nhỏ */
+  }
+
+  .check-box__label {
+    font-size: 13px; /* Thu nhỏ chữ nhãn check-box */
+  }
+/* =============== KẾT THÚC Responsive LAYOUT FORM THÔNG TIN VÀ ÁP MÃ GIẢM GIÁ =============== */
+
+/* RESPONSIVE KHU VỰC CHECK OUT */
   /* Chuyển các item trong row2 thành cột dọc */
   .row2 {
     flex-direction: column; /* Chuyển từ row sang column */
@@ -1386,4 +1436,74 @@ table {
     font-size: 18px; /* Giảm kích thước font để phù hợp với màn hình nhỏ */
     padding: 10px 15px; /* Giảm padding cho nút để dễ bấm hơn */
   }
+/* KẾT THÚC RESPONSIVE KHU VỰC CHECK OUT */
+
+/* =============== Responsive SẢN PHẨM NÊN MUA KÈM =============== */
+  /* Căn chỉnh phần intro */
+  .row3 {
+      flex-direction: column;
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .section__heading {
+      font-size: 18px;
+  }
+
+  .section__span {
+      font-size: 14px;
+  }
+
+  /* Điều chỉnh bố cục sản phẩm */
+  .product-carousel {
+      flex-direction: column; /* Các sản phẩm xếp thành cột */
+      gap: 20px;
+  }
+
+  .product-item {
+      width: 100%; /* Chiếm toàn bộ chiều rộng */
+      padding: 10px;
+      margin-bottom: 20px;
+  }
+
+  .image-wrap .aspect {
+      height: auto; /* Đảm bảo ảnh tự điều chỉnh */
+  }
+
+  .product-img {
+      width: 100%; /* Ảnh chiếm toàn bộ chiều rộng container */
+  }
+
+  /* Văn bản sản phẩm */
+  .product-info {
+      align-items: center; /* Canh giữa văn bản */
+      text-align: center;
+  }
+
+  .product-category,
+  .product-name a,
+  .price,
+  .review {
+      font-size: 14px; /* Thu nhỏ kích thước chữ */
+  }
+
+  .rating {
+      justify-content: center;
+  }
+
+  /* Nút hành động */
+  .action-wrap {
+      top: auto;
+      bottom: 10px;
+      transform: translateX(-50%);
+      display: flex;
+      flex-wrap: wrap; /* Đảm bảo nút không bị chồng chéo */
+      gap: 5px;
+  }
+
+  .action-wrap li a {
+      padding: 8px; /* Giảm kích thước nút */
+  }
+
+/* =============== End Responsive Layout SP NÊN MUA KÈM =============== */
 }
