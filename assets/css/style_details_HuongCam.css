@@ -378,7 +378,7 @@ table {
 
 /*=============== DETAILS ===============*/
 .sk-prd {
-  background-color: hsl(30, 100%, 86%) ;
+  background-color: white ;
   padding: 20px 50px 60px 50px;
 }
 /* CHIA TRANG LÀM 2 */
@@ -2277,10 +2277,6 @@ td {
 
 .star {
  font-size: 20px;
-}
-
-.review-bar {
-
 }
 
 .review-bar span {
