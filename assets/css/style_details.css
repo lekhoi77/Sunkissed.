@@ -1933,8 +1933,8 @@ td:nth-child(2) {
 .rate__product {
   margin-bottom: 2rem;
 }
-/* Responsive Layout for 738px */
-@media (max-width: 738px) {
+/* Responsive Layout for 768px */
+@media (max-width: 768px) {
 
    /*LƯỚI SẢN PHẨM */
   .product-page-container {

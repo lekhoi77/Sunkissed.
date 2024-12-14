@@ -783,8 +783,8 @@ img {
   color: var(--first-color);
 
 }
-/* Responsive cho màn hình dưới 780px */
-@media screen and (max-width: 780px) {
+/* Responsive cho màn hình dưới 768px */
+@media screen and (max-width: 768px) {
   .spnb {
     margin-bottom: 100px; /* Điều chỉnh margin */
   }
