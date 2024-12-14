@@ -159,3 +159,24 @@ document.querySelectorAll('.blog-card').forEach(card => {
         card.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
     });
 });
+
+
+// Lấy nút lên đầu trang
+const scrollToTopButton = document.getElementById('scroll-to-top');
+
+// Hiển thị hoặc ẩn nút khi cuộn
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    scrollToTopButton.classList.add('show'); // Hiển thị nút
+  } else {
+    scrollToTopButton.classList.remove('show'); // Ẩn nút
+  }
+});
+
+// Cuộn lên đầu trang khi nhấn nút
+scrollToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Cuộn mượt mà
+  });
+});
