@@ -13,10 +13,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="./assets/css/style_cart.css" />
+  <link rel="stylesheet" href="assets/css/style_wishlist.css" />
   <link rel="stylesheet" href="assets/css/breakpoint.css" />
-
-  <title>Ecommerce Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+  </link>
 </head>
 
 <body>
@@ -109,88 +109,105 @@
     </section>
 
     <!--=============== Khung chứa sản phẩm yêu thích ===============-->
-    <section class="wishlist section--lg container">
-      <div class="table__container">
-        <table class="table">
-          <!-- Tiêu đề các cột -->
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th>Name</th>
-              <th>Price</th>
-              <th>Stock Status</th>
-              <th>Action</th>
-              <th>Rename</th>
-            </tr>
-          </thead>
-           <!-- n/ Tiêu đề các cột -->
-        
-          <!-- Dữ liệu bên trong bảng -->
-          <tbody>
-            <!-- Sản phẩm yêu thích thứ 1 -->
-            <tr>
-              <td>
-                <img src="./assets//img/product-1-2.jpg" alt="" class="table__img" />
-              </td>
-              <td>
-                <h3 class="table__title">
-                  J.Crew Mercantile Women's Short-Sleeve
-                </h3>
-                <p class="table__description">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </td>
-              <td>
-                <span class="table__price">$110</span>
-              </td>
-              <td><span class="table__stock">In Stock</span></td>
-              <td><a href="#" class="btn btn--sm">Add to Cart</a></td>
-              <td><i class="fi fi-rs-trash table__trash"></i></td>
-            </tr>
-            <!-- Sản phẩm yêu thích thứ 2 -->
-            <tr>
-              <td>
-                <img src="./assets//img/product-7-1.jpg" alt="" class="table__img" />
-              </td>
-              <td>
-                <h3 class="table__title">Amazon Essentials Women's Tank</h3>
-                <p class="table__description">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </td>
-              <td>
-                <span class="table__price">$110</span>
-              </td>
-              <td><span class="table__stock">In Stock</span></td>
-              <td><a href="#" class="btn btn--sm">Add to Cart</a></td>
-              <td><i class="fi fi-rs-trash table__trash"></i></td>
-            </tr>
-            <!-- Sản phẩm yêu thích thứ 3 -->
-            <tr>
-              <td>
-                <img src="./assets//img/product-2-1.jpg" alt="" class="table__img" />
-              </td>
-              <td>
-                <h3 class="table__title">
-                  Amazon Brand - Daily Ritual Women's Jersey
-                </h3>
-                <p class="table__description">
-                  Lorem ipsum dolor sit amet consectetur.
-                </p>
-              </td>
-              <td>
-                <span class="table__price">$110</span>
-              </td>
-              <td><span class="table__stock">In Stock</span></td>
-              <td><a href="#" class="btn btn--sm">Add to Cart</a></td>
-              <td><i class="fi fi-rs-trash table__trash"></i></td>
-            </tr>
-          </tbody>
-          <!-- n/ Dữ liệu bên trong bảng -->
-        </table>
-      </div>
-    </section>
+    <div class="section__content">
+      <!-- Container -->
+      <div class="container">
 
+        <!-- Sản phẩm 1 -->
+        <div class="product-list">
+          <div class="w-r__container">
+            <div class="w-r__img-wrap">
+              <a href="category-link.html">
+                <img src="assets\img\cf_p1_bg.png" alt="Product Image">
+              </a>
+            </div>
+            <div class="w-r__info">
+              <div class="w-r__name">Vị Sài Gòn</div>
+              <div class="w-r__details">
+                <div class="w-r__category">Cà phê</a></div>
+                <div class="w-r__variant">500ml</a></div>
+              </div>
+              <div class="w-r__price-wrapper">
+                <div class="w-r__price">25,000₫</div>
+                <div class="w-r__discount">30,000₫</div>
+              </div>
+            </div>
+            <div class="w-r__wrap-2">
+              <button class="w-r__link">Thêm Vào Giỏ Hàng</button>
+              <button class="w-r__link btn--e-transparent-platinum-b-2">Xem Sản Phẩm</button>
+              <button class="w-r__link btn--e-transparent-platinum-b-2">Xóa Sản Phẩm</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sản phẩm 2 -->
+        <div class="product-list">
+          <div class="w-r__container">
+            <div class="w-r__img-wrap">
+              <a href="category-link.html">
+                <img src="assets\img\mi_p3_bg.png" alt="Product Image">
+              </a>
+            </div>
+            <div class="w-r__info">
+              <div class="w-r__name">Hương Chuối</div>
+              <div class="w-r__details">
+                <div class="w-r__category">Sữa</a></div>
+                <div class="w-r__variant">500ml</a></div>
+              </div>
+              <div class="w-r__price-wrapper">
+                <div class="w-r__price">2,190,000₫</div>
+                <div class="w-r__discount">3,990,000₫</div>
+              </div>
+            </div>
+            <div class="w-r__wrap-2">
+              <button class="w-r__link">Thêm Vào Giỏ Hàng</button>
+              <button class="w-r__link btn--e-transparent-platinum-b-2">Xem Sản Phẩm</button>
+              <button class="w-r__link btn--e-transparent-platinum-b-2">Xóa Sản Phẩm</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sản phẩm 3 -->
+        <div class="product-list">
+          <div class="w-r__container">
+            <div class="w-r__img-wrap">
+              <a href="category-link.html">
+                <img src="assets\img\td_p1_bg.png" alt="Product Image">
+              </a>
+            </div>
+            <div class="w-r__info">
+              <div class="w-r__name">Hương Cam</div>
+              <div class="w-r__details">
+                <div class="w-r__category">Tropical Drinks</a></div>
+                <div class="w-r__variant">330ml</a></div>
+              </div>
+              <div class="w-r__price-wrapper">
+                <div class="w-r__price">35,000₫</div>
+                <div class="w-r__discount">50,000₫</div>
+              </div>
+            </div>
+            <div class="w-r__wrap-2">
+              <button class="w-r__link">Thêm Vào Giỏ Hàng</button>
+              <button class="w-r__link btn--e-transparent-platinum-b-2">Xem Sản Phẩm</button>
+              <button class="w-r__link btn--e-transparent-platinum-b-2">Xóa Sản Phẩm</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Các hành động của giỏ yêu thích -->
+        <div class="wishlist-actions">
+          <button class="action-btn icon-shop" onclick="redirectTo('shop.html')">
+            <i class="fa-solid fa-arrow-left"></i> Tiếp tục mua hàng
+          </button>
+          <button class="action-btn icon-cart" onclick="redirectTo('cart.html')">
+            <i class="fa-solid fa-cart-plus"></i> Thêm tất cả vào giỏ hàng
+          </button>
+          <button class="action-btn icon-clear" onclick="clearWishlist()">
+            <i class="fa-solid fa-trash"></i> Làm sạch giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
 
   </main>
   <!-- =============== FOOTER thông tin liên hệ ===============-->
@@ -273,7 +290,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!--=============== MAIN JS ===============-->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/nhat_wishlist.js"></script>
 </body>
 
 </html>
