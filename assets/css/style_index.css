@@ -1496,6 +1496,9 @@ margin-bottom: 60px;
   .blog-card {
       flex: 1 1 100%;
   }
+  .circle{
+    display: none;
+  }
 }
 
 /*===============Nút lên đầu trang ===============*/
