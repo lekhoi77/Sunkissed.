@@ -459,7 +459,6 @@ table {
     flex-direction: column; /* Đặt chiều dọc cho các phần tử */
     
 }
-
 .comment-form h2 {
     font-size: 24px; /* Kích thước chữ cho tiêu đề form */
     margin-bottom: 15px; /* Khoảng cách dưới tiêu đề */
@@ -494,8 +493,8 @@ form {
     border-radius: 5px; /* Bo góc cho nút */
     cursor: pointer; /* Hiển thị con trỏ khi hover */
 }
-
 /*n/ Điền bình luận */
+
 /* Responsive layout cho màn hình nhỏ hơn 738px */
 @media (max-width: 738px) {
   .blog_section {
