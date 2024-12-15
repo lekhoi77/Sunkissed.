@@ -472,7 +472,13 @@ font-size: 18px;
  
   font-weight: bold;
   font-size: 30px;
+  transform: translateY(1px);
 }
+
+.dong_goi p {
+  transform: translateY(10px);
+}
+
 .tac_dong h3 {
   font-weight: bold;
   font-size: 30px;
