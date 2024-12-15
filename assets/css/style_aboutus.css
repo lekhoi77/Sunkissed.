@@ -570,7 +570,7 @@ h3:hover {
 /* Giới thiệu thành viên */
 .introduce_mem {
   text-align: center;
-  margin-bottom: 20px; 
+  margin-bottom: 50px; 
 }
 .introduce_mem h2{
   font-weight: bold;
@@ -578,16 +578,24 @@ h3:hover {
   font-family: var(--second-font);
   color: var(--first-color);
   text-align: center;
+   margin-bottom: 50px; 
 }
-
+.tong_thanh_vien{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
 .ba_thanh_vien_1, .ba_thanh_vien_2 {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
 }
 
 .ba_thanh_vien_1 div, .ba_thanh_vien_2 div {
   text-align: center;
+}
+ h3 {
+  transform: translateY(-30px);
 }
 .profile-image {
   width: 300px; /* Chiều rộng đồng nhất */
