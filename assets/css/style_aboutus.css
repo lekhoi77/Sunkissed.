@@ -382,10 +382,9 @@ table {
   justify-content: center;
   font-family: var(--body-font);
   margin-bottom: 100px;
-  margin-top: 50px;
-  
+  margin-top: 50px; 
 }
-
+/* Căn chỉnh vị trí, màu cho tiêu đề */
 .tieude {
   text-align:center ;
   color: var(--first-color);
@@ -396,21 +395,24 @@ table {
 font-size: 40px;
 font-family: var(--second-font);
 }
+/*n/ Căn chỉnh vị trí, màu cho tiêu đề */
+
 
 .content {
   display: flex;
   justify-content: space-between;
   gap: 70px;
 }
-
+/* Vị trí bên trái */
 .ben_trai{
   display: flex;
   flex-direction: column;
   justify-content: center;
 
 }
+/*n/ Vị trí bên trái */
 
-
+/* Vị trí bên phải */
 .ben_phai {
   display: flex;
   flex-direction: column;
@@ -421,7 +423,9 @@ font-family: var(--second-font);
   justify-content: center;
   align-items: center;
 }
+/*n/ Vị trí bên phải */
 
+/* Vị trí lon cam */
 .lon_cam img {
 
   max-width: 250px; /* Điều chỉnh kích thước hình ảnh lon cam */
@@ -438,6 +442,7 @@ font-family: var(--second-font);
   transform: scale(1.1); /* Phóng to hình ảnh khi hover */
   filter: brightness(1.1); /* Tăng độ sáng hình ảnh khi hover */
 }
+/*n/ Vị trí lon cam */
 
 .thanh_phan p {
   width: 300px;
@@ -578,6 +583,7 @@ h3:hover {
   text-align: center;
   margin-bottom: 50px; 
 }
+/* Tiêu đề giới thiệu thành viên */
 .introduce_mem h2{
   font-weight: bold;
   font-size: 50px;
@@ -586,22 +592,26 @@ h3:hover {
   text-align: center;
    margin-bottom: 50px; 
 }
+/*n/ Tiêu đề giới thiệu thành viên */
 .tong_thanh_vien{
   display: flex;
   justify-content: center;
   gap: 40px;
 }
+/* 6 thành viên */
 .ba_thanh_vien_1, .ba_thanh_vien_2 {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-
 .ba_thanh_vien_1 div, .ba_thanh_vien_2 div {
   text-align: center;
 }
- h3 {
-  transform: translateY(-30px);
+.tong_thanh_vien {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Căn giữa các thành viên */
+  gap: 20px; /* Khoảng cách giữa các thành viên */
 }
 .profile-image {
   width: 300px; /* Chiều rộng đồng nhất */
@@ -621,12 +631,10 @@ h3:hover {
   transform: scale(1.1); /* Phóng to hình ảnh khi hover */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Thêm bóng cho hình ảnh khi hover */
 }
+/*n/ 6 thành viên */
 
-.tong_thanh_vien {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Căn giữa các thành viên */
-  gap: 20px; /* Khoảng cách giữa các thành viên */
+ h3 {
+  transform: translateY(-30px);
 }
 
 @media (max-width: 768px) {
@@ -643,8 +651,6 @@ h3:hover {
   }
   
 }
-
-
 /*=============== FOOTER ===============*/
 .footer__container {
   grid-template-columns: 4.5fr repeat(2, 2fr) 3.5fr;
