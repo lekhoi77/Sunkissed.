@@ -565,13 +565,13 @@ table {
 }
 
 .w-r__link {
-  font-size: var(--body-font);
-  background-color:var(--first-color);
+  font-family: Arial, sans-serif; 
+  font-size: 14px;               
+  font-weight: 500;              
+  background-color: var(--first-color);
   color: #fefefe;
   border: 1px solid var(--btn-color);
-  padding: 20px 15px;
-  font-size: 14px;
-  height: auto;
+  padding: 15px 20px;            
   border-radius: 10px;
   cursor: pointer;
   display: inline-flex;
@@ -581,7 +581,7 @@ table {
   white-space: nowrap;
 }
 
-/* Hiệu ứng hover cho các nút */
+/* Hiệu ứng hover */
 .w-r__link:hover {
   background-color: var(--title-color);
   color: #fff;
@@ -698,7 +698,6 @@ table {
   padding: 5px 0px;
   font-size: 16px;
   width: 120px;
-  
 }
 
 .quantity-btn {
