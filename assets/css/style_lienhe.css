@@ -383,7 +383,18 @@ table {
     padding: 20px;
     text-align: center; /* Căn giữa nội dung */
     justify-content: center;
-    
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.tong_quan_tittle {
+  font-size: 2em; /* Kích thước chữ mặc định */
+  color:var(--first-color);
+  text-align: center; /* Căn giữa tiêu đề */
+  margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+.tong_quan_tittle:hover {
+  color: #ff6600; /* Màu sắc khi hover */
+  transform: scale(1.1); /* Phóng to chữ khi hover */
 }
 .info_box_tong {
    display: flex;

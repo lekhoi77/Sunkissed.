@@ -111,7 +111,7 @@
       <div class="info_container">
         <!-- Tiêu đề giới thiệu -->
         <div class="tieude">
-          <div class="title">Hơn cả việc khoẻ mạnh</div>
+          <div class="title hover-title">Hơn cả việc khoẻ mạnh</div>
         </div>
         <!--n/ Tiêu đề giới thiệu -->
         <div class="content">
@@ -119,40 +119,50 @@
           <div class="ben_trai">
             <div class="thanh_phan">
               <h3>Thành phần hữu cơ</h3>
-              <p>Sự tươi mát thuần khiết với nước ép 100% hữu cơ, được làm từ những nguyên liệu tinh túy nhất của thiên nhiên, mang đến cho bạn nguồn năng lượng khỏe mạnh và thơm ngon.</p>
+              <p class="hover-effect">Sự tươi mát thuần khiết với nước ép 100% hữu cơ, được làm từ những nguyên liệu tinh túy nhất của thiên nhiên, mang đến cho bạn nguồn năng lượng khỏe mạnh và thơm ngon.</p>
             </div>
             <div class="dong_goi">
               <h3>Đóng gói bền vững</h3>
-              <p>Sản phẩm của chúng tôi được thiết kế bằng các vật liệu thân thiện với môi trường, giúp giảm thiểu rác thải và hướng tới một tương lai xanh hơn.</p>
+              <p class="hover-effect">Sản phẩm của chúng tôi được thiết kế bằng các vật liệu thân thiện với môi trường, giúp giảm thiểu rác thải và hướng tới một tương lai xanh hơn.</p>
             </div>
           </div>
-              <!--n/ Nội dung bên trái -->
-
+          <!--n/ Nội dung bên trái -->
+    
           <!-- Hình ảnh lon nước -->
           <div class="lon_cam">
             <img id="lonImage" src="assets/img/td_p1.png" alt="Sunkissed Latte Can">
           </div>
-              <!--n/ Hình ảnh lon nước -->
-
+          <!--n/ Hình ảnh lon nước -->
+    
           <!-- Nội dung bên phải -->
           <div class="ben_phai">
             <div class="tac_dong">
               <h3>Tác động đến sức khoẻ</h3>
-              <p>Khám phá hương vị tươi mát từ sản phẩm của chúng tôi, chứa đựng các thành phần tự nhiên giúp bạn duy trì lối sống lành mạnh hơn.</p>
+              <p class="hover-effect">Khám phá hương vị tươi mát từ sản phẩm của chúng tôi, chứa đựng các thành phần tự nhiên giúp bạn duy trì lối sống lành mạnh hơn.</p>
             </div>
             <div class="social">
               <h3>Kết nối với chúng tôi qua</h3>
-              <img src="assets/img/ig_icon.svg" alt="Instagram">
-              <img src="assets/img/fb_icon.svg" alt="Facebook">
-              <img src="assets/img/ytb_icon.svg" alt="YouTube">
+              <img src="assets/img/ig_icon.svg" alt="Instagram" class="social-icon">
+              <img src="assets/img/fb_icon.svg" alt="Facebook" class="social-icon">
+              <img src="assets/img/ytb_icon.svg" alt="YouTube" class="social-icon">
             </div>
           </div>
         </div>
       </div>
     </section>
-     <!--n/ Nội dung bên phải -->
+    <!--n/ Nội dung bên phải -->
     
     <style>
+      .title {
+        font-size: 2.5em; /* Kích thước chữ mặc định */
+        transition: color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển màu và phóng to */
+      }
+    
+      .hover-title:hover {
+        color: #ff6600; /* Màu sắc khi hover */
+        transform: scale(1.1); /* Phóng to chữ khi hover */
+      }
+    
       h3 {
         transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
       }
@@ -168,6 +178,24 @@
       .lon_cam img:hover {
         transform: scale(1.1); /* Phóng to hình ảnh khi hover */
         filter: brightness(1.1); /* Tăng độ sáng hình ảnh khi hover */
+      }
+    
+      .hover-effect {
+        transition: color 0.3s ease; /* Hiệu ứng cho đoạn văn */
+      }
+    
+      .hover-effect:hover {
+        color: #ff6600; /* Chỉ đổi màu chữ khi hover */
+      }
+    
+      .social-icon {
+        transition: transform 0.3s ease; /* Hiệu ứng cho icon mạng xã hội */
+        width: 40px; /* Kích thước icon */
+        height: 40px; /* Kích thước icon */
+      }
+    
+      .social-icon:hover {
+        transform: scale(1.1); /* Phóng to icon khi hover */
       }
     </style>
     

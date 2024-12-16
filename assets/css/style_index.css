@@ -393,7 +393,19 @@ img {
   padding: px;
   margin-bottom: 120px;
   overflow: visible;
-  
+  transition: all 0.6s ease;
+}
+/* Hero content hiệu ứng hover */
+.hero-content {
+  display: inline-block; /* Giữ kích thước chính xác */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), /* Hiệu ứng mượt */
+              filter 0.6s ease-out; /* Mượt cho filter */
+}
+
+.hero-content:hover {
+  transform: scale(1.25); /* Phóng to nhẹ khi hover */
+  cursor: pointer;
+  filter: brightness(1.3); /* Tăng độ sáng */
 }
 /* Khung chứa hàng lon */
 .cans-container {
@@ -495,6 +507,7 @@ img {
 }
 
 .shop-button:hover {
+  border: 1px solid var(--first-color);
   background-color: #fefefe;
   color: var(--first-color);
   transform: translateY(-5px);
@@ -502,10 +515,10 @@ img {
 
 /* CSS cho màn hình nhỏ */
 @media (max-width: 768px) {
-
+  .hero-content:hover {
+    display: none;
+  }
   .sunkissed_hero {
-  
-    
     text-align: center;
     height: 800px;
     padding-bottom: 160px ;
@@ -541,7 +554,11 @@ img {
   #canvas {
     display: none;
   }
+  .circle{
+    display: none;
+  }
 }
+
 
 /*===============n/ HERO===============*/
 
@@ -1174,7 +1191,7 @@ overflow: hidden;
 
 
 
-/*=============== bÌNH LUẬT KHÁCH HÀNG ===============*/
+/*=============== bÌNH LUẬn KHÁCH HÀNG ===============*/
 
 .wave_blkh {
   overflow: visible !important;
