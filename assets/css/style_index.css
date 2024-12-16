@@ -559,7 +559,6 @@ img {
   }
 }
 
-
 /*===============n/ HERO===============*/
 
 /* Giới thiệu thương hiệu */
@@ -576,7 +575,6 @@ overflow: hidden;
   margin-top: 200px;
   position: relative;
   
-
 
   /* Thêm thuộc tính này để sử dụng position: absolute; cho các phần tử con */
 }
