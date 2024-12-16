@@ -84,6 +84,7 @@
   box-sizing: border-box;
 }
 main{
+  overflow: hidden;
   
 }
 html {
@@ -480,9 +481,9 @@ img {
   font-family: var(--body-font);
   background-color: var(--first-color);
   color: white;
-  padding: 15px;
+  padding: 16px;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 15px;
   font-size: 0.9em;
   display: inline-block;
   text-align: center;
@@ -855,12 +856,10 @@ img {
 }
 
 .tab__btns {
-  
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 2rem;
-  
 }
 
 .tab__btn {
@@ -872,7 +871,16 @@ img {
   font-weight: var(--weight-600);
   cursor: pointer;
   border-radius: 15px;
-  align-items: center
+  align-items: center;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease; /* Hiệu ứng mượt */
+  will-change: background-color, color, transform; /* Tối ưu hóa */
+}
+
+.tab__btn:hover {
+
+  color: var(--first-color); /* Đổi màu chữ khi hover */
+  transform: translateY(-5px); /* Nhấc nút lên nhẹ */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ để tạo chiều sâu */
 }
 
 .products__container {
@@ -1278,7 +1286,6 @@ justify-content: center;
 }
 
 .faq_container {
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1294,7 +1301,7 @@ justify-content: center;
 .faq h2 {
   text-align: center;
   font-family: var(--body-font);
-  color:var(--first-color);
+  color: var(--first-color);
   font-size: 30px;
   font-weight: bold;
 }
@@ -1306,13 +1313,16 @@ justify-content: center;
   margin-bottom: 10px;
   padding: 15px;
   cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease; /* Thêm các hiệu ứng mượt */
+  will-change: background-color, color, transform; /* Tối ưu hóa trình duyệt */
 }
 
 .faq-item:hover {
   background-color: #a0b193;
-  color:#fefefe;
-  transition: transform 0.5s ease;
+  color: #fefefe;
+  transform: scale(1.02); /* Phóng to nhẹ để thêm hiệu ứng thị giác */
 }
+
 
 .faq-item p {
   display: none;
@@ -1405,17 +1415,36 @@ margin-bottom: 60px;
   flex: 2; /* Chiều rộng gấp đôi cho trường nhập */
   padding: 10px; /* Khoảng cách bên trong */
   border: 1px solid #ccc; /* Đường viền cho input */
-  border-radius: 5px; /* Bo góc cho input */
+  border-radius: 15px; /* Bo góc cho input */
+  transition: transform 0.4s ease, border-color 0.4s ease; /* Hiệu ứng mượt */
+  will-change: transform, border-color; /* Tối ưu hóa trình duyệt */
+}
+
+.comment-form input:focus, 
+.comment-form textarea:focus {
+  transform: scale(1.02); /* Phóng to nhẹ khi focus */
+  border-color: var(--first-color); /* Đổi màu đường viền */
 }
 
 .comment-form button {
-  background-color:var(--first-color); /* Màu nền cho nút */
+  font-family: var(--body-font);
+  background-color: var(--first-color); /* Màu nền cho nút */
   color: white; /* Màu chữ cho nút */
   padding: 13px 15px; /* Khoảng cách bên trong nút */
   border: none; /* Không có đường viền */
-  border-radius: 10px; /* Bo góc cho nút */
+  border-radius: 15px; /* Bo góc cho nút */
   cursor: pointer; /* Hiển thị con trỏ khi hover */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Tối ưu hóa chuyển đổi */
+  will-change: background-color, color, transform; /* Cải thiện hiệu năng */
 }
+
+.comment-form button:hover {
+  background-color: #fff; /* Màu nền khi hover */
+  color: var(--first-color); /* Màu chữ khi hover */
+  transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+  border: 1px solid var(--first-color); /* Đổi màu viền */
+}
+
 /* Responsive cho màn hình nhỏ hơn 768px */
 @media (max-width: 768px) {
   .comment-form {
@@ -1458,7 +1487,7 @@ margin-bottom: 60px;
 .blog-section h2 {
   text-align: center;
   font-size: 2rem;
-  color: var(--second-color);
+  color: var(--first-color);
   margin-bottom: 30px;
 }
 
@@ -1512,7 +1541,7 @@ margin-bottom: 60px;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
-
+.butt
 @media (max-width: 768px) {
   .blog-card {
       flex: 1 1 100%;
