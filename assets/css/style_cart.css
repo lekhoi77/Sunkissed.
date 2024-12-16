@@ -571,9 +571,9 @@ table {
   font-weight: 500;              
   background-color: var(--first-color);
   color: #fefefe;
-  border: 1px solid var(--btn-color);
+  border: 1px solid;
   padding: 15px 20px;            
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -584,9 +584,8 @@ table {
 
 /* Hiệu ứng hover */
 .w-r__link:hover {
-  background-color: var(--title-color);
-  color: #fff;
-  border-color: var(--btn-color);
+  background-color: transparent;
+  color: var(--first-color);
 }
 
 /* Các nút hành động trong giỏ hàng */
@@ -632,7 +631,6 @@ table {
 .cart__shipping .section__title,
 .cart__coupon .section__title,
 .cart__total .section__title {
-  font-size: var(--large-font-size);
   margin-bottom: 1rem;
 }
 
