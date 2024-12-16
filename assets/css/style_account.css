@@ -585,8 +585,7 @@ table {
   font-size: 0.875rem; /* Kích thước chữ nhỏ */
 }
 .form__btn {
-  transition: all 0.5s ease; /* Chuyển đổi tất cả với thời gian 0.3 giây */
-  
+  transition: all 0.3s ease; /* Chuyển đổi tất cả với thời gian 0.3 giây */
 }
 
 .form__btn .btn--md {
@@ -594,6 +593,19 @@ table {
   padding: 10px 16px; /* Khoảng cách bên trong */
   background-color: var(--first-color); /* Màu nền */
   color: #fefefe; /* Màu chữ */
+  border: none; /* Xóa đường viền mặc định */
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.btn--md{
+  cursor: pointer;
+}
+.form__btn .btn--md:hover {
+  background-color: #fefefe; /* Đổi màu nền */
+  color: var(--first-color); /* Đổi màu chữ */
+  border: 1px solid var(--first-color); /* Thêm đường viền */
+}
+.dangxuat{
+  color: var(--first-color);
 }
 .tab__info, 
 .tab__credentials { 
