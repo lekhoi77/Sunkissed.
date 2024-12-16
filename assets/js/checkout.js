@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       loginForm.classList.remove('show');
   });
 });
+// click vào 2 form
 
 // Adding some CSS for smooth transitions
 const style = document.createElement('style');
@@ -68,29 +69,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Lắng nghe sự kiện click trên liên kết có thuộc tính `data-modal-id`
-document.querySelectorAll('[data-modal-id="#edit-ship-address"]').forEach(function (trigger) {
-  trigger.addEventListener("click", function (event) {
-    event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-    const modalId = this.getAttribute("data-modal-id");
-    document.querySelector(modalId).style.display = "block"; // Hiển thị form chỉnh sửa
-  });
-});
-
-// Đóng form chỉnh sửa
-document.getElementById("close-edit-modal").addEventListener("click", function () {
-  document.getElementById("edit-ship-address").style.display = "none";
-});
-
-// Hiển thị form thêm địa chỉ mới
-document.getElementById("add-new-address").addEventListener("click", function () {
-  document.getElementById("edit-ship-address").style.display = "none";
-  document.getElementById("new-address-modal").style.display = "block";
-});
-
-// Đóng form thêm địa chỉ mới
-document.getElementById("close-new-address-modal").addEventListener("click", function () {
-  document.getElementById("new-address-modal").style.display = "none";
-  document.getElementById("edit-ship-address").style.display = "block";
-});
 
