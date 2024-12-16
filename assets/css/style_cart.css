@@ -567,7 +567,7 @@ table {
 }
 
 .w-r__link {
-  font-family: Arial, sans-serif; 
+  font-family: var(--body-font); 
   font-size: 14px;               
   font-weight: 500;              
   background-color: var(--first-color);
