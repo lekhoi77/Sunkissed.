@@ -17,36 +17,36 @@ Hệ thống lọc và tìm kiếm thông minh: Hỗ trợ khách hàng tìm ki�
 Tích hợp thanh toán đa dạng: Cung cấp các phương thức thanh toán hiện đại và linh hoạt.
 Cung cấp dịch vụ giao hàng thuận tiện: Mang đến cho khách hàng những dịch vụ đa dạng và hợp lý nhất.
 <h2>TÁC GIẢ</h2>
--VÕ XUÂN LÊ KHÔI
--NGUYỄN ĐÌNH QUỐC BẢO
--NGUYỄN HỒ HỮU KHẢI
--NGUYỄN VĨNH NGHI
--TRẦN MINH NHẬT
--NGUYỄN VĨNH NGHI
+-VÕ XUÂN LÊ KHÔI<br>
+-NGUYỄN ĐÌNH QUỐC BẢO<br>
+-NGUYỄN HỒ HỮU KHẢI<br>
+-NGUYỄN VĨNH NGHI<br>
+-TRẦN MINH NHẬT<br>
+-NGUYỄN VĨNH NGHI<br>
 <H2>ĐỐI TƯỢNG NGHIÊN CỨU</H2>
-Khách hàng
-Trải nghiệm landing page.
-Xem thông tin sản phẩm.
-Tìm kiếm sản phẩm thông qua danh mục hoặc chức năng tìm kiếm nâng cao.
-Thêm sản phẩm vào giỏ hàng và thực hiện thanh toán.
-Quản lý tài khoản cá nhân và lịch sử đơn hàng.
+Khách hàng<br>
+Trải nghiệm landing page.<br>
+Xem thông tin sản phẩm.<br>
+Tìm kiếm sản phẩm thông qua danh mục hoặc chức năng tìm kiếm nâng cao.<br>
+Thêm sản phẩm vào giỏ hàng và thực hiện thanh toán.<br>
+Quản lý tài khoản cá nhân và lịch sử đơn hàng.<br>
 <H2>PHƯƠNG PHÁP THỰC HIỆN</H2>
 Sử dụng ngôn ngữ lập trình bao gồm:
-HTML
-CSS
-Javascript
+HTML<br>
+CSS<br>
+Javascript<br>
 <H2> CÁC TRANG</H2>
-Trang landing page: index.html
-Trang cửa hàng: shop.html
-Trang chi tiết sản phẩm: details_HuongCam.html, details_HuongDua.html
-Trang giỏ hàng: cart.html
-Trang thanh toán: checkout.html
-Trang tài khoản: account.html
-Đăng nhập, đăng ký: login-register.html
-Trang về chúng tôi: aboutus.html
-Trang blog: blog.html
-Trang liên hệ: lienhe.html
-Trang wishlist: wishlist.html
+Trang landing page: index.html<br>
+Trang cửa hàng: shop.html<br>
+Trang chi tiết sản phẩm: details_HuongCam.html, details_HuongDua.html<br>
+Trang giỏ hàng: cart.html<br>
+Trang thanh toán: checkout.html<br>
+Trang tài khoản: account.html<br>
+Đăng nhập, đăng ký: login-register.html<br>
+Trang về chúng tôi: aboutus.html<br>
+Trang blog: blog.html<br>
+Trang liên hệ: lienhe.html<br>
+Trang wishlist: wishlist.html<br>
 <H2>PUBLIC SUNKISSED</H2>
 https://lekhoi77.github.io/sunkissedg5/index.html
 
