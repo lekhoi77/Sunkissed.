@@ -14,7 +14,7 @@
   --first-color: hsl(0, 75%, 33%);
   --second-color: hsl(115, 67%, 13%);
   --title-color:hsl(115, 67%, 13%);
-  --text-color: hsl(115, 67%, 13%);
+  --text-color: hsl(115, 69%, 27%);
   --text-color-light: hsl(60, 1%, 56%);
   --body-color: hsl(46, 100%, 91%);
   --container-color: hsl(0, 0%, 93%);
@@ -23,7 +23,7 @@
   --btn-color: hsl(0, 75%, 33%);
   --title-colos: hsl(33, 93%, 66%);
 
-  /*========== Font and typography ==========*/
+  /*========== Font and kích cỡ chữ ==========*/
   --body-font: "Lexend", sans-serif;
   --second-font: "Raleway" sans-serif;
   --big-font-size: 3.5rem;
@@ -189,6 +189,7 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
+/* Header */
 .header__top {
   background-color: var(--first-color);
   border-bottom: 1px solid var(--first-color);
@@ -221,7 +222,7 @@ img {
 .header__top-action {
   color: #fefefe;
 }
-
+/* n/Header */
 .nav,
 .nav__menu,
 .nav__list,
@@ -347,11 +348,13 @@ img {
   -ms-transition: all 0.4s var(--transition);
   -o-transition: all 0.4s var(--transition);
 }
-
+/* Hiệu ứng khi hovêr vào nút */
 .btn:hover {
   background-color: transparent;
   color: var(--first-color);
 }
+/*n/ Hiệu ứng khi hovêr vào nút */
+/*===============n/ BUTTONS ===============*/
 
 .btn--md,
 .btn--sm {
@@ -372,13 +375,7 @@ img {
   height: auto !important;
 }
 
-/*=============== HERO===============*/
-.sunkissed_hero {
-
-  text-align: center;
-  padding: px;
-  margin-bottom: 120px;
-}
+/*=============== Tuyết===============*/
 
 #canvas {
   position: absolute;
@@ -387,23 +384,31 @@ img {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
-}
+  z-index: 1;}
 
+  /*=============== HERO===============*/
+  /* Khung chứa */
+  .sunkissed_hero {
+  text-align: center;
+  padding: px;
+  margin-bottom: 120px;
+}
+/* Khung chứa hàng lon */
 .cans-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+/* Các hàng lon */
 .cans-row {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-
   position: relative;
 }
+/*n/ Các hàng lon */
 
+/* từng lon */
 .can {
   width: 120px;
   margin: 0 40px;
@@ -447,6 +452,7 @@ img {
   bottom: -20px;
 }
 
+/* TIÊU ĐỀ HERO */
 .title {
   color: var(--first-color);
   font-size: 80px;
@@ -461,7 +467,7 @@ img {
   font-weight: 850;
   text-align: center;
 }
-
+/* Tag giảm giá và thời gian sự kiện */
 .tagline {
   font-size: 18px;
   margin: 10px 0;
@@ -469,7 +475,7 @@ img {
   text-align: center;
   color: hsl(115, 11%, 40%);
 }
-
+/* Nút đặt hàng ngay */
 .shop-button {
   font-family: var(--body-font);
   background-color: var(--first-color);
@@ -481,6 +487,13 @@ img {
   display: inline-block;
   text-align: center;
   margin-top: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.shop-button:hover {
+  background-color: #fefefe;
+  color: var(--first-color);
+  transform: translateY(-5px);
 }
 
 /* CSS cho màn hình nhỏ */
@@ -1619,5 +1632,5 @@ margin-bottom: 60px;
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: 99999999; /* so that it stays on top of all other elements */
+  z-index: 99999999; /*  luôn luôn hiển thị trên mọi đối tượng trên trang web*/
 }

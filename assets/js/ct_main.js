@@ -12,6 +12,7 @@ if (navToggle) {
 }
 
 /*===== Hide Show =====*/
+
 /* Validate if constant exists */
 if (navClose) {
   navClose.addEventListener("click", () => {
@@ -19,7 +20,7 @@ if (navClose) {
   });
 }
 
-
+// HIỆU ỨNG CÁC LON DI CHUYỂN KHI NGƯỜI DÙNG SCROLL MÀN HÌNH
 window.addEventListener('scroll', function() {
   const heroSection = document.querySelector('.sunkissed_hero');
   const cans = document.querySelectorAll('.can');
@@ -182,6 +183,8 @@ scrollToTopButton.addEventListener('click', () => {
 });
   
 // HIỆU ỨNG CON TRỎ CHUỘT
+
+// Khởi tạo biến và màu sắc
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
@@ -203,19 +206,19 @@ const colors = [
   "#ef865e",
   "#ec805d",
 ];
-
+// Thiết lập màu sắc cho các vòng tròn
 circles.forEach(function (circle, index) {
   circle.x = 0;
   circle.y = 0;
   circle.style.backgroundColor = colors[index % colors.length];
 });
-
+// Lắng nghe sự kiện di chuyển chuột
 window.addEventListener("mousemove", function(e){
   coords.x = e.clientX;
   coords.y = e.clientY;
   
 });
-
+  
 function animateCircles() {
   
   let x = coords.x;
