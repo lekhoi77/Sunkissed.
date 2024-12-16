@@ -772,9 +772,9 @@ table {
   height: 40px;
   line-height: 42px;
   text-align: center;
-  background-color: var(--first-color-alt);
+  background-color: #fff;
   border: 1px solid var(--border-color);
-  color: var(--text-color);
+  color: var(--first-color);
   font-size: var(--small-font-size);
   border-radius: 50%;
   -webkit-border-radius: 50%;
