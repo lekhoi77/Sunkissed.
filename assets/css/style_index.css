@@ -1172,14 +1172,20 @@ img {
 
 
 /*=============== bÌNH LUẬT KHÁCH HÀNG ===============*/
-.blkh {
+
+.wave_blkh {
+  overflow: visible !important;
   
+}
+.blkh {
+  background-color:#c4dcc3;
   justify-content: center;
   width: 2000x;
   height: 620px;
-  margin: 50px 0px;
-  margin-top: 70px;
-  background-image: url("/assets/img/wave.svg") ;
+  margin-bottom: 50px;
+  transform: translateY(-40px);
+ 
+  
  
 }
 
@@ -1242,15 +1248,17 @@ justify-content: center;
 }
 }
 @media (max-width: 768px) {
+  .wave_blkh{
+    display: none;
+  }
   .blkh{
     display:flex;
     flex-direction: column;
     gap: 30px;
     margin-top: 80px;
+    background-color: transparent;
   }
-.blkh{
-  background-image: none;
-}
+
   .blkh_content {
       flex-direction: column; /* Hiển thị dạng cột */
       gap: 20px; /* Giảm khoảng cách giữa các bài */
