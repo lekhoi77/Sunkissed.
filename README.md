@@ -31,24 +31,28 @@ Tìm kiếm sản phẩm thông qua danh mục hoặc chức năng tìm kiếm n
 Thêm sản phẩm vào giỏ hàng và thực hiện thanh toán.<br>
 Quản lý tài khoản cá nhân và lịch sử đơn hàng.<br>
 <H2>PHƯƠNG PHÁP THỰC HIỆN</H2>
-Sử dụng ngôn ngữ lập trình bao gồm:
+Sử dụng ngôn ngữ lập trình bao gồm:<br>
 HTML<br>
 CSS<br>
 Javascript<br>
 <H2> CÁC TRANG THÀNH PHẦN TRANG WEB</H2>
-Trang landing page: index.html<br>
-Trang cửa hàng: shop.html<br>
-Trang chi tiết sản phẩm: details_HuongCam.html, details_HuongDua.html<br>
-Trang giỏ hàng: cart.html<br>
-Trang thanh toán: checkout.html<br>
-Trang tài khoản: account.html<br>
-Đăng nhập, đăng ký: login-register.html<br>
-Trang về chúng tôi: aboutus.html<br>
-Trang blog: blog.html<br>
-Trang liên hệ: lienhe.html<br>
-Trang wishlist: wishlist.html<br>
+<ul>
+  <li>Trang landing page: index.html</li>
+  <li>Trang cửa hàng: shop.html</li>
+  <li>Trang chi tiết sản phẩm: details_HuongCam.html, details_HuongDua.html</li>
+  <li>Trang giỏ hàng: cart.html</li>
+  <li>Trang thanh toán: checkout.html</li>
+  <li>Đăng nhập, đăng ký: login-register.html</li>
+  <li>Trang về chúng tôi: aboutus.html</li>
+  <li>Trang blog: blog.html</li>
+  <li>Trang liên hệ: lienhe.html</li>
+  <li>Trang wishlist: wishlist.html</li>
+</ul>
+
 <H2>PUBLIC SUNKISSED</H2>
 https://lekhoi77.github.io/sunkissedg5/index.html
+<H2>LỜI CẢM ƠN</H2>
+Để hoàn thành tốt đề tài này chúng em xin cảm ơn tiến sĩ/giảng viên Nguyễn Mạnh . Một lần nữa chúng em xin trân trọng cảm ơn thầy Mai Cường Thọ đã tận tình giúp đỡ, hướng dẫn chúng em trong suốt quá trình thực hiện đề tài.
 
 
 
