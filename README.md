@@ -48,11 +48,13 @@ Javascript<br>
   <li>Trang liên hệ: lienhe.html</li>
   <li>Trang wishlist: wishlist.html</li>
 </ul>
-
+<H2>CHUẨN LẬP TRÌNH</H2>
+Đưa ra các quy ước khi coding với ngôn ngữ lập trình HTML, CSS, và JavaScript, những quy tắc này giúp tiết kiệm thời gian đáng kể trong quá trình phát triển và bảo trì dự án. Đồng thời, các quy ước này hỗ trợ sinh viên làm quen với cách làm việc nhóm hiệu quả. Tài liệu chủ yếu hướng dẫn sinh viên sử dụng Visual Studio Code để lập trình front-end cho các trang web, kết hợp với Figma để thiết kế giao diện. Các quy tắc này không chỉ áp dụng trong các công cụ và ngôn ngữ trên mà còn có thể mở rộng cho nhiều công cụ lập trình khác.
 <H2>PUBLIC SUNKISSED</H2>
 https://lekhoi77.github.io/sunkissedg5/index.html
 <H2>LỜI CẢM ƠN</H2>
-Để hoàn thành tốt đề tài này chúng em xin cảm ơn tiến sĩ/giảng viên Nguyễn Mạnh . Một lần nữa chúng em xin trân trọng cảm ơn thầy Mai Cường Thọ đã tận tình giúp đỡ, hướng dẫn chúng em trong suốt quá trình thực hiện đề tài.
+Để hoàn thành tốt đề tài này chúng em xin cảm ơn thầy Nguyễn Mạnh Tuấn. Một lần nữa chúng em xin trân trọng cảm ơn thầy Nguyễn Mạnh Tuấn đã tận tình giúp đỡ, hướng dẫn chúng em trong suốt quá trình thực hiện đề tài.
+
 
 
 
