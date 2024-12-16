@@ -594,21 +594,7 @@ table {
   padding: 10px 16px; /* Khoảng cách bên trong */
   background-color: var(--first-color); /* Màu nền */
   color: #fefefe; /* Màu chữ */
-  border: none; /* Xóa đường viền mặc định */
-  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-  cursor: pointer;
 }
-.btn--md{
-  cursor: pointer;
-}
-
-.form__btn .btn--md:hover {
-  background-color: #fefefe; /* Đổi màu nền */
-  color: var(--first-color); /* Đổi màu chữ */
-  border: 1px solid var(--first-color); /* Thêm đường viền */
-}
-
-
 .tab__info, 
 .tab__credentials { 
   display: flex; 
