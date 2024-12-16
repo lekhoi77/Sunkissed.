@@ -4,7 +4,7 @@ Trong những năm gần đây, ngành công nghệ thông tin (CNTT) đã đạ
 
 Sự ứng dụng CNTT trong công tác quản lý đã mang lại nhiều giá trị thiết thực, không chỉ cải thiện hiệu suất làm việc mà còn hỗ trợ việc lập báo cáo và thống kê số liệu một cách nhanh chóng, chính xác và đúng thời điểm. Bên cạnh đó, CNTT còn giúp tối ưu hóa thời gian và công sức, khắc phục sự cồng kềnh của các phương thức quản lý truyền thống, qua đó tạo nên một hệ thống quản lý gọn nhẹ và hiệu quả hơn.
 
-<h2>Mô TẢ VÀ MỤC TIÊU DỰ ÁN</h2>
+<h2>MÔ TẢ VÀ MỤC TIÊU DỰ ÁN</h2>
 <h3>Mô tả</h3>
 Trong bối cảnh thị trường trực tuyến ngày càng sôi động, việc xây dựng một website thương mại điện tử không chỉ là xu hướng mà còn là yêu cầu thiết yếu để các doanh nghiệp tiếp cận khách hàng tiềm năng và phát triển thương hiệu.
 Cùng với sự phát triển của công nghệ khoa học kỹ thuật ngày nay, website thương mại điện tử giúp doanh nghiệp tăng cường khả năng quảng bá sản phẩm, nâng cao trải nghiệm người dùng, và đáp ứng nhu cầu tiêu dùng hiện đại. Đặc biệt, ngành hàng thức uống hiện đang nhận được sự quan tâm lớn từ người tiêu dùng, khi chất lượng sản phẩm và tính tiện lợi được đặt lên hàng đầu. Vấn đề quảng bá ngành hàng thức uống là một vấn đề mà nhóm muốn hướng đến ở trong thị trường thương mại điện tử phát triển không ngừng hiện nay.
