@@ -467,9 +467,7 @@ img {
 .londuahau {
   bottom: -20px;
 }
-.herocontent:hover{
 
-}
 /* TIÊU ĐỀ HERO */
 .title {
   color: var(--first-color);
@@ -517,10 +515,10 @@ img {
 
 /* CSS cho màn hình nhỏ */
 @media (max-width: 768px) {
-
+  .hero-content:hover {
+    display: none;
+  }
   .sunkissed_hero {
-  
-    
     text-align: center;
     height: 800px;
     padding-bottom: 160px ;
@@ -556,7 +554,11 @@ img {
   #canvas {
     display: none;
   }
+  .circle{
+    display: none;
+  }
 }
+
 
 /*===============n/ HERO===============*/
 
