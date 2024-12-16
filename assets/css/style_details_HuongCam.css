@@ -428,10 +428,6 @@ table {
   border-radius: 20px;
 }
 
-.righ-part {
-  display: flex;
-}
-
 .product-img {
   min-width: 200px;
   width: 471px;
@@ -454,8 +450,12 @@ table {
 #feature-3 {
   font-size: 25px;
 }
-/* Phần phải */
 
+
+/* Phần phải */
+.righ-part {
+  display: flex;
+}
 /* Lưới sản phẩm đề xuất */
   /* Tabs */
   .suggested-tabs {
@@ -579,19 +579,16 @@ table {
     
   }
   
-  
   .pack:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
   .pack img {
     width: 90px;
     height: 90px;
     margin-bottom: 10px;
     padding-top: 10px;
   }
-  
   #pack-2 {
     background-color: hsl(49, 70%, 70%);
   }

@@ -150,6 +150,9 @@
             </div>
           </div>
         </div>
+        <!-- n/Phần trái -->
+
+
         <!-- Phần phải -->
         <div class="right-part">
           <div class="product-top-description">
@@ -245,14 +248,20 @@
         </div>
       </div>
     </section>
+    <!-- n/Phần phải -->
 
+
+    <!--========= n/DETAILS ========= -->
 
         <!-- ==================== SECTION BREAK DẠNG GỢN SÓNG ==================== -->
     <div class="wave-section">
-        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" width="100%" height="60" preserveAspectRatio="none">
+        <svg viewBox="0  0 1440 60" xmlns="http://www.w3.org/2000/svg" width="100%" height="60" preserveAspectRatio="none">
             <path d="M720 38.3053C326 -21.6947 0 6.72642 0 6.72642V60H1440V6.72643C1440 6.72643 1114 98.3053 720 38.3053Z" fill="WHITE"></path>
         </svg>
       </div>
+         <!-- ==================== n/SECTION BREAK DẠNG GỢN SÓNG ==================== -->
+
+
     <!-- ==================== CHI TIẾT SẢN PHẨM ==================== -->
     <section class="sk-prd-details">
       <div class="prd-details-container">
@@ -273,6 +282,10 @@
                   class="short-feature-content">Không Chất Bảo Quản</span></div>
             </div>
           </div>
+
+        <!-- n/Thông tin chi tiết sản phẩm -->
+
+        <!-- Hàm lượng dinh dưỡng sản phẩm -->
           <div class="prd-nutrition-facts">
             <div class="nutrition-facts">
               <h1>Hàm Lượng Dinh Dưỡng</h1>
@@ -320,23 +333,30 @@
                 sắt.</p>
             </div>
           </div>
+        <!-- n/Hàm lượng dinh dưỡng sản phẩm -->
         </div>
     </section>
-    <!-- ========== Gợn sóng ========== -->
+    <!-- ==================== n/CHI TIẾT SẢN PHẨM ==================== -->
+
+
+    <!-- ========== Gợn sóng 2========== -->
     <div class="wave-section-2">
       <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" width="100%" height="60" preserveAspectRatio="none">
           <path d="M201.758 0H0V6.72642C0 6.72642 77.1543 0 201.758 0ZM1440 6.72643V0H201.758C333.283 0 517.676 7.49452 720 38.3053C1114 98.3053 1440 6.72643 1440 6.72643Z" fill="white"></path>
       </svg>
     </div>
+
     <!-- ========== Hình commercial ========== -->
     <div class="section-break-image">
       <img src="assets\img\section-break.png" class="section-break-img">
+          <!-- ========== Gợn sóng 3========== -->
       <div class="wave-section-3">
         <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" width="100%" height="60" preserveAspectRatio="none">
             <path d="M720 38.3053C326 -21.6947 0 6.72642 0 6.72642V60H1440V6.72643C1440 6.72643 1114 98.3053 720 38.3053Z" fill="hsl(31, 100%, 72%)"></path>
         </svg>
       </div>
     </div>
+
 
     <!-- ==================== REVIEW ==================== -->
     <section class="sk-review" id="review-section">
@@ -364,6 +384,8 @@
               required></textarea> <button type="submit">Gửi</button> </form>
         </div>
       </div>
+
+      <!-- Phần đánh giá trung bình -->
           <div class="review-summary">
             <div class="star-summary-container">
               <div class="average-rating">4.3</div>
@@ -410,13 +432,14 @@
             </div>
             </div>
             </div>
+             <!-- n/Phần đánh giá trung bình -->
+
           </div>
         </div>
         <!-- Đánh giá của khách hàng -->
         <div class="reviews-container" id="reviews-container">
           <!-- Đánh giá sẽ được chèn ở đây qua JavaScript -->
       </div>
-  
       <div class="pagination" id="pagination">
           <button id="prev-page" disabled>Trang trước</button>
           <span class="page-info" id="page-info"></span>
@@ -427,8 +450,9 @@
       <div class="continue-exploring">
         <button class="continue-btn">Tiếp tục cuộc dạo chơi</button>
       </div>
-      
     </section>
+
+    <!-- ==================== n/REVIEW ==================== -->
 
   <!-- =============== FOOTER ===============-->
   <footer class="footer container">
@@ -512,18 +536,20 @@
   <!-- ============== HIỂN THỊ Ô ĐÁNH GIÁ SẢN PHẨM POP-UP ==================== -->
   <script> 
     // Lấy các phần tử 
-    var reviewPopup = document.getElementById("review-popup"); var writeReviewBtn = document.getElementById("write-review-btn"); var closePopupBtn = document.getElementById("close-popup"); 
+    var reviewPopup = document.getElementById("review-popup"); 
+    var writeReviewBtn = document.getElementById("write-review-btn"); 
+    var closePopupBtn = document.getElementById("close-popup"); 
     // Khi người dùng nhấn nút "Write a Review", hiển thị popup 
     writeReviewBtn.onclick = function() { reviewPopup.style.display = "flex"; } 
     // Khi người dùng nhấn nút close, ẩn popup 
     closePopupBtn.onclick = function() { reviewPopup.style.display = "none"; } 
     // Khi người dùng nhấn bất kỳ đâu bên ngoài popup, ẩn popup 
     window.onclick = function(event) { if (event.target == reviewPopup) { reviewPopup.style.display = "none"; } } 
-    
   </script>
 
   <!-- ============== Đánh giá khách hàng ==================== -->
   <script>
+    // Danh sách đánh giá sản phẩm
     const reviews = [
         { name: "Ngọc Anh", time: "13 ngày trước", stars: 5, content: "Tôi rất thích Coca-Cola nhưng không muốn uống vì lượng đường cao. Sunkissed là lựa chọn thay thế hoàn hảo, giòn, ngon và lành mạnh!" },
         { name: "Hà My", time: "2 tháng trước", stars: 5, content: "Hương vị này là số một! Tôi từng nghiện Coca-Cola, nhưng Sunkissed đã khiến tôi hoàn toàn thay đổi!" },
@@ -537,52 +563,83 @@
         { name: "Bảo Khang", time: "3 ngày trước", stars: 1, content: "Không ngon và không đáng tiền." },
     ];
 
+    // Số lượng đánh giá hiển thị trên mỗi trang
     const reviewsPerPage = 3;
+
+    // Trang hiện tại đang được hiển thị
     let currentPage = 0;
+
+    // Danh sách đánh giá được lọc (ban đầu chứa toàn bộ đánh giá)
     let filteredReviews = reviews;
 
+    /**
+     * Hàm renderReviews
+     * Mục đích: Hiển thị các đánh giá trên giao diện theo trang hiện tại.
+     */
     function renderReviews() {
+        // Lấy container chứa danh sách đánh giá và xóa nội dung cũ
         const container = document.getElementById("reviews-container");
         container.innerHTML = "";
 
+        // Xác định phạm vi đánh giá cần hiển thị (bắt đầu và kết thúc)
         const start = currentPage * reviewsPerPage;
         const end = start + reviewsPerPage;
+
+        // Lấy danh sách đánh giá cho trang hiện tại
         const currentReviews = filteredReviews.slice(start, end);
 
+        // Duyệt qua danh sách đánh giá và tạo các phần tử HTML tương ứng
         currentReviews.forEach(review => {
+            // Tạo phần tử HTML cho từng đánh giá
             const reviewElement = document.createElement("div");
-            reviewElement.className = "review";
+            reviewElement.className = "review"; // Gán class "review" cho phần tử
+
+            // Nội dung HTML của từng đánh giá
             reviewElement.innerHTML = `
                 <div class="review-header">
-                    <h3>${review.name}</h3>
-                    <span>${review.time}</span>
+                    <h3>${review.name}</h3> <!-- Tên người dùng -->
+                    <span>${review.time}</span> <!-- Thời gian đánh giá -->
                 </div>
-                <div class="stars">${'★'.repeat(review.stars)}${'☆'.repeat(5 - review.stars)}</div>
+                <div class="stars">
+                    ${'★'.repeat(review.stars)} <!-- Số sao đầy -->
+                    ${'☆'.repeat(5 - review.stars)} <!-- Số sao trống -->
+                </div>
                 <div class="review-content">
-                    <p>${review.content}</p>
+                    <p>${review.content}</p> <!-- Nội dung đánh giá -->
                 </div>
             `;
+
+            // Thêm phần tử đánh giá vào container
             container.appendChild(reviewElement);
         });
 
+        // Tính tổng số trang
         const totalPages = Math.ceil(filteredReviews.length / reviewsPerPage);
+
+        // Cập nhật thông tin số trang hiện tại
         document.getElementById("page-info").textContent = `Trang ${currentPage + 1} / ${totalPages}`;
 
+        // Kiểm tra và vô hiệu hóa nút "Trang trước" nếu ở trang đầu tiên
         document.getElementById("prev-page").disabled = currentPage === 0;
+
+        // Kiểm tra và vô hiệu hóa nút "Trang sau" nếu ở trang cuối cùng
         document.getElementById("next-page").disabled = end >= filteredReviews.length;
     }
 
+    // Gán sự kiện cho nút "Trang trước"
     document.getElementById("prev-page").addEventListener("click", () => {
-        currentPage--;
-        renderReviews();
+        currentPage--; // Giảm số trang hiện tại
+        renderReviews(); // Cập nhật giao diện
     });
 
+    // Gán sự kiện cho nút "Trang sau"
     document.getElementById("next-page").addEventListener("click", () => {
-        currentPage++;
-        renderReviews();
+        currentPage++; // Tăng số trang hiện tại
+        renderReviews(); // Cập nhật giao diện
     });
 
 </script>
+
 <script>
       //Lọc các đánh giá có số sao tương tự khi chọn vào thanh đánh giá
   document.querySelectorAll(".review-bar").forEach(bar => {
@@ -601,21 +658,20 @@ renderReviews();
 
 <script>
   function switchTab(event, tabId) {
-    // Remove active class from all tabs
+    // Gỡ các tab đang hoạt động
     const tabs = document.querySelectorAll('.tab-button');
     tabs.forEach(tab => tab.classList.remove('active'));
   
-    // Add active class to clicked tab
+    // Thêm tab đang hoạt động vào tab được click
     event.currentTarget.classList.add('active');
   
-    // Hide all tab contents
+    // Ẩn các nội dung của tab bị ẩn
     const contents = document.querySelectorAll('.tab-content');
     contents.forEach(content => content.classList.remove('active'));
   
-    // Show selected tab content
+    // Hiển thị các nội dung của tab được chọn
     document.getElementById(tabId).classList.add('active');
   }
-  
 </script>
 
 
@@ -626,7 +682,6 @@ document.querySelectorAll('.variety, .pack').forEach(item => {
   item.addEventListener('click', () => {
     // Xóa trạng thái 'selected' khỏi tất cả các sản phẩm
     document.querySelectorAll('.variety, .pack').forEach(i => i.classList.remove('selected'));
-    
     // Thêm trạng thái 'selected' cho sản phẩm được chọn
     item.classList.add('selected');
   });
@@ -641,6 +696,7 @@ document.querySelectorAll('.variety, .pack').forEach(item => {
     });
   });
 </script>
+
 
 <script>
   //Tăng giảm số lượng sản phẩm khi nhấn vào dấu + hoặc -
@@ -664,6 +720,7 @@ document.querySelectorAll('.variety, .pack').forEach(item => {
     });
   });  
 </script>
+
 <!-- TÍNH NĂNG ZOOM -->
 <script type="text/javascript" src="assets\js\jquery.min.js"></script>
 <script type="text/javascript" src="assets\js\jquery.ez-plus.js"></script>
@@ -673,9 +730,11 @@ document.querySelectorAll('.variety, .pack').forEach(item => {
     cursor: 'crosshair',
 });
 </script>
+
+
 <div id="notification" class="notification hidden"></div>
 
-  <!-- ========== Thông báo sản phẩm đã được thêm/xóa khỏi giỏ hàng ========== -->
+  <!-- ========== Thông báo sản phẩm đã được thêm/xóa khỏi giỏ hàng/wishlist ========== -->
    <script>
     // Lấy các phần tử
 const favoriteBtn = document.querySelector(".favorite-btn");
@@ -733,6 +792,8 @@ function showNotification(message, type) {
       });
       </script>
 
+
+      <!-- ========== Hiệu ứng chuyển màu sau khi load xong trang ========== -->
       <script>
         window.addEventListener("load", function () {
           // Chọn các section cần hiệu ứng
