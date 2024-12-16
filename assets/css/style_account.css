@@ -589,6 +589,7 @@ table {
   padding: 10px 16px; /* Khoảng cách bên trong */
   background-color: var(--first-color); /* Màu nền */
   color: #fefefe; /* Màu chữ */
+  
 }
 .tab__info, 
 .tab__credentials { 
