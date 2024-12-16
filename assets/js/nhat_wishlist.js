@@ -1,36 +1,12 @@
-document.querySelectorAll('.wishlist-btn').forEach(function(button) {
-    button.addEventListener('click', function() {
-        var wishlistIcon = this.querySelector('.wishlist-icon');
-        var notification = document.getElementById('notification');
-        if (wishlistIcon.classList.contains('heart-red')) {
-            wishlistIcon.classList.remove('heart-red');
-            notification.textContent = 'Removed from wishlist';
-        } else {
-            wishlistIcon.classList.add('heart-red');
-            notification.textContent = 'Added to wishlist';
-        }
-        notification.classList.add('show');
-        setTimeout(function() {
-            notification.classList.remove('show');
-        }, 2000);
-    });
-  });
-  
-  function redirectTo(url) {
-    window.location.href = url;
-  }
-  
-  function clearWishlist() {
-    // Add your logic to clear the wishlist here
-    alert('Wishlist has been cleared!');
-  }
+// Đợi đến khi toàn bộ nội dung của trang được tải xong
+document.addEventListener("DOMContentLoaded", function() {
 
-  document.addEventListener("DOMContentLoaded", function() {
+  // Lấy các phần tử nút giảm, tăng số lượng và ô nhập số lượng
   const decreaseBtn = document.querySelector("[data-quantity-remove]");
   const increaseBtn = document.querySelector("[data-quantity-add]");
   const quantityInput = document.querySelector("[data-quantity-input]");
 
-  // Function to decrease quantity
+  // Hàm xử lý giảm số lượng khi nhấn nút giảm
   decreaseBtn.addEventListener("click", function() {
     let currentValue = parseInt(quantityInput.value);
     if (currentValue > 1) {
@@ -38,7 +14,7 @@ document.querySelectorAll('.wishlist-btn').forEach(function(button) {
     }
   });
 
-  // Function to increase quantity
+  // Hàm xử lý tăng số lượng khi nhấn nút tăng
   increaseBtn.addEventListener("click", function() {
     let currentValue = parseInt(quantityInput.value);
     if (currentValue < 99) {
@@ -46,5 +22,7 @@ document.querySelectorAll('.wishlist-btn').forEach(function(button) {
     }
   });
 });
+
+
 
 

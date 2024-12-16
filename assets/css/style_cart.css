@@ -464,6 +464,7 @@ table {
 }
 
 /*=============== CART ===============*/
+/* Định dạng tiêu đề khung cho phần sản phẩm */
 .giohang_title{
   color: var(--first-color);
   font-weight: bold;
