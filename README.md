@@ -35,7 +35,7 @@ Sử dụng ngôn ngữ lập trình bao gồm:
 HTML<br>
 CSS<br>
 Javascript<br>
-<H2> CÁC TRANG</H2>
+<H2> CÁC TRANG THÀNH PHẦN TRANG WEB</H2>
 Trang landing page: index.html<br>
 Trang cửa hàng: shop.html<br>
 Trang chi tiết sản phẩm: details_HuongCam.html, details_HuongDua.html<br>
