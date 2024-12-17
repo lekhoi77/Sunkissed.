@@ -690,6 +690,21 @@ table {
   color: var(--first-color); /* Màu chữ của liên kết "View" và "Edit" */
 }
 
+.delete__order {
+  background-color: #ff4d4d; /* Màu nền nút xóa */
+  color: #fff; /* Màu chữ */
+  border: none; /* Xóa đường viền */
+  border-radius: 4px; /* Bo góc mềm */
+  padding: 0.5rem 1rem; /* Khoảng cách trong nút */
+  cursor: pointer; /* Thay đổi con trỏ khi hover */
+  font-size: var(--small-font-size); /* Kích thước chữ */
+}
+
+.delete__order:hover {
+  background-color: #ff1a1a; /* Màu khi hover */
+}
+
+
 .address {
   font-style: normal; /* Kiểu chữ thông thường */
   font-size: var(--small-font-size); /* Kích thước chữ nhỏ */

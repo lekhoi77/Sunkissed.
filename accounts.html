@@ -184,65 +184,51 @@
           </div>
           <!-- n/Nội dung tab Thông tin -->
       
-          <!-- Nội dung tab Orders -->
-          <div class="tab__content" content id="orders">
-            <h3 class="tab__header">ĐƠN HÀNG CỦA BẠN</h3>
-            
-            <!-- Thanh lọc đơn hàng -->
-            <div class="filter__orders">
-              <label for="order-filter" class="filter__label">Xếp theo:</label>
-              <select id="order-filter" class="filter__dropdown">
-                <option value="5">5 Đơn gần nhất</option>
-                <option value="15">15 Ngày gần nhất</option>
-                <option value="30">30 Ngày gần nhất</option>
-                <option value="6months">6 Tháng gần nhất</option>
-                <option value="2022">Đơn hàng năm 2022</option>
-                <option value="all">Tất cả đơn hàng</option>
-              </select>
-            </div>
-            <!--n/ Thanh lọc đơn hàng -->
-          
-            <!-- Bảng các đơn hàng -->
-            <div class="tab__body">
-              <table class="placed__order-table">
-                <thead>
-                  <tr>
-                    <th>Đơn hàng</th>
-                    <th>Hình ảnh</th> <!-- Thêm cột hình ảnh sau cột đơn hàng -->
-                    <th>Thời gian</th>
-                    <th>Trạng thái</th>
-                    <th>Tổng cộng</th>
-                    <th>Hành động</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>#1357</td>
-                    <td><img src="./assets/img/pack6_mi_p3.png" alt="Product Image" class="order__image"></td> <!-- Thêm hình ảnh -->
-                    <td>14/5/2023</td>
-                    <td>Đang chờ xác nhận</td>
-                    <td>140.000 vnđ</td>
-                    <td><a href="#" class="view__order">Xem</a></td>
-                  </tr>
-                  <tr>
-                    <td>#2468</td>
-                    <td><img src="./assets/img/pack6_cf_p2.png" alt="Product Image" class="order__image"></td> <!-- Thêm hình ảnh -->
-                    <td>23/11/2024</td>
-                    <td>Đã giao</td>
-                    <td>70.000 vnđ</td>
-                    <td><a href="#" class="view__order">Xem</a></td>
-                  </tr>
-                  <tr>
-                    <td>#2366</td>
-                    <td><img src="./assets/img/pack6_td_p1.png" alt="Product Image" class="order__image"></td> <!-- Thêm hình ảnh -->
-                    <td>14/12/2024</td>
-                    <td>Huỷ</td>
-                    <td>23.000 vnđ</td>
-                    <td><a href="#" class="view__order">Xem</a></td>
-                  </tr>
-                </tbody>
-              </table>
-              <!--n/ Bảng các đơn hàng -->
+        <!-- Bảng các đơn hàng -->
+        <div class="tab__body">
+          <table class="placed__order-table">
+            <thead>
+              <tr>
+                <th>Đơn hàng</th>
+                <th>Hình ảnh</th>
+                <th>Thời gian</th>
+                <th>Trạng thái</th>
+                <th>Tổng cộng</th>
+                <th>Hành động</th>
+                <th>Xóa</th> <!-- Thêm cột xóa -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#1357</td>
+                <td><img src="./assets/img/pack6_mi_p3.png" alt="Product Image" class="order__image"></td>
+                <td>14/5/2023</td>
+                <td>Đang chờ xác nhận</td>
+                <td>140.000 vnđ</td>
+                <td><a href="#" class="view__order">Xem</a></td>
+                <td><button class="delete__order" onclick="deleteOrder(this)">Xóa</button></td> <!-- Nút xóa -->
+              </tr>
+              <tr>
+                <td>#2468</td>
+                <td><img src="./assets/img/pack6_cf_p2.png" alt="Product Image" class="order__image"></td>
+                <td>23/11/2024</td>
+                <td>Đã giao</td>
+                <td>70.000 vnđ</td>
+                <td><a href="#" class="view__order">Xem</a></td>
+                <td><button class="delete__order" onclick="deleteOrder(this)">Xóa</button></td> <!-- Nút xóa -->
+              </tr>
+              <tr>
+                <td>#2366</td>
+                <td><img src="./assets/img/pack6_td_p1.png" alt="Product Image" class="order__image"></td>
+                <td>14/12/2024</td>
+                <td>Huỷ</td>
+                <td>23.000 vnđ</td>
+                <td><a href="#" class="view__order">Xem</a></td>
+                <td><button class="delete__order" onclick="deleteOrder(this)">Xóa</button></td> <!-- Nút xóa -->
+              </tr>
+            </tbody>
+          </table>
+          <!--n/ Bảng các đơn hàng -->
             </div>
           </div>
           <!--n/Nội dung tab Orders -->
@@ -353,6 +339,20 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+      function deleteOrder(button) {
+  // Lấy dòng chứa nút "Xóa" được nhấn
+  const row = button.parentElement.parentElement;
+  
+  // Xóa dòng khỏi bảng
+  row.remove();
+  
+  // Có thể thêm logic khác như cập nhật dữ liệu trên server nếu cần
+  alert("Đơn hàng đã được xóa!");
+}
+
+    </script>
     
   </body>
 </html>
