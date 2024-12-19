@@ -691,7 +691,7 @@ table {
 }
 
 .delete__order {
-  background-color: #ff4d4d; /* Màu nền nút xóa */
+  background-color: var(--first-color); /* Màu nền nút xóa */
   color: #fff; /* Màu chữ */
   border: none; /* Xóa đường viền */
   border-radius: 4px; /* Bo góc mềm */
