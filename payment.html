@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!--=============== FLATICON ===============-->
+    <link rel="icon" href="./assets/img/logo_hinh_red.svg" type="image/png">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="payment.css" />
+    <link rel="stylesheet" href="assets/css/breakpoint.css" />
+
+    <title>Sunkissed | Thanh toán</title>
+</head>
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+        <div class="header__top">
+            <div class="header__container container">
+                <div class="header__contact">
+                    <span>(+84)335993276</span>
+                    <span></span>
+                </div>
+                <p class="header__alert-news">
+                    Giảm 15% trên mọi đơn hàng từ 20-24/12
+                </p>
+                <a href="login-register.html" class="header__top-action">
+                    Đăng nhập/ Đăng kí
+                </a>
+            </div>
+        </div>
+        <!--=============== n/HEADER ===============-->
+        <!-- Navigation -->
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img class="nav__logo-img" src="assets/img/logo_red.svg" alt="website logo" />
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__menu-top">
+                    <a href="index.html" class="nav__menu-logo">
+                        <img src="./assets/img/logo_red.svg" alt="">
+                    </a>
+                    <div class="nav__close" id="nav-close">
+                        <i class="fi fi-rs-cross-small"></i>
+                    </div>
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Trang chủ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Cửa hàng</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="aboutus.html" class="nav__link">Về chúng tôi</a>
+                    </li>
+                    
+                    <li class="nav__item">
+                        <a href="lienhe.html" class="nav__link">Liên hệ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="accounts.html" class="nav__link">Tài khoản</a>
+                    </li>
+                </ul>
+
+                <!-- Hộp tìm kiếm -->
+                <div class="header__search">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm" class="form__input" />
+                </div>
+            </div>
+
+            <!-- Wishlist và Giỏ hàng -->
+            <div class="header__user-actions">
+                <a href="wishlist.html" class="header__action-btn" title="Wishlist">
+                    <img src="assets/img/icon-heart.svg" alt="" />
+                    <span class="count">3</span>
+                </a>
+                <a href="cart.html" class="header__action-btn" title="Cart">
+                    <img src="assets/img/icon-cart.svg" alt="" />
+                    <span class="count">3</span>
+                </a>
+                <div class="header__action-btn nav__toggle" id="nav-toggle">
+                    <img src="./assets//img/menu-burger.svg" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== BREADCRUMB ===============-->
+        <section class="breadcrumb">
+            <ul class="breadcrumb__list flex container">
+                <li><a href="index.html" class="breadcrumb__link">Trang chủ</a></li>
+                <li><span class="breadcrumb__link">></span></li>
+                <li><a href="cart.html" class="breadcrumb__link">Giỏ hàng</a></li>
+                <li><span class="breadcrumb__link">></span></li>
+                <li><span class="breadcrumb__link">Thanh toán</span></li>
+            </ul>
+        </section>
+
+        <!--=============== PAYMENT ===============-->
+        <section class="payment section--lg">
+            <div class="payment__container container grid">
+                <section class="payment-form">
+                    <h2><span class="back-arrow">&#8592;</span> Thanh toán</h2>
+                    <form>
+                        <div class="section">
+                            <h3>1. Thông tin khách hàng</h3>
+                            <div class="form-row">
+                                <div>
+                                    <label>Tên <span class="required">*</span></label>
+                                    <input type="text" class="form__input" required>
+                                </div>
+                                <div>
+                                    <label>Họ và tên lót <span class="required">*</span></label>
+                                    <input type="text" class="form__input" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div>
+                                    <label>Số điện thoại <span class="required">*</span></label>
+                                    <div class="phone-input">
+                                        <span>+84</span>
+                                        <input type="text" class="form__input" required>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Email <span class="required">*</span></label>
+                                    <input type="email" class="form__input" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <h3>2. Phương thức giao hàng</h3>
+                            <div class="shipping-methods">
+                                <button type="button" class="store-btn active">Cửa hàng</button>
+                                <button type="button" class="delivery-btn">Giao hàng</button>
+                            </div>
+                            
+                            <!-- Giao diện cho phương thức Cửa hàng -->
+                            <div class="store-pickup-container">
+                                <div class="form-row">
+                                    <div>
+                                        <label>Ngày lấy hàng <span class="required">*</span></label>
+                                        <input type="date" class="form__input" required>
+                                    </div>
+                                    <div>
+                                        <label>Thời gian lấy <span class="required">*</span></label>
+                                        <input type="text" class="form__input" placeholder="13h-16h" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="store-location">
+                                    <h4>Chọn cửa hàng</h4>
+                                    <div class="store-options">
+                                        <div class="store-option">
+                                            <input type="radio" id="store1" name="store" checked>
+                                            <label for="store1">
+                                                <strong>Sunkissed - Chi nhánh 1</strong>
+                                                <p>219 Nguyễn Tri Phương, Quận 10, Tp. Hồ Chí Minh</p>
+                                                <p>Giờ mở cửa: 8:00 - 21:00, Thứ 2 - Thứ 7</p>
+                                            </label>
+                                        </div>
+                                        <div class="store-option">
+                                            <input type="radio" id="store2" name="store">
+                                            <label for="store2">
+                                                <strong>Sunkissed - Chi nhánh 2</strong>
+                                                <p>78 Nguyễn Văn Linh, Quận 7, Tp. Hồ Chí Minh</p>
+                                                <p>Giờ mở cửa: 8:00 - 21:00, Thứ 2 - Chủ Nhật</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Giao diện cho phương thức Giao hàng (ẩn ban đầu) -->
+                            <div class="delivery-container" style="display: none;">
+                                <div class="form-row">
+                                    <div>
+                                        <label>Ngày giao hàng <span class="required">*</span></label>
+                                        <input type="date" class="form__input" required>
+                                    </div>
+                                    <div>
+                                        <label>Thời gian giao <span class="required">*</span></label>
+                                        <input type="text" class="form__input" placeholder="13h-16h" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div>
+                                        <label>Thành phố/Tỉnh <span class="required">*</span></label>
+                                        <input type="text" class="form__input" required>
+                                    </div>
+                                    <div>
+                                        <label>Quận/Huyện <span class="required">*</span></label>
+                                        <input type="text" class="form__input" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div>
+                                        <label>Số nhà/Đường <span class="required">*</span></label>
+                                        <input type="text" class="form__input" required>
+                                    </div>
+                                    <div>
+                                        <label>Mã Zip <span class="required">*</span></label>
+                                        <input type="text" class="form__input" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <h3>3. Phương thức thanh toán</h3>
+                            <div class="payment-methods">
+                                <button type="button" class="payment-btn active"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa"></button>
+                                <button type="button" class="payment-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard"></button>
+                                <button type="button" class="payment-btn"><img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="Momo"></button>
+                                <button type="button" class="payment-btn"><img src="https://cdn-icons-png.flaticon.com/512/1554/1554401.png" alt="COD"></button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <aside class="order-summary">
+                    <h3>Đơn hàng của bạn</h3>
+                    <div class="cart-item">
+                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam">
+                        <div>
+                            <div class="item-title">Tropical Hương Cam</div>
+                            <div class="item-qty">
+                                Số lượng 
+                                <button class="quantity-btn"><img src="assets/img/minus.png" alt="-"></button>
+                                <span>1</span>
+                                <button class="quantity-btn"><img src="assets/img/plus.png" alt="+"></button>
+                                <span class="remove">Xóa</span>
+                            </div>
+                            <div class="item-price">35,000 đ</div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam">
+                        <div>
+                            <div class="item-title">Tropical Hương Cam</div>
+                            <div class="item-qty">
+                                Số lượng 
+                                <button class="quantity-btn"><img src="assets/img/minus.png" alt="-"></button>
+                                <span>1</span>
+                                <button class="quantity-btn"><img src="assets/img/plus.png" alt="+"></button>
+                                <span class="remove">Xóa</span>
+                            </div>
+                            <div class="item-price">35,000 đ</div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam">
+                        <div>
+                            <div class="item-title">Tropical Hương Cam</div>
+                            <div class="item-qty">
+                                Số lượng 
+                                <button class="quantity-btn"><img src="assets/img/minus.png" alt="-"></button>
+                                <span>1</span>
+                                <button class="quantity-btn"><img src="assets/img/plus.png" alt="+"></button>
+                                <span class="remove">Xóa</span>
+                            </div>
+                            <div class="item-price">35,000 đ</div>
+                        </div>
+                    </div>
+                    <div class="shipping-fee">
+                        Phí vận chuyển: <span>Miễn phí</span>
+                    </div>
+                    <div class="total">
+                        Tổng tiền: <span>210.000 vnd</span>
+                    </div>
+                    <div class="terms">
+                        <div class="check-box">
+                            <input type="checkbox" id="terms-checkbox" required>
+                            <div class="check-box__state check-box__state--primary">
+                                <label class="check-box__label" for="terms-checkbox">Tôi đồng ý với <a href="#">Điều khoản và dịch vụ</a></label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn checkout-btn">Tiến hành thanh toán</button>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="index.html" class="footer__logo">
+                    <img src="assets/img/logo_red.svg" alt="" class="footer__logo-img">
+                </a>
+
+                <h4 class="footer__subtitle">Liên hệ</h4>
+
+                <p class="footer__description">
+                    <span>Địa chỉ: 219 Nguyễn Tri Phương, Quận 10, Tp. Hồ Chí Minh</span><br>
+                    <span>Điện thoại: +84 335993276</span><br>
+                    <span>Giờ làm việc: 8:00 - 21:00, Thứ 2 - Thứ 7</span>
+                </p>
+            </div>
+
+            <div class="footer__content">
+                <h4 class="footer__title">Thông tin</h4>
+
+                <ul class="footer__links">
+                    <li><a href="aboutus.html" class="footer__link">Về chúng tôi</a></li>
+                    <li><a href="#" class="footer__link">Thông tin giao hàng</a></li>
+                    <li><a href="#" class="footer__link">Chính sách</a></li>
+                    <li><a href="#" class="footer__link">Điều khoản và Điều kiện</a></li>
+                    <li><a href="lienhe.html" class="footer__link">Trung tâm hỗ trợ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h4 class="footer__title">Tài khoản</h4>
+
+                <ul class="footer__links">
+                    <li><a href="login-register.html" class="footer__link">Đăng nhập</a></li>
+                    <li><a href="cart.html" class="footer__link">Xem giỏ hàng</a></li>
+                    <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
+                    <li><a href="#" class="footer__link">Theo dõi đơn hàng</a></li>
+                    <li><a href="#" class="footer__link">Trợ giúp</a></li>
+                    <li><a href="login-register.html" class="footer__link">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="secure-pay">
+                <span>Cổng thanh toán bảo mật</span>
+                <div class="secure-pay__images">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="Momo">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const storeBtn = document.querySelector('.store-btn');
+        const deliveryBtn = document.querySelector('.delivery-btn');
+        const storeContainer = document.querySelector('.store-pickup-container');
+        const deliveryContainer = document.querySelector('.delivery-container');
+        
+        storeBtn.addEventListener('click', function() {
+            storeBtn.classList.add('active');
+            deliveryBtn.classList.remove('active');
+            storeContainer.style.display = 'block';
+            deliveryContainer.style.display = 'none';
+        });
+        
+        deliveryBtn.addEventListener('click', function() {
+            deliveryBtn.classList.add('active');
+            storeBtn.classList.remove('active');
+            deliveryContainer.style.display = 'block';
+            storeContainer.style.display = 'none';
+        });
+        
+        // Xử lý chọn cửa hàng
+        const storeOptions = document.querySelectorAll('.store-option');
+        storeOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // Bỏ chọn tất cả
+                storeOptions.forEach(opt => opt.classList.remove('selected'));
+                // Chọn option hiện tại
+                this.classList.add('selected');
+                // Chọn radio button
+                const radio = this.querySelector('input[type="radio"]');
+                radio.checked = true;
+            });
+        });
+    });
+    </script>
+</body>
+</html>
