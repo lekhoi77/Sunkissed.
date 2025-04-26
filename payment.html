@@ -115,24 +115,37 @@
                             <h3>1. Thông tin khách hàng</h3>
                             <div class="form-row">
                                 <div>
-                                    <label>Tên <span class="required">*</span></label>
+                                    <label>Tên <span class="required">*Bắt buộc</span></label>
                                     <input type="text" class="form__input" required>
                                 </div>
                                 <div>
-                                    <label>Họ và tên lót <span class="required">*</span></label>
+                                    <label>Họ và tên lót <span class="required">*Bắt buộc</span></label>
                                     <input type="text" class="form__input" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div>
-                                    <label>Số điện thoại <span class="required">*</span></label>
+                                    <label>Số điện thoại <span class="required">*Bắt buộc</span></label>
                                     <div class="phone-input">
-                                        <span>+84</span>
+                                        <div class="phone-code-dropdown">
+                                            <div class="selected-country">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png" alt="VN" class="country-flag">
+                                                <span>+84</span>
+                                                <i class="dropdown-arrow"></i>
+                                            </div>
+                                            <select id="country-code" class="country-select">
+                                                <option value="+84">+84</option>
+                                                <option value="+1">+1</option>
+                                                <option value="+44">+44</option>
+                                                <option value="+86">+86</option>
+                                                <option value="+81">+81</option>
+                                            </select>
+                                        </div>
                                         <input type="text" class="form__input" required>
                                     </div>
                                 </div>
                                 <div>
-                                    <label>Email <span class="required">*</span></label>
+                                    <label>Email <span class="required">*Bắt buộc</span></label>
                                     <input type="email" class="form__input" required>
                                 </div>
                             </div>
@@ -148,11 +161,11 @@
                             <div class="store-pickup-container">
                                 <div class="form-row">
                                     <div>
-                                        <label>Ngày lấy hàng <span class="required">*</span></label>
+                                        <label>Ngày lấy hàng <span class="required">*Bắt buộc</span></label>
                                         <input type="date" class="form__input" required>
                                     </div>
                                     <div>
-                                        <label>Thời gian lấy <span class="required">*</span></label>
+                                        <label>Thời gian lấy <span class="required">*Bắt buộc</span></label>
                                         <input type="text" class="form__input" placeholder="13h-16h" required>
                                     </div>
                                 </div>
@@ -184,31 +197,31 @@
                             <div class="delivery-container" style="display: none;">
                                 <div class="form-row">
                                     <div>
-                                        <label>Ngày giao hàng <span class="required">*</span></label>
+                                        <label>Ngày giao hàng <span class="required">*Bắt buộc</span></label>
                                         <input type="date" class="form__input" required>
                                     </div>
                                     <div>
-                                        <label>Thời gian giao <span class="required">*</span></label>
+                                        <label>Thời gian giao <span class="required">*Bắt buộc</span></label>
                                         <input type="text" class="form__input" placeholder="13h-16h" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div>
-                                        <label>Thành phố/Tỉnh <span class="required">*</span></label>
+                                        <label>Thành phố/Tỉnh <span class="required">*Bắt buộc</span></label>
                                         <input type="text" class="form__input" required>
                                     </div>
                                     <div>
-                                        <label>Quận/Huyện <span class="required">*</span></label>
+                                        <label>Quận/Huyện <span class="required">*Bắt buộc</span></label>
                                         <input type="text" class="form__input" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div>
-                                        <label>Số nhà/Đường <span class="required">*</span></label>
+                                        <label>Số nhà/Đường <span class="required">*Bắt buộc</span></label>
                                         <input type="text" class="form__input" required>
                                     </div>
                                     <div>
-                                        <label>Mã Zip <span class="required">*</span></label>
+                                        <label>Mã Zip <span class="required">*Bắt buộc</span></label>
                                         <input type="text" class="form__input" required>
                                     </div>
                                 </div>
@@ -228,53 +241,71 @@
 
                 <aside class="order-summary">
                     <h3>Đơn hàng của bạn</h3>
+                    
                     <div class="cart-item">
-                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam">
-                        <div>
+                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam" class="product-image">
+                        <div class="cart-item-details">
                             <div class="item-title">Tropical Hương Cam</div>
-                            <div class="item-qty">
-                                Số lượng 
-                                <button class="quantity-btn"><img src="assets/img/minus.png" alt="-"></button>
-                                <span>1</span>
-                                <button class="quantity-btn"><img src="assets/img/plus.png" alt="+"></button>
-                                <span class="remove">Xóa</span>
+                            <div class="item-qty-row">
+                                <span>Số lượng</span>
+                                <div class="qty-number">1</div>
                             </div>
                             <div class="item-price">35,000 đ</div>
                         </div>
+                        <div class="item-actions">
+                            <div class="quantity-buttons">
+                                <button class="quantity-btn minus-btn" aria-label="Giảm">-</button>
+                                <button class="quantity-btn plus-btn" aria-label="Tăng">+</button>
+                            </div>
+                            <a href="#" class="remove-link">Xóa</a>
+                        </div>
                     </div>
+                    
                     <div class="cart-item">
-                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam">
-                        <div>
+                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam" class="product-image">
+                        <div class="cart-item-details">
                             <div class="item-title">Tropical Hương Cam</div>
-                            <div class="item-qty">
-                                Số lượng 
-                                <button class="quantity-btn"><img src="assets/img/minus.png" alt="-"></button>
-                                <span>1</span>
-                                <button class="quantity-btn"><img src="assets/img/plus.png" alt="+"></button>
-                                <span class="remove">Xóa</span>
+                            <div class="item-qty-row">
+                                <span>Số lượng</span>
+                                <div class="qty-number">1</div>
                             </div>
                             <div class="item-price">35,000 đ</div>
                         </div>
+                        <div class="item-actions">
+                            <div class="quantity-buttons">
+                                <button class="quantity-btn minus-btn" aria-label="Giảm">-</button>
+                                <button class="quantity-btn plus-btn" aria-label="Tăng">+</button>
+                            </div>
+                            <a href="#" class="remove-link">Xóa</a>
+                        </div>
                     </div>
+                    
                     <div class="cart-item">
-                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam">
-                        <div>
+                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam" class="product-image">
+                        <div class="cart-item-details">
                             <div class="item-title">Tropical Hương Cam</div>
-                            <div class="item-qty">
-                                Số lượng 
-                                <button class="quantity-btn"><img src="assets/img/minus.png" alt="-"></button>
-                                <span>1</span>
-                                <button class="quantity-btn"><img src="assets/img/plus.png" alt="+"></button>
-                                <span class="remove">Xóa</span>
+                            <div class="item-qty-row">
+                                <span>Số lượng</span>
+                                <div class="qty-number">1</div>
                             </div>
                             <div class="item-price">35,000 đ</div>
                         </div>
+                        <div class="item-actions">
+                            <div class="quantity-buttons">
+                                <button class="quantity-btn minus-btn" aria-label="Giảm">-</button>
+                                <button class="quantity-btn plus-btn" aria-label="Tăng">+</button>
+                            </div>
+                            <a href="#" class="remove-link">Xóa</a>
+                        </div>
                     </div>
+                    
                     <div class="shipping-fee">
-                        Phí vận chuyển: <span>Miễn phí</span>
+                        <span>Phí vận chuyển:</span>
+                        <span class="fee-value">Miễn phí</span>
                     </div>
                     <div class="total">
-                        Tổng tiền: <span>210.000 vnd</span>
+                        <span>Tổng tiền:</span>
+                        <span class="total-value">210.000 vnd</span>
                     </div>
                     <div class="terms">
                         <div class="check-box">
@@ -353,6 +384,35 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Xử lý dropdown mã quốc gia
+        const countrySelect = document.getElementById('country-code');
+        const selectedCountryText = document.querySelector('.selected-country span');
+        
+        countrySelect.addEventListener('change', function() {
+            selectedCountryText.textContent = this.value;
+            
+            // Đổi cờ tương ứng với mã quốc gia
+            const flagImg = document.querySelector('.country-flag');
+            switch(this.value) {
+                case '+84':
+                    flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png';
+                    break;
+                case '+1':
+                    flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/2000px-Flag_of_the_United_States.svg.png';
+                    break;
+                case '+44':
+                    flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/2000px-Flag_of_the_United_Kingdom_%283-5%29.svg.png';
+                    break;
+                case '+86':
+                    flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/2000px-Flag_of_the_People%27s_Republic_of_China.svg.png';
+                    break;
+                case '+81':
+                    flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/2000px-Flag_of_Japan.svg.png';
+                    break;
+            }
+        });
+        
+        // Xử lý chuyển đổi giữa phương thức Cửa hàng và Giao hàng
         const storeBtn = document.querySelector('.store-btn');
         const deliveryBtn = document.querySelector('.delivery-btn');
         const storeContainer = document.querySelector('.store-pickup-container');
@@ -383,6 +443,30 @@
                 // Chọn radio button
                 const radio = this.querySelector('input[type="radio"]');
                 radio.checked = true;
+            });
+        });
+        
+        // Xử lý tăng giảm số lượng
+        const minusBtns = document.querySelectorAll('.minus-btn');
+        const plusBtns = document.querySelectorAll('.plus-btn');
+        
+        minusBtns.forEach((btn, index) => {
+            btn.addEventListener('click', function() {
+                const qtyNumberEl = document.querySelectorAll('.qty-number')[index];
+                let qty = parseInt(qtyNumberEl.textContent);
+                if (qty > 1) {
+                    qty--;
+                    qtyNumberEl.textContent = qty;
+                }
+            });
+        });
+        
+        plusBtns.forEach((btn, index) => {
+            btn.addEventListener('click', function() {
+                const qtyNumberEl = document.querySelectorAll('.qty-number')[index];
+                let qty = parseInt(qtyNumberEl.textContent);
+                qty++;
+                qtyNumberEl.textContent = qty;
             });
         });
     });
