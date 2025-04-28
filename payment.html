@@ -18,7 +18,7 @@
 
     <title>Sunkissed | Thanh toán</title>
     <style>
-        /* Header styling to match image more precisely */
+        /* Header styling */
         .header__top {
             background-color: #941212;
             padding: 8px 0;
@@ -54,6 +54,11 @@
             font-size: 14px;
             font-weight: 500;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .header__top-action:hover {
+            color: #f8f8f8;
         }
         
         /* Navigation styling */
@@ -61,21 +66,19 @@
             padding: 15px 0;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
         
         .nav__logo {
-            margin-right: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav__logo:hover {
+            transform: scale(1.05);
         }
         
         .nav__logo-img {
             height: 40px;
-        }
-        
-        .nav__menu {
-            display: flex;
-            gap: 50px;
-            align-items: center;
-            flex: 1;
         }
         
         .nav__list {
@@ -88,30 +91,47 @@
         
         .nav__link {
             color: #333;
-            font-weight: 600;
-            font-size: 15px;
+            font-weight: 700;
+            position: relative;
             text-decoration: none;
-            white-space: nowrap;
+            transition: color 0.3s var(--transition);
         }
         
         .nav__link:hover {
             color: #941212;
         }
         
+        /* Active link */
+        .active-link,
+        .nav__link:hover {
+            color: #941212;
+        }
+        
+        /* Remove the underline effect */
+        .nav__link::after {
+            content: none;
+        }
+        
         /* Search box styling */
-        .search-box {
+        .header__search {
             flex: 1;
-            max-width: 350px;
+            max-width: 250px;
             margin-left: 30px;
         }
         
-        .search-input {
+        .form__input {
             width: 100%;
             padding: 8px 15px;
             border: 1px solid #ddd;
             border-radius: 50px;
             font-size: 14px;
             outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .form__input:focus {
+            border-color: #941212;
+            box-shadow: 0 0 0 2px rgba(148, 18, 18, 0.1);
         }
         
         /* Action buttons */
@@ -119,11 +139,17 @@
             display: flex;
             gap: 15px;
             margin-left: 20px;
+            align-items: center;
         }
         
         .header__action-btn {
             position: relative;
             display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .header__action-btn:hover {
+            transform: scale(1.1);
         }
         
         .header__action-btn img {
@@ -144,6 +170,95 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .header__action-btn:hover .count {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 992px) {
+            .payment__container {
+                grid-template-columns: 1fr;
+            }
+            
+            .order-summary {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            
+            .footer__row {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .payment-methods {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .nav {
+                flex-wrap: wrap;
+            }
+            
+            .nav__list {
+                order: 3;
+                width: 100%;
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            .header__search {
+                order: 2;
+                margin-left: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav__list {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .cart-items-container {
+                max-height: 300px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer__row {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer__bottom-content {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .qty-controls {
+                margin: 5px 0;
+            }
+            
+            .item-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .item-info > span {
+                margin-bottom: 5px;
+            }
+            
+            .remove-link {
+                margin-top: 5px;
+                margin-left: 0;
+            }
         }
         
         /* Breadcrumb styling */
@@ -165,27 +280,221 @@
             color: #666;
             font-size: 13px;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb__link:hover {
+            color: #941212;
+        }
+        
+        /* Payment form styling */
+        .payment {
+            padding: 40px 0;
+        }
+        
+        .payment__container {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+        }
+        
+        .payment-form {
+            padding-right: 20px;
+        }
+        
+        .payment-form h2 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .back-arrow {
+            margin-right: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .back-arrow:hover {
+            transform: translateX(-5px);
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section h3 {
+            font-size: 18px;
+            margin-bottom: 18px;
+            color: #333;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .required {
+            font-size: 12px;
+            color: #941212;
+            margin-left: 5px;
+            font-weight: normal;
         }
         
         /* Phone input styling */
-        .phone-country-code {
-            border: 1px solid #ddd;
-            border-radius: 4px 0 0 4px;
-            padding: 8px 12px;
-            display: flex;
-            align-items: center;
-            background-color: #f9f9f9;
-            border-right: none;
-        }
-        
         .phone-input-container {
             display: flex;
             width: 100%;
         }
         
+        .phone-country-code {
+            position: relative;
+            min-width: 95px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            border-right: none;
+            overflow: visible;
+        }
+        
+        .phone-dropdown-btn {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            width: 100%;
+            height: 100%;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: left;
+            border: none;
+        }
+        
+        .dropdown-arrow {
+            margin-left: auto;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .country-flag {
+            width: 20px;
+            height: 15px;
+            margin-right: 5px;
+            object-fit: cover;
+        }
+        
+        .country-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 250px;
+            max-height: 300px;
+            overflow-y: auto;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+        }
+        
+        .country-dropdown.active,
+        .country-dropdown.show {
+            display: block;
+        }
+        
+        .country-option {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .country-option:hover {
+            background: #f5f5f5;
+        }
+        
+        .country-name {
+            flex: 1;
+            margin: 0 8px;
+        }
+        
+        .country-code {
+            color: #666;
+        }
+        
         .phone-number-input {
             flex: 1;
             border-radius: 0 4px 4px 0;
+        }
+        
+        /* Shipping methods */
+        .shipping-methods {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .shipping-methods button {
+            padding: 10px 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .shipping-methods button.active {
+            background-color: #941212;
+            color: white;
+            border-color: #941212;
+        }
+        
+        .store-pickup-container, .delivery-container {
+            margin-top: 20px;
+        }
+        
+        .store-location {
+            margin-top: 20px;
+        }
+        
+        .store-location h4 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .store-options {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .store-option {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            display: flex;
+            transition: border-color 0.3s ease;
+        }
+        
+        .store-option input {
+            margin-right: 10px;
+        }
+        
+        .store-option label {
+            margin-bottom: 0;
+        }
+        
+        .store-option:hover {
+            border-color: #941212;
         }
         
         /* Payment method styling */
@@ -211,18 +520,29 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
             margin-bottom: 8px;
         }
         
         .payment-btn.active {
-            border-color: var(--first-color);
-            box-shadow: 0 0 0 1px var(--first-color);
+            border-color: #941212;
+            box-shadow: 0 0 0 1px #941212;
+        }
+        
+        .payment-btn:hover:not(.active) {
+            border-color: #ddd;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
         }
         
         .payment-btn img {
             max-height: 40px;
             max-width: 80%;
+            transition: transform 0.3s ease;
+        }
+        
+        .payment-btn:hover img {
+            transform: scale(1.05);
         }
         
         .payment-method span {
@@ -231,9 +551,239 @@
             margin-top: 5px;
         }
         
+        /* Order summary */
+        .order-summary {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .order-summary h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .cart-items-container {
+            /* Remove scrolling */
+            max-height: unset;
+            overflow-y: visible;
+            margin-bottom: 10px;
+        }
+        
+        .cart-item {
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+            align-items: center;
+        }
+        
+        .product-image {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        
+        .cart-item-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #941212;
+        }
+        
+        .item-info {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .item-info-label {
+            margin-right: 10px;
+        }
+        
+        .qty-controls {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            overflow: hidden;
+            min-width: 100px;
+            justify-content: space-between;
+        }
+        
+        .qty-btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .qty-number {
+            padding: 0 8px;
+            font-size: 14px;
+            min-width: 20px;
+            text-align: center;
+        }
+        
+        .qty-btn:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .remove-link {
+            font-size: 14px;
+            color: #941212;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        
+        .remove-link:hover {
+            text-decoration: underline;
+        }
+        
+        .item-price {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .shipping-fee, .total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            font-size: 16px;
+        }
+        
+        .fee-value {
+            font-weight: 500;
+        }
+        
+        .total {
+            font-weight: 600;
+            margin-top: 4px;
+            border-top: none;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
         .total-value {
-            color: var(--first-color);
-            font-weight: var(--weight-700);
+            color: #941212;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        /* Custom checkbox styling */
+        .terms {
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .check-box {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+        
+        .check-box input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        
+        .checkbox-custom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        .check-box:hover input ~ .checkbox-custom {
+            border-color: #941212;
+        }
+        
+        .check-box input:checked ~ .checkbox-custom {
+            background-color: #941212;
+            border-color: #941212;
+        }
+        
+        .checkbox-custom:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 6px;
+            top: 2px;
+            width: 6px;
+            height: 11px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        
+        .check-box input:checked ~ .checkbox-custom:after {
+            display: block;
+        }
+        
+        .check-box span {
+            font-size: 14px;
+            color: #555;
+            line-height: 20px;
+        }
+        
+        .check-box a {
+            color: #941212;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .checkout-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #941212;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+        
+        .checkout-btn:hover {
+            background-color: #6b0d0d;
         }
         
         /* Footer styling */
@@ -241,12 +791,6 @@
             padding-top: 60px;
             background: #fff;
             border-top: 1px solid #eee;
-        }
-        
-        .footer__container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
         }
         
         .footer__row {
@@ -258,6 +802,11 @@
         .footer__logo-img {
             height: 40px;
             margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+        
+        .footer__logo:hover .footer__logo-img {
+            transform: scale(1.05);
         }
         
         .footer__heading {
@@ -294,6 +843,12 @@
         .footer__social-link {
             color: #666;
             font-size: 16px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .footer__social-link:hover {
+            color: #941212;
+            transform: translateY(-3px);
         }
         
         .footer__title {
@@ -317,11 +872,13 @@
             color: #666;
             font-size: 14px;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
         }
         
         .footer__link:hover {
             color: #941212;
+            transform: translateX(5px);
         }
         
         .footer__payment {
@@ -334,6 +891,11 @@
         .payment-logo {
             height: 30px;
             object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .payment-logo:hover {
+            transform: scale(1.1);
         }
         
         .footer__bottom {
@@ -354,22 +916,99 @@
             margin: 0;
         }
         
-        @media (max-width: 992px) {
-            .footer__row {
-                grid-template-columns: 1fr 1fr;
-            }
+        /* Country Dropdown Styling */
+        .country-section {
+            position: relative;
         }
         
-        @media (max-width: 576px) {
-            .footer__row {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer__bottom-content {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
+        .selected-country {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 6px 10px;
+            border-right: 1px solid #ddd;
+        }
+        
+        .country-flag {
+            width: 20px;
+            height: 15px;
+            margin-right: 5px;
+            object-fit: cover;
+        }
+        
+        .country-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 250px;
+            max-height: 300px;
+            overflow-y: auto;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: none;
+        }
+        
+        .country-dropdown.active,
+        .country-dropdown.show {
+            display: block;
+        }
+        
+        .country-option {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .country-option:hover {
+            background: #f5f5f5;
+        }
+        
+        .country-name {
+            flex: 1;
+            margin: 0 8px;
+        }
+        
+        .country-code {
+            color: #666;
+        }
+        
+        /* Checkbox styling */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .checkbox-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        
+        .checkbox-custom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .checkbox-input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
         }
     </style>
 </head>
@@ -379,7 +1018,7 @@
         <div class="header__top">
             <div class="header__container container">
                 <div class="header__contact">
-                    (+84)335993276
+                    <span>(+84)335993276</span>
                 </div>
                 <p class="header__alert-news">
                     Giảm 15% trên mọi đơn hàng từ 20-24/12
@@ -392,34 +1031,32 @@
         
         <!-- Navigation -->
         <div class="container">
-            <nav class="nav">
+            <div class="nav">
                 <a href="index.html" class="nav__logo">
                     <img class="nav__logo-img" src="assets/img/logo_red.svg" alt="Sunkissed logo" />
                 </a>
                 
-                <div class="nav__menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="index.html" class="nav__link">Trang chủ</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="shop.html" class="nav__link">Cửa hàng</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="aboutus.html" class="nav__link">Về chúng tôi</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="lienhe.html" class="nav__link">Liên hệ</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="accounts.html" class="nav__link">Tài khoản</a>
-                        </li>
-                    </ul>
-                    
-                    <!-- Hộp tìm kiếm -->
-                    <div class="search-box">
-                        <input type="text" placeholder="Tìm kiếm sản phẩm" class="search-input" />
-                    </div>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Trang chủ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Cửa hàng</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="aboutus.html" class="nav__link">Về chúng tôi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="lienhe.html" class="nav__link">Liên hệ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="accounts.html" class="nav__link">Tài khoản</a>
+                    </li>
+                </ul>
+
+                <!-- Search box -->
+                <div class="header__search">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm" class="form__input" />
                 </div>
 
                 <!-- Wishlist và Giỏ hàng -->
@@ -433,7 +1070,7 @@
                         <span class="count">2</span>
                     </a>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
@@ -452,9 +1089,8 @@
 
     <!--=============== MAIN CONTENT ===============-->
     <main class="main">
-        <!--=============== PAYMENT ===============-->
         <section class="payment section--lg">
-            <div class="payment__container container grid">
+            <div class="payment__container container">
                 <section class="payment-form">
                     <h2><span class="back-arrow">&#8592;</span> Thanh toán</h2>
                     <form>
@@ -475,8 +1111,73 @@
                                     <label>Số điện thoại <span class="required">*Bắt buộc</span></label>
                                     <div class="phone-input-container">
                                         <div class="phone-country-code">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png" alt="VN" class="country-flag" style="width: 20px; margin-right: 5px;">
-                                            <span>+84</span>
+                                            <button type="button" class="phone-dropdown-btn" id="country-selector">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png" alt="VN" class="country-flag">
+                                                <span>+84</span>
+                                                <span class="dropdown-arrow">&#9662;</span>
+                                            </button>
+                                            <div class="country-dropdown" id="country-dropdown">
+                                                <div class="country-option" data-code="+84" data-country="VN">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png" alt="VN" class="country-flag">
+                                                    <span class="country-name">Việt Nam</span>
+                                                    <span class="country-code">+84</span>
+                                                </div>
+                                                <div class="country-option" data-code="+1" data-country="US">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/2000px-Flag_of_the_United_States.svg.png" alt="US" class="country-flag">
+                                                    <span class="country-name">United States</span>
+                                                    <span class="country-code">+1</span>
+                                                </div>
+                                                <div class="country-option" data-code="+44" data-country="GB">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/2000px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="GB" class="country-flag">
+                                                    <span class="country-name">United Kingdom</span>
+                                                    <span class="country-code">+44</span>
+                                                </div>
+                                                <div class="country-option" data-code="+86" data-country="CN">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/2000px-Flag_of_the_People%27s_Republic_of_China.svg.png" alt="CN" class="country-flag">
+                                                    <span class="country-name">China</span>
+                                                    <span class="country-code">+86</span>
+                                                </div>
+                                                <div class="country-option" data-code="+81" data-country="JP">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/2000px-Flag_of_Japan.svg.png" alt="JP" class="country-flag">
+                                                    <span class="country-name">Japan</span>
+                                                    <span class="country-code">+81</span>
+                                                </div>
+                                                <div class="country-option" data-code="+82" data-country="KR">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2000px-Flag_of_South_Korea.svg.png" alt="KR" class="country-flag">
+                                                    <span class="country-name">South Korea</span>
+                                                    <span class="country-code">+82</span>
+                                                </div>
+                                                <div class="country-option" data-code="+33" data-country="FR">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/2000px-Flag_of_France.svg.png" alt="FR" class="country-flag">
+                                                    <span class="country-name">France</span>
+                                                    <span class="country-code">+33</span>
+                                                </div>
+                                                <div class="country-option" data-code="+49" data-country="DE">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/2000px-Flag_of_Germany.svg.png" alt="DE" class="country-flag">
+                                                    <span class="country-name">Germany</span>
+                                                    <span class="country-code">+49</span>
+                                                </div>
+                                                <div class="country-option" data-code="+39" data-country="IT">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/2000px-Flag_of_Italy.svg.png" alt="IT" class="country-flag">
+                                                    <span class="country-name">Italy</span>
+                                                    <span class="country-code">+39</span>
+                                                </div>
+                                                <div class="country-option" data-code="+34" data-country="ES">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/2000px-Flag_of_Spain.svg.png" alt="ES" class="country-flag">
+                                                    <span class="country-name">Spain</span>
+                                                    <span class="country-code">+34</span>
+                                                </div>
+                                                <div class="country-option" data-code="+61" data-country="AU">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/2000px-Flag_of_Australia_%28converted%29.svg.png" alt="AU" class="country-flag">
+                                                    <span class="country-name">Australia</span>
+                                                    <span class="country-code">+61</span>
+                                                </div>
+                                                <div class="country-option" data-code="+65" data-country="SG">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/2000px-Flag_of_Singapore.svg.png" alt="SG" class="country-flag">
+                                                    <span class="country-name">Singapore</span>
+                                                    <span class="country-code">+65</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <input type="text" class="form__input phone-number-input" required>
                                     </div>
@@ -599,60 +1300,56 @@
                 <aside class="order-summary">
                     <h3>Đơn hàng của bạn</h3>
                     
-                    <div class="cart-item" data-price="35000">
-                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam" class="product-image">
-                        <div class="cart-item-details">
-                            <div class="item-title">Tropical Hương Cam</div>
-                            <div class="item-qty-row">
-                                <span>Số lượng</span>
-                                <div class="qty-number">1</div>
+                    <div class="cart-items-container">
+                        <div class="cart-item" data-price="35000">
+                            <img src="./assets/img/td_p1_bg.png" alt="Tropical Hương Cam" class="product-image">
+                            <div class="cart-item-details">
+                                <div class="item-title">Tropical Hương Cam</div>
+                                <div class="item-info">
+                                    <span class="item-info-label">Số lượng</span>
+                                    <div class="qty-controls">
+                                        <button class="qty-btn" aria-label="Giảm">-</button>
+                                        <span class="qty-number">1</span>
+                                        <button class="qty-btn" aria-label="Tăng">+</button>
+                                    </div>
+                                    <a href="#" class="remove-link">Xóa</a>
+                                </div>
+                                <div class="item-price">35.000 đ</div>
                             </div>
-                            <div class="item-price">35,000 đ</div>
                         </div>
-                        <div class="item-actions">
-                            <div class="quantity-buttons">
-                                <button class="quantity-btn minus-btn" aria-label="Giảm">-</button>
-                                <button class="quantity-btn plus-btn" aria-label="Tăng">+</button>
+                        
+                        <div class="cart-item" data-price="35000">
+                            <img src="./assets/img/td_p1_bg.png" alt="Tropical Hương Cam" class="product-image">
+                            <div class="cart-item-details">
+                                <div class="item-title">Tropical Hương Cam</div>
+                                <div class="item-info">
+                                    <span class="item-info-label">Số lượng</span>
+                                    <div class="qty-controls">
+                                        <button class="qty-btn" aria-label="Giảm">-</button>
+                                        <span class="qty-number">1</span>
+                                        <button class="qty-btn" aria-label="Tăng">+</button>
+                                    </div>
+                                    <a href="#" class="remove-link">Xóa</a>
+                                </div>
+                                <div class="item-price">35.000 đ</div>
                             </div>
-                            <a href="#" class="remove-link">Xóa</a>
                         </div>
-                    </div>
-                    
-                    <div class="cart-item" data-price="35000">
-                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam" class="product-image">
-                        <div class="cart-item-details">
-                            <div class="item-title">Tropical Hương Cam</div>
-                            <div class="item-qty-row">
-                                <span>Số lượng</span>
-                                <div class="qty-number">1</div>
+                        
+                        <div class="cart-item" data-price="35000">
+                            <img src="./assets/img/td_p1_bg.png" alt="Tropical Hương Cam" class="product-image">
+                            <div class="cart-item-details">
+                                <div class="item-title">Tropical Hương Cam</div>
+                                <div class="item-info">
+                                    <span class="item-info-label">Số lượng</span>
+                                    <div class="qty-controls">
+                                        <button class="qty-btn" aria-label="Giảm">-</button>
+                                        <span class="qty-number">1</span>
+                                        <button class="qty-btn" aria-label="Tăng">+</button>
+                                    </div>
+                                    <a href="#" class="remove-link">Xóa</a>
+                                </div>
+                                <div class="item-price">35.000 đ</div>
                             </div>
-                            <div class="item-price">35,000 đ</div>
-                        </div>
-                        <div class="item-actions">
-                            <div class="quantity-buttons">
-                                <button class="quantity-btn minus-btn" aria-label="Giảm">-</button>
-                                <button class="quantity-btn plus-btn" aria-label="Tăng">+</button>
-                            </div>
-                            <a href="#" class="remove-link">Xóa</a>
-                        </div>
-                    </div>
-                    
-                    <div class="cart-item" data-price="35000">
-                        <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam" class="product-image">
-                        <div class="cart-item-details">
-                            <div class="item-title">Tropical Hương Cam</div>
-                            <div class="item-qty-row">
-                                <span>Số lượng</span>
-                                <div class="qty-number">1</div>
-                            </div>
-                            <div class="item-price">35,000 đ</div>
-                        </div>
-                        <div class="item-actions">
-                            <div class="quantity-buttons">
-                                <button class="quantity-btn minus-btn" aria-label="Giảm">-</button>
-                                <button class="quantity-btn plus-btn" aria-label="Tăng">+</button>
-                            </div>
-                            <a href="#" class="remove-link">Xóa</a>
                         </div>
                     </div>
                     
@@ -662,17 +1359,16 @@
                     </div>
                     <div class="total">
                         <span>Tổng tiền:</span>
-                        <span class="total-value">105.000 vnd</span>
+                        <span class="total-value">210.000 vnd</span>
                     </div>
                     <div class="terms">
-                        <div class="check-box">
+                        <label class="check-box" for="terms-checkbox">
                             <input type="checkbox" id="terms-checkbox" required>
-                            <div class="check-box__state check-box__state--primary">
-                                <label class="check-box__label" for="terms-checkbox">Tôi đồng ý với <a href="#">Điều khoản và dịch vụ</a></label>
-                            </div>
-                        </div>
+                            <span class="checkbox-custom"></span>
+                            <span>Tôi đồng ý với <a href="#">Điều khoản và dịch vụ</a></span>
+                        </label>
                     </div>
-                    <button class="btn checkout-btn">Tiến hành thanh toán</button>
+                    <button class="checkout-btn">Tiến hành thanh toán</button>
                 </aside>
             </div>
         </section>
@@ -774,25 +1470,69 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Country dropdown functionality
+        const countrySelector = document.getElementById('country-selector');
+        const countryDropdown = document.getElementById('country-dropdown');
+        const countryOptions = document.querySelectorAll('.country-option');
+        
+        // Toggle dropdown
+        if (countrySelector) {
+            countrySelector.addEventListener('click', function(e) {
+                e.stopPropagation();
+                countryDropdown.classList.toggle('show');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.phone-country-code')) {
+                    countryDropdown.classList.remove('show');
+                }
+            });
+            
+            // Select country option
+            countryOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const code = this.getAttribute('data-code');
+                    const flag = this.querySelector('.country-flag').src;
+                    
+                    // Update button content
+                    const codeSpan = countrySelector.querySelector('span:first-of-type');
+                    if (codeSpan) {
+                        codeSpan.textContent = code;
+                    }
+                    const flagImg = countrySelector.querySelector('.country-flag');
+                    if (flagImg) {
+                        flagImg.src = flag;
+                    }
+                    
+                    // Hide dropdown
+                    countryDropdown.classList.remove('show');
+                });
+            });
+        }
+        
         // Xử lý chuyển đổi giữa phương thức Cửa hàng và Giao hàng
         const storeBtn = document.querySelector('.store-btn');
         const deliveryBtn = document.querySelector('.delivery-btn');
         const storeContainer = document.querySelector('.store-pickup-container');
         const deliveryContainer = document.querySelector('.delivery-container');
         
-        storeBtn.addEventListener('click', function() {
-            storeBtn.classList.add('active');
-            deliveryBtn.classList.remove('active');
-            storeContainer.style.display = 'block';
-            deliveryContainer.style.display = 'none';
-        });
-        
-        deliveryBtn.addEventListener('click', function() {
-            deliveryBtn.classList.add('active');
-            storeBtn.classList.remove('active');
-            deliveryContainer.style.display = 'block';
-            storeContainer.style.display = 'none';
-        });
+        if (storeBtn && deliveryBtn) {
+            storeBtn.addEventListener('click', function() {
+                storeBtn.classList.add('active');
+                deliveryBtn.classList.remove('active');
+                storeContainer.style.display = 'block';
+                deliveryContainer.style.display = 'none';
+            });
+            
+            deliveryBtn.addEventListener('click', function() {
+                deliveryBtn.classList.add('active');
+                storeBtn.classList.remove('active');
+                deliveryContainer.style.display = 'block';
+                storeContainer.style.display = 'none';
+            });
+        }
         
         // Xử lý phương thức thanh toán
         const paymentBtns = document.querySelectorAll('.payment-btn');
@@ -807,8 +1547,8 @@
         });
         
         // Xử lý tăng giảm số lượng và cập nhật giá tiền
-        const minusBtns = document.querySelectorAll('.minus-btn');
-        const plusBtns = document.querySelectorAll('.plus-btn');
+        const minusBtns = document.querySelectorAll('.qty-btn:first-child');
+        const plusBtns = document.querySelectorAll('.qty-btn:last-child');
         const totalValueEl = document.querySelector('.total-value');
         
         function formatPrice(price) {
@@ -825,10 +1565,10 @@
                 total += qty * unitPrice;
             });
             
-            totalValueEl.textContent = formatPrice(total).replace(' đ', ' vnd');
+            totalValueEl.textContent = (total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' vnd';
         }
         
-        minusBtns.forEach((btn, index) => {
+        minusBtns.forEach(btn => {
             btn.addEventListener('click', function() {
                 const cartItem = this.closest('.cart-item');
                 const qtyNumberEl = cartItem.querySelector('.qty-number');
@@ -850,7 +1590,7 @@
             });
         });
         
-        plusBtns.forEach((btn, index) => {
+        plusBtns.forEach(btn => {
             btn.addEventListener('click', function() {
                 const cartItem = this.closest('.cart-item');
                 const qtyNumberEl = cartItem.querySelector('.qty-number');
@@ -886,6 +1626,20 @@
                 updateTotalPrice();
             });
         });
+        
+        // Xử lý checkbox terms
+        const termsCheckbox = document.getElementById('terms-checkbox');
+        const checkboxLabel = termsCheckbox.closest('label');
+        
+        if (checkboxLabel) {
+            checkboxLabel.addEventListener('click', function(e) {
+                // Prevent default only if clicking the label but not the checkbox directly
+                if (e.target !== termsCheckbox) {
+                    e.preventDefault();
+                    termsCheckbox.checked = !termsCheckbox.checked;
+                }
+            });
+        }
     });
     </script>
 </body>
