@@ -17,6 +17,361 @@
     <link rel="stylesheet" href="assets/css/breakpoint.css" />
 
     <title>Sunkissed | Thanh toán</title>
+    <style>
+        /* Header styling to match image more precisely */
+        .header__top {
+            background-color: #941212;
+            padding: 8px 0;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .header__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header__contact {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .header__alert-news {
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .header__top-action {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        /* Navigation styling */
+        .nav {
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav__logo {
+            margin-right: 30px;
+        }
+        
+        .nav__logo-img {
+            height: 40px;
+        }
+        
+        .nav__menu {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .nav__list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 25px;
+        }
+        
+        .nav__link {
+            color: #333;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        
+        .nav__link:hover {
+            color: #941212;
+        }
+        
+        /* Search box styling */
+        .search-box {
+            flex: 1;
+            max-width: 350px;
+            margin-left: 30px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 14px;
+            outline: none;
+        }
+        
+        /* Action buttons */
+        .header__user-actions {
+            display: flex;
+            gap: 15px;
+            margin-left: 20px;
+        }
+        
+        .header__action-btn {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .header__action-btn img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #941212;
+            color: white;
+            font-size: 10px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Breadcrumb styling */
+        .breadcrumb {
+            background-color: #f5f5f5;
+            padding: 10px 0;
+        }
+        
+        .breadcrumb__list {
+            list-style: none;
+            display: flex;
+            gap: 5px;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        
+        .breadcrumb__link {
+            color: #666;
+            font-size: 13px;
+            text-decoration: none;
+        }
+        
+        /* Phone input styling */
+        .phone-country-code {
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border-right: none;
+        }
+        
+        .phone-input-container {
+            display: flex;
+            width: 100%;
+        }
+        
+        .phone-number-input {
+            flex: 1;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        /* Payment method styling */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        
+        .payment-method {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .payment-btn {
+            width: 100%;
+            height: 80px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 8px;
+        }
+        
+        .payment-btn.active {
+            border-color: var(--first-color);
+            box-shadow: 0 0 0 1px var(--first-color);
+        }
+        
+        .payment-btn img {
+            max-height: 40px;
+            max-width: 80%;
+        }
+        
+        .payment-method span {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .total-value {
+            color: var(--first-color);
+            font-weight: var(--weight-700);
+        }
+        
+        /* Footer styling */
+        .footer {
+            padding-top: 60px;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .footer__row {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .footer__logo-img {
+            height: 40px;
+            margin-bottom: 25px;
+        }
+        
+        .footer__heading {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .footer__info {
+            margin: 0 0 8px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .footer__social {
+            margin-top: 25px;
+        }
+        
+        .footer__social-title {
+            font-size: 13px;
+            margin-bottom: 12px;
+            color: #666;
+            font-weight: normal;
+        }
+        
+        .footer__social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer__social-link {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .footer__title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .footer__links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer__links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer__link {
+            color: #666;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer__link:hover {
+            color: #941212;
+        }
+        
+        .footer__payment {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        .payment-logo {
+            height: 30px;
+            object-fit: contain;
+        }
+        
+        .footer__bottom {
+            margin-top: 50px;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+        }
+        
+        .footer__bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .copyright, .designer {
+            font-size: 13px;
+            color: #666;
+            margin: 0;
+        }
+        
+        @media (max-width: 992px) {
+            .footer__row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer__row {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer__bottom-content {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!--=============== HEADER ===============-->
@@ -24,8 +379,7 @@
         <div class="header__top">
             <div class="header__container container">
                 <div class="header__contact">
-                    <span>(+84)335993276</span>
-                    <span></span>
+                    (+84)335993276
                 </div>
                 <p class="header__alert-news">
                     Giảm 15% trên mọi đơn hàng từ 20-24/12
@@ -35,76 +389,69 @@
                 </a>
             </div>
         </div>
-        <!--=============== n/HEADER ===============-->
+        
         <!-- Navigation -->
-        <nav class="nav container">
-            <a href="index.html" class="nav__logo">
-                <img class="nav__logo-img" src="assets/img/logo_red.svg" alt="website logo" />
-            </a>
-            <div class="nav__menu" id="nav-menu">
-                <div class="nav__menu-top">
-                    <a href="index.html" class="nav__menu-logo">
-                        <img src="./assets/img/logo_red.svg" alt="">
-                    </a>
-                    <div class="nav__close" id="nav-close">
-                        <i class="fi fi-rs-cross-small"></i>
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="nav__logo">
+                    <img class="nav__logo-img" src="assets/img/logo_red.svg" alt="Sunkissed logo" />
+                </a>
+                
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Trang chủ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="shop.html" class="nav__link">Cửa hàng</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="aboutus.html" class="nav__link">Về chúng tôi</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="lienhe.html" class="nav__link">Liên hệ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="accounts.html" class="nav__link">Tài khoản</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Hộp tìm kiếm -->
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm" class="search-input" />
                     </div>
                 </div>
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="index.html" class="nav__link">Trang chủ</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="shop.html" class="nav__link">Cửa hàng</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="aboutus.html" class="nav__link">Về chúng tôi</a>
-                    </li>
-                    
-                    <li class="nav__item">
-                        <a href="lienhe.html" class="nav__link">Liên hệ</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="accounts.html" class="nav__link">Tài khoản</a>
-                    </li>
-                </ul>
 
-                <!-- Hộp tìm kiếm -->
-                <div class="header__search">
-                    <input type="text" placeholder="Tìm kiếm sản phẩm" class="form__input" />
+                <!-- Wishlist và Giỏ hàng -->
+                <div class="header__user-actions">
+                    <a href="wishlist.html" class="header__action-btn" title="Wishlist">
+                        <img src="assets/img/icon-heart.svg" alt="Wishlist" />
+                        <span class="count">3</span>
+                    </a>
+                    <a href="cart.html" class="header__action-btn" title="Cart">
+                        <img src="assets/img/icon-cart.svg" alt="Cart" />
+                        <span class="count">2</span>
+                    </a>
                 </div>
-            </div>
-
-            <!-- Wishlist và Giỏ hàng -->
-            <div class="header__user-actions">
-                <a href="wishlist.html" class="header__action-btn" title="Wishlist">
-                    <img src="assets/img/icon-heart.svg" alt="" />
-                    <span class="count">3</span>
-                </a>
-                <a href="cart.html" class="header__action-btn" title="Cart">
-                    <img src="assets/img/icon-cart.svg" alt="" />
-                    <span class="count">3</span>
-                </a>
-                <div class="header__action-btn nav__toggle" id="nav-toggle">
-                    <img src="./assets//img/menu-burger.svg" alt="">
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
-    <!--=============== MAIN ===============-->
-    <main class="main">
-        <!--=============== BREADCRUMB ===============-->
-        <section class="breadcrumb">
-            <ul class="breadcrumb__list flex container">
+    <!--=============== BREADCRUMB ===============-->
+    <section class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb__list">
                 <li><a href="index.html" class="breadcrumb__link">Trang chủ</a></li>
                 <li><span class="breadcrumb__link">></span></li>
                 <li><a href="cart.html" class="breadcrumb__link">Giỏ hàng</a></li>
                 <li><span class="breadcrumb__link">></span></li>
                 <li><span class="breadcrumb__link">Thanh toán</span></li>
             </ul>
-        </section>
+        </div>
+    </section>
 
+    <!--=============== MAIN CONTENT ===============-->
+    <main class="main">
         <!--=============== PAYMENT ===============-->
         <section class="payment section--lg">
             <div class="payment__container container grid">
@@ -126,22 +473,12 @@
                             <div class="form-row">
                                 <div>
                                     <label>Số điện thoại <span class="required">*Bắt buộc</span></label>
-                                    <div class="phone-input">
-                                        <div class="phone-code-dropdown">
-                                            <div class="selected-country">
-                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png" alt="VN" class="country-flag">
-                                                <span>+84</span>
-                                                <i class="dropdown-arrow"></i>
-                                            </div>
-                                            <select id="country-code" class="country-select">
-                                                <option value="+84">+84</option>
-                                                <option value="+1">+1</option>
-                                                <option value="+44">+44</option>
-                                                <option value="+86">+86</option>
-                                                <option value="+81">+81</option>
-                                            </select>
+                                    <div class="phone-input-container">
+                                        <div class="phone-country-code">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png" alt="VN" class="country-flag" style="width: 20px; margin-right: 5px;">
+                                            <span>+84</span>
                                         </div>
-                                        <input type="text" class="form__input" required>
+                                        <input type="text" class="form__input phone-number-input" required>
                                     </div>
                                 </div>
                                 <div>
@@ -230,10 +567,30 @@
                         <div class="section">
                             <h3>3. Phương thức thanh toán</h3>
                             <div class="payment-methods">
-                                <button type="button" class="payment-btn active"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa"></button>
-                                <button type="button" class="payment-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard"></button>
-                                <button type="button" class="payment-btn"><img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="Momo"></button>
-                                <button type="button" class="payment-btn"><img src="https://cdn-icons-png.flaticon.com/512/1554/1554401.png" alt="COD"></button>
+                                <div class="payment-method">
+                                    <button type="button" class="payment-btn active" data-method="visa">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa">
+                                    </button>
+                                    <span>Visa</span>
+                                </div>
+                                <div class="payment-method">
+                                    <button type="button" class="payment-btn" data-method="mastercard">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard">
+                                    </button>
+                                    <span>Mastercard</span>
+                                </div>
+                                <div class="payment-method">
+                                    <button type="button" class="payment-btn" data-method="momo">
+                                        <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="Momo">
+                                    </button>
+                                    <span>Momo E-wallet</span>
+                                </div>
+                                <div class="payment-method">
+                                    <button type="button" class="payment-btn" data-method="cod">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/1554/1554401.png" alt="COD">
+                                    </button>
+                                    <span>Thanh toán khi nhận hàng</span>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -242,7 +599,7 @@
                 <aside class="order-summary">
                     <h3>Đơn hàng của bạn</h3>
                     
-                    <div class="cart-item">
+                    <div class="cart-item" data-price="35000">
                         <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam" class="product-image">
                         <div class="cart-item-details">
                             <div class="item-title">Tropical Hương Cam</div>
@@ -261,7 +618,7 @@
                         </div>
                     </div>
                     
-                    <div class="cart-item">
+                    <div class="cart-item" data-price="35000">
                         <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam" class="product-image">
                         <div class="cart-item-details">
                             <div class="item-title">Tropical Hương Cam</div>
@@ -280,7 +637,7 @@
                         </div>
                     </div>
                     
-                    <div class="cart-item">
+                    <div class="cart-item" data-price="35000">
                         <img src="assets/img/square-huongcam.png" alt="Tropical Hương Cam" class="product-image">
                         <div class="cart-item-details">
                             <div class="item-title">Tropical Hương Cam</div>
@@ -305,7 +662,7 @@
                     </div>
                     <div class="total">
                         <span>Tổng tiền:</span>
-                        <span class="total-value">210.000 vnd</span>
+                        <span class="total-value">105.000 vnd</span>
                     </div>
                     <div class="terms">
                         <div class="check-box">
@@ -323,54 +680,87 @@
 
     <!--=============== FOOTER ===============-->
     <footer class="footer">
-        <div class="footer__container container grid">
-            <div class="footer__content">
-                <a href="index.html" class="footer__logo">
-                    <img src="assets/img/logo_red.svg" alt="" class="footer__logo-img">
-                </a>
-
-                <h4 class="footer__subtitle">Liên hệ</h4>
-
-                <p class="footer__description">
-                    <span>Địa chỉ: 219 Nguyễn Tri Phương, Quận 10, Tp. Hồ Chí Minh</span><br>
-                    <span>Điện thoại: +84 335993276</span><br>
-                    <span>Giờ làm việc: 8:00 - 21:00, Thứ 2 - Thứ 7</span>
-                </p>
-            </div>
-
-            <div class="footer__content">
-                <h4 class="footer__title">Thông tin</h4>
-
-                <ul class="footer__links">
-                    <li><a href="aboutus.html" class="footer__link">Về chúng tôi</a></li>
-                    <li><a href="#" class="footer__link">Thông tin giao hàng</a></li>
-                    <li><a href="#" class="footer__link">Chính sách</a></li>
-                    <li><a href="#" class="footer__link">Điều khoản và Điều kiện</a></li>
-                    <li><a href="lienhe.html" class="footer__link">Trung tâm hỗ trợ</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__content">
-                <h4 class="footer__title">Tài khoản</h4>
-
-                <ul class="footer__links">
-                    <li><a href="login-register.html" class="footer__link">Đăng nhập</a></li>
-                    <li><a href="cart.html" class="footer__link">Xem giỏ hàng</a></li>
-                    <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
-                    <li><a href="#" class="footer__link">Theo dõi đơn hàng</a></li>
-                    <li><a href="#" class="footer__link">Trợ giúp</a></li>
-                    <li><a href="login-register.html" class="footer__link">Đăng ký</a></li>
-                </ul>
+        <div class="footer__container container">
+            <div class="footer__row">
+                <div class="footer__column">
+                    <a href="index.html" class="footer__logo">
+                        <img src="./assets/img/logo_red.svg" alt="Sunkissed" class="footer__logo-img">
+                    </a>
+                    
+                    <h4 class="footer__heading">LIÊN HỆ</h4>
+                    
+                    <p class="footer__info">
+                        Địa chỉ: 279 Nguyễn Tri Phương, Quận 10, Tp. Hồ Chí Minh
+                    </p>
+                    <p class="footer__info">
+                        Điện thoại: +84 0335993276
+                    </p>
+                    <p class="footer__info">
+                        Giờ hoạt động: 8:00 - 21:00, Thứ 2 - Thứ 7
+                    </p>
+                    
+                    <div class="footer__social">
+                        <h4 class="footer__social-title">Follow ngay</h4>
+                        <div class="footer__social-links">
+                            <a href="#" class="footer__social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Thông Tin</h3>
+                    <ul class="footer__links">
+                        <li><a href="aboutus.html" class="footer__link">Về chúng tôi</a></li>
+                        <li><a href="#" class="footer__link">Thông tin giao hàng</a></li>
+                        <li><a href="#" class="footer__link">Chính sách</a></li>
+                        <li><a href="#" class="footer__link">Điều khoản & Điều kiện</a></li>
+                        <li><a href="#" class="footer__link">Liên hệ chúng tôi</a></li>
+                        <li><a href="#" class="footer__link">Trung tâm hỗ trợ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Tài khoản</h3>
+                    <ul class="footer__links">
+                        <li><a href="login-register.html" class="footer__link">Đăng nhập</a></li>
+                        <li><a href="cart.html" class="footer__link">Xem giỏ hàng</a></li>
+                        <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
+                        <li><a href="#" class="footer__link">Theo dõi đơn hàng</a></li>
+                        <li><a href="#" class="footer__link">Trợ giúp</a></li>
+                        <li><a href="#" class="footer__link">Đặt hàng</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Cổng thanh toán bảo mật</h3>
+                    <div class="footer__payment">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa" class="payment-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard" class="payment-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="Momo" class="payment-logo">
+                    </div>
+                </div>
             </div>
         </div>
-
+        
         <div class="footer__bottom">
-            <div class="secure-pay">
-                <span>Cổng thanh toán bảo mật</span>
-                <div class="secure-pay__images">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard">
-                    <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="Momo">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <p class="copyright">© 2024 Sunkissed. All right reserved</p>
+                    <p class="designer">Thiết kế bởi Nhóm 5 Coop.</p>
                 </div>
             </div>
         </div>
@@ -384,34 +774,6 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Xử lý dropdown mã quốc gia
-        const countrySelect = document.getElementById('country-code');
-        const selectedCountryText = document.querySelector('.selected-country span');
-        
-        countrySelect.addEventListener('change', function() {
-            selectedCountryText.textContent = this.value;
-            
-            // Đổi cờ tương ứng với mã quốc gia
-            const flagImg = document.querySelector('.country-flag');
-            switch(this.value) {
-                case '+84':
-                    flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png';
-                    break;
-                case '+1':
-                    flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/2000px-Flag_of_the_United_States.svg.png';
-                    break;
-                case '+44':
-                    flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/2000px-Flag_of_the_United_Kingdom_%283-5%29.svg.png';
-                    break;
-                case '+86':
-                    flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/2000px-Flag_of_the_People%27s_Republic_of_China.svg.png';
-                    break;
-                case '+81':
-                    flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/2000px-Flag_of_Japan.svg.png';
-                    break;
-            }
-        });
-        
         // Xử lý chuyển đổi giữa phương thức Cửa hàng và Giao hàng
         const storeBtn = document.querySelector('.store-btn');
         const deliveryBtn = document.querySelector('.delivery-btn');
@@ -432,41 +794,96 @@
             storeContainer.style.display = 'none';
         });
         
-        // Xử lý chọn cửa hàng
-        const storeOptions = document.querySelectorAll('.store-option');
-        storeOptions.forEach(option => {
-            option.addEventListener('click', function() {
-                // Bỏ chọn tất cả
-                storeOptions.forEach(opt => opt.classList.remove('selected'));
-                // Chọn option hiện tại
-                this.classList.add('selected');
-                // Chọn radio button
-                const radio = this.querySelector('input[type="radio"]');
-                radio.checked = true;
+        // Xử lý phương thức thanh toán
+        const paymentBtns = document.querySelectorAll('.payment-btn');
+        
+        paymentBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Bỏ active tất cả các nút
+                paymentBtns.forEach(b => b.classList.remove('active'));
+                // Thêm active cho nút được chọn
+                this.classList.add('active');
             });
         });
         
-        // Xử lý tăng giảm số lượng
+        // Xử lý tăng giảm số lượng và cập nhật giá tiền
         const minusBtns = document.querySelectorAll('.minus-btn');
         const plusBtns = document.querySelectorAll('.plus-btn');
+        const totalValueEl = document.querySelector('.total-value');
+        
+        function formatPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' đ';
+        }
+        
+        function updateTotalPrice() {
+            let total = 0;
+            const cartItems = document.querySelectorAll('.cart-item');
+            
+            cartItems.forEach(item => {
+                const qty = parseInt(item.querySelector('.qty-number').textContent);
+                const unitPrice = parseInt(item.getAttribute('data-price'));
+                total += qty * unitPrice;
+            });
+            
+            totalValueEl.textContent = formatPrice(total).replace(' đ', ' vnd');
+        }
         
         minusBtns.forEach((btn, index) => {
             btn.addEventListener('click', function() {
-                const qtyNumberEl = document.querySelectorAll('.qty-number')[index];
+                const cartItem = this.closest('.cart-item');
+                const qtyNumberEl = cartItem.querySelector('.qty-number');
+                const itemPriceEl = cartItem.querySelector('.item-price');
+                const unitPrice = parseInt(cartItem.getAttribute('data-price'));
+                
                 let qty = parseInt(qtyNumberEl.textContent);
                 if (qty > 1) {
                     qty--;
                     qtyNumberEl.textContent = qty;
+                    
+                    // Cập nhật giá tiền của sản phẩm
+                    const newPrice = qty * unitPrice;
+                    itemPriceEl.textContent = formatPrice(newPrice);
+                    
+                    // Cập nhật tổng tiền
+                    updateTotalPrice();
                 }
             });
         });
         
         plusBtns.forEach((btn, index) => {
             btn.addEventListener('click', function() {
-                const qtyNumberEl = document.querySelectorAll('.qty-number')[index];
+                const cartItem = this.closest('.cart-item');
+                const qtyNumberEl = cartItem.querySelector('.qty-number');
+                const itemPriceEl = cartItem.querySelector('.item-price');
+                const unitPrice = parseInt(cartItem.getAttribute('data-price'));
+                
                 let qty = parseInt(qtyNumberEl.textContent);
                 qty++;
                 qtyNumberEl.textContent = qty;
+                
+                // Cập nhật giá tiền của sản phẩm
+                const newPrice = qty * unitPrice;
+                itemPriceEl.textContent = formatPrice(newPrice);
+                
+                // Cập nhật tổng tiền
+                updateTotalPrice();
+            });
+        });
+        
+        // Khởi tạo tổng tiền ban đầu
+        updateTotalPrice();
+        
+        // Xử lý nút xóa sản phẩm
+        const removeLinks = document.querySelectorAll('.remove-link');
+        
+        removeLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const cartItem = this.closest('.cart-item');
+                cartItem.remove();
+                
+                // Cập nhật tổng tiền sau khi xóa
+                updateTotalPrice();
             });
         });
     });
