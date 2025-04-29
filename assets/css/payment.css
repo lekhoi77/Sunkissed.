@@ -81,7 +81,7 @@ body {
 }
 
 body {
-  background-color: var(--body-color);
+  background: linear-gradient(180deg, #FFF 26.74%, #FEC695);
 }
 
 h1,
@@ -261,7 +261,7 @@ input {
   display: grid;
   grid-template-columns: 1fr 350px;
   gap: 2.5rem;
-  background: linear-gradient(90deg, #fff 60%, #FFfFFf 100%);
+ 
 }
 
 /* Payment Form Styles */
@@ -624,7 +624,7 @@ label {
 
 /*=============== FOOTER ===============*/
 .footer {
-  background-color: var(--container-color);
+ 
   padding-block: 4rem 2rem;
 }
 
@@ -686,7 +686,7 @@ label {
 }
 
 .footer__bottom {
-  border-top: 1px solid var(--border-color);
+
   padding-top: 2rem;
   text-align: center;
 }
@@ -1745,8 +1745,8 @@ label {
 /* Footer styling */
 .footer {
   padding-top: 60px;
-  background: #fff;
-  border-top: 1px solid #eee;
+  
+  
 }
 
 .footer__row {
@@ -1857,7 +1857,7 @@ label {
 .footer__bottom {
   margin-top: 50px;
   padding: 15px 0;
-  border-top: 1px solid #eee;
+
 }
 
 .footer__bottom-content {
@@ -2102,8 +2102,8 @@ input[type="radio"]:hover {
 background-color: #ffffff;
 display: flex;
 width: 80%;
-max-width: 300px;
-height: 80px;
+max-width: 500px;
+height: 60px;
 position: relative;
 border-radius: 12px;
 transition: 0.3s ease-in-out;
@@ -2123,9 +2123,9 @@ width: 100%;
 }
 
 .payment-left-side {
-background-color: #26551D;
+background-color: #447029;
 width: 80px;
-height: 80px;
+height: 60px;
 border-radius: 12px;
 position: relative;
 display: flex;
@@ -2141,11 +2141,14 @@ overflow: hidden;
 width: calc(100% - 80px);
 display: flex;
 align-items: center;
+text-align: center;
+justify-content: center;
 overflow: hidden;
 cursor: pointer;
-justify-content: space-between;
+
 white-space: nowrap;
 transition: 0.3s;
+
 }
 
 .payment-right-side:hover {
@@ -2163,7 +2166,7 @@ font-size: 16px;
 font-family: inherit;
 margin-left: 15px;
 font-weight: 600;
-color: #333;
+color: var(--title-color);
 }
 
 .payment-card {
@@ -2176,7 +2179,7 @@ display: flex;
 z-index: 10;
 flex-direction: column;
 align-items: center;
-box-shadow: 9px 9px 9px -2px rgba(148, 18, 18, 0.4);
+
 }
 
 .payment-card-line {
