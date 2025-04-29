@@ -1273,6 +1273,256 @@
         input[type="radio"]:hover {
             border-color: #941212;
         }
+        
+        /* New payment button styles */
+        .payment-container {
+          background-color: #ffffff;
+          display: flex;
+          width: 80%;
+          max-width: 300px;
+          height: 80px;
+          position: relative;
+          border-radius: 12px;
+          transition: 0.3s ease-in-out;
+          margin: 20px auto;
+          border: 1px solid #e0e0e0;
+        }
+
+        .payment-container:hover {
+          transform: scale(1.02);
+          width: 140px;
+          margin: 20px auto;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .payment-container:hover .payment-left-side {
+          width: 100%;
+        }
+
+        .payment-left-side {
+          background-color: #941212;
+          width: 80px;
+          height: 80px;
+          border-radius: 12px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: 0.3s;
+          flex-shrink: 0;
+          overflow: hidden;
+        }
+
+        .payment-right-side {
+          width: calc(100% - 80px);
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          cursor: pointer;
+          justify-content: space-between;
+          white-space: nowrap;
+          transition: 0.3s;
+        }
+
+        .payment-right-side:hover {
+          background-color: #f9f7f9;
+        }
+
+        .payment-arrow {
+          width: 20px;
+          height: 20px;
+          margin-right: 20px;
+        }
+
+        .payment-new {
+          font-size: 16px;
+          font-family: inherit;
+          margin-left: 15px;
+          font-weight: 600;
+          color: #333;
+        }
+
+        .payment-card {
+          width: 50px;
+          height: 34px;
+          background-color: #e97878;
+          border-radius: 6px;
+          position: absolute;
+          display: flex;
+          z-index: 10;
+          flex-direction: column;
+          align-items: center;
+          box-shadow: 9px 9px 9px -2px rgba(148, 18, 18, 0.4);
+        }
+
+        .payment-card-line {
+          width: 45px;
+          height: 8px;
+          background-color: #d95555;
+          border-radius: 2px;
+          margin-top: 6px;
+        }
+
+        @media only screen and (max-width: 480px) {
+          .payment-container {
+            transform: scale(0.7);
+          }
+
+          .payment-container:hover {
+            transform: scale(0.74);
+          }
+
+          .payment-new {
+            font-size: 16px;
+          }
+        }
+
+        .payment-buttons {
+          width: 6px;
+          height: 6px;
+          background-color: #9e1f1f;
+          box-shadow: 0 -8px 0 0 #850e0e, 0 8px 0 0 #be3e3e;
+          border-radius: 50%;
+          margin-top: 4px;
+          transform: rotate(90deg);
+          margin: 8px 0 0 -25px;
+        }
+
+        .payment-container:hover .payment-card {
+          animation: payment-slide-top 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+        }
+
+        .payment-container:hover .payment-post {
+          animation: payment-slide-post 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+        }
+
+        @keyframes payment-slide-top {
+          0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+          }
+
+          50% {
+            -webkit-transform: translateY(-70px) rotate(90deg);
+            transform: translateY(-70px) rotate(90deg);
+          }
+
+          60% {
+            -webkit-transform: translateY(-70px) rotate(90deg);
+            transform: translateY(-70px) rotate(90deg);
+          }
+
+          100% {
+            -webkit-transform: translateY(-8px) rotate(90deg);
+            transform: translateY(-8px) rotate(90deg);
+          }
+        }
+
+        .payment-post {
+          width: 45px;
+          height: 55px;
+          background-color: #dddde0;
+          position: absolute;
+          z-index: 11;
+          bottom: 8px;
+          top: 80px;
+          border-radius: 6px;
+          overflow: hidden;
+        }
+
+        .payment-post-line {
+          width: 35px;
+          height: 7px;
+          background-color: #545354;
+          position: absolute;
+          border-radius: 0px 0px 3px 3px;
+          right: 6px;
+          top: 6px;
+        }
+
+        .payment-post-line:before {
+          content: "";
+          position: absolute;
+          width: 35px;
+          height: 7px;
+          background-color: #757375;
+          top: -7px;
+        }
+
+        .payment-screen {
+          width: 35px;
+          height: 18px;
+          background-color: #ffffff;
+          position: absolute;
+          top: 18px;
+          right: 6px;
+          border-radius: 3px;
+        }
+
+        .payment-numbers {
+          width: 10px;
+          height: 10px;
+          background-color: #838183;
+          box-shadow: 0 -15px 0 0 #838183, 0 15px 0 0 #838183;
+          border-radius: 2px;
+          position: absolute;
+          transform: rotate(90deg);
+          left: 20px;
+          top: 42px;
+        }
+
+        .payment-numbers-line2 {
+          width: 10px;
+          height: 10px;
+          background-color: #aaa9ab;
+          box-shadow: 0 -15px 0 0 #aaa9ab, 0 15px 0 0 #aaa9ab;
+          border-radius: 2px;
+          position: absolute;
+          transform: rotate(90deg);
+          left: 20px;
+          top: 55px;
+        }
+
+        @keyframes payment-slide-post {
+          50% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+          }
+
+          100% {
+            -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+          }
+        }
+
+        .payment-dollar {
+          position: absolute;
+          font-size: 12px;
+          font-family: inherit;
+          width: 100%;
+          left: 0;
+          top: 3px;
+          color: #941212;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .payment-container:hover .payment-dollar {
+          animation: payment-fade-in-fwd 0.3s 1s backwards;
+        }
+
+        @keyframes payment-fade-in-fwd {
+          0% {
+            opacity: 0;
+            transform: translateY(-5px);
+          }
+
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
     </style>
 </head>
 <body>
@@ -1631,7 +1881,28 @@
                             <span>Tôi đồng ý với <a href="#">Điều khoản và dịch vụ</a></span>
                         </label>
                             </div>
-                    <button class="checkout-btn">Tiến hành thanh toán</button>
+                    
+                    <!-- Replace the checkout button with new animated button -->
+                    <div class="payment-container">
+                     <div class="payment-left-side">
+                      <div class="payment-card">
+                       <div class="payment-card-line"></div>
+                       <div class="payment-buttons"></div>
+                      </div>
+                      <div class="payment-post">
+                       <div class="payment-post-line"></div>
+                       <div class="payment-screen">
+                        <div class="payment-dollar">$</div>
+                       </div>
+                       <div class="payment-numbers"></div>
+                       <div class="payment-numbers-line2"></div>
+                      </div>
+                     </div>
+                     <div class="payment-right-side">
+                      <div class="payment-new">Tiến hành thanh toán</div>
+                      <svg viewBox="0 0 451.846 451.847" height="512" width="512" xmlns="http://www.w3.org/2000/svg" class="payment-arrow"><path fill="#cfcfcf" data-old_color="#000000" class="active-path" data-original="#000000" d="M345.441 248.292L151.154 442.573c-12.359 12.365-32.397 12.365-44.75 0-12.354-12.354-12.354-32.391 0-44.744L278.318 225.92 106.409 54.017c-12.354-12.359-12.354-32.394 0-44.748 12.354-12.359 32.391-12.359 44.75 0l194.287 194.284c6.177 6.18 9.262 14.271 9.262 22.366 0 8.099-3.091 16.196-9.267 22.373z"></path></svg>
+                     </div>
+                    </div>
                 </aside>
             </div>
         </section>
