@@ -261,7 +261,7 @@ input {
   display: grid;
   grid-template-columns: 1fr 350px;
   gap: 2.5rem;
-  background: linear-gradient(90deg, #fff 60%, #FFF3E6 100%);
+  background: linear-gradient(90deg, #fff 60%, #FFfFFf 100%);
 }
 
 /* Payment Form Styles */

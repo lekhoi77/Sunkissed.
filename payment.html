@@ -123,15 +123,26 @@
             width: 100%;
             padding: 8px 15px;
             border: 1px solid #ddd;
-            border-radius: 50px;
+            border-radius: 12px;
             font-size: 14px;
             outline: none;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
         
+        /* Make sure date inputs match other form elements */
+        input[type="date"].form__input {
+            padding-right: 10px;
+        }
+        
+        /* Fix display in Firefox */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        
         .form__input:focus {
-            border-color: #941212;
-            box-shadow: 0 0 0 2px rgba(148, 18, 18, 0.1);
+            border-color: #26551D;
+            box-shadow: 0 0 0 1px rgba(38, 85, 29, 0.1);
         }
         
         /* Action buttons */
@@ -184,7 +195,9 @@
             
             .order-summary {
                 max-width: 100%;
+                width: 100%;
                 margin: 0 auto;
+                margin-right: 0;
             }
             
             .footer__row {
@@ -294,14 +307,16 @@
         
         .payment__container {
             display: grid;
-            grid-template-columns: 1fr 400px;
+            grid-template-columns: 1fr 450px;
             gap: 30px;
+            align-items: start;
         }
         
         .payment-form {
             padding-right: 20px;
         }
         
+        /* Payment form heading */
         .payment-form h2 {
             font-size: 22px;
             margin-bottom: 25px;
@@ -309,6 +324,7 @@
             align-items: center;
         }
         
+        /* Back arrow */
         .back-arrow {
             margin-right: 10px;
             cursor: pointer;
@@ -350,19 +366,21 @@
             font-weight: normal;
         }
         
-        /* Phone input styling */
+        /* Phone input container styling */
         .phone-input-container {
             display: flex;
             width: 100%;
+            height: 40px;
         }
         
         .phone-country-code {
             position: relative;
             min-width: 95px;
             border: 1px solid #ddd;
-            border-radius: 4px 0 0 4px;
+            border-radius: 12px 0 0 12px;
             border-right: none;
             overflow: visible;
+            height: 40px;
         }
         
         .phone-dropdown-btn {
@@ -370,7 +388,7 @@
             align-items: center;
             padding: 8px 12px;
             width: 100%;
-            height: 100%;
+            height: 40px;
             background-color: #f9f9f9;
             cursor: pointer;
             font-size: 14px;
@@ -434,29 +452,42 @@
         
         .phone-number-input {
             flex: 1;
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 12px 12px 0;
+            height: 40px;
+        }
+        
+        .phone-number-input:focus {
+            border-color: #26551D;
+            box-shadow: 0 0 0 1px rgba(38, 85, 29, 0.1);
         }
         
         /* Shipping methods */
         .shipping-methods {
             display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-bottom: 15px;
         }
         
         .shipping-methods button {
-            padding: 10px 20px;
+            padding: 8px 16px;
             background-color: #f5f5f5;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
+            height: 36px;
+            font-size: 13px;
         }
         
         .shipping-methods button.active {
-            background-color: #941212;
+            background-color: #26551D;
             color: white;
-            border-color: #941212;
+            border-color: #26551D;
+        }
+        
+        .shipping-methods button:hover:not(.active) {
+            border-color: #26551D;
+            color: #26551D;
         }
         
         .store-pickup-container, .delivery-container {
@@ -479,7 +510,7 @@
         
         .store-option {
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 12px;
             padding: 15px;
             display: flex;
             transition: border-color 0.3s ease;
@@ -489,19 +520,19 @@
             margin-right: 10px;
         }
         
-        .store-option label {
-            margin-bottom: 0;
+        .store-option:hover {
+            border-color: #26551D;
         }
         
-        .store-option:hover {
-            border-color: #941212;
+        .store-option input:checked ~ label {
+            color: #26551D;
         }
         
         /* Payment method styling */
         .payment-methods {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            gap: 10px;
         }
         
         .payment-method {
@@ -513,15 +544,16 @@
         
         .payment-btn {
             width: 100%;
-            height: 80px;
+            height: 60px;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
+            padding: 8px;
         }
         
         .payment-btn.active {
@@ -531,49 +563,104 @@
         
         .payment-btn:hover:not(.active) {
             border-color: #ddd;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
             transform: translateY(-2px);
         }
         
         .payment-btn img {
-            max-height: 40px;
-            max-width: 80%;
-            transition: transform 0.3s ease;
-        }
-        
-        .payment-btn:hover img {
-            transform: scale(1.05);
+            max-height: 28px;
+            max-width: 75%;
+            object-fit: contain;
         }
         
         .payment-method span {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #666;
-            margin-top: 5px;
+            margin-top: 3px;
+        }
+        
+        /* New payment options styles */
+        .payment-options-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 25px 20px;
+            background-color: #fff;
+            border-radius: 12px;
+        }
+        
+        .payment-option-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+        
+        .payment-option {
+            width: 75%;
+            height: 60px;
+            padding: 8px 10px;
+            background-color: #ffffff;
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 5px;
+        }
+        
+        .payment-option.active {
+            border-color: #26551D;
+            border-width: 2px;
+            box-shadow: none;
+            background-color: #ffffff;
+        }
+        
+        .payment-option:hover:not(.active) {
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        .payment-option img {
+            max-height: 32px;
+            max-width: 80%;
+            object-fit: contain;
+        }
+        
+        .payment-label {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 8px;
+            text-align: center;
         }
         
         /* Order summary */
         .order-summary {
-            background-color: #f9f9f9;
-            border-radius: 8px;
+            background-color: #ffffff;
+            border-radius: 12px;
             padding: 20px;
-            width: 100%;
-            max-width: 450px;
+            width: 150%;
+            max-width: 510px;
             margin-left: auto;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            margin-right: -10%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
         }
         
         .order-summary h3 {
             font-size: 18px;
             margin-bottom: 15px;
             color: #333;
-            font-weight: 600;
+            font-weight: 700;
         }
         
         .cart-items-container {
             /* Remove scrolling */
             max-height: unset;
             overflow-y: visible;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         
         .cart-item {
@@ -584,11 +671,11 @@
         }
         
         .product-image {
-            width: 70px;
-            height: 70px;
+            width: 75px;
+            height: 75px;
             object-fit: cover;
-            border-radius: 8px;
-            margin-right: 15px;
+            border-radius: 12px;
+            margin-right: 18px;
         }
         
         .cart-item-details {
@@ -599,7 +686,7 @@
         
         .item-title {
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             font-size: 16px;
             color: #941212;
         }
@@ -609,63 +696,70 @@
             align-items: center;
             font-size: 14px;
             color: #333;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
         
         .item-info-label {
-            margin-right: 10px;
+            margin-right: 15px;
+            font-weight: 500;
         }
         
         .qty-controls {
             display: flex;
             align-items: center;
             margin-left: auto;
-            border: 1px solid #ccc;
-            border-radius: 30px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
             overflow: hidden;
-            min-width: 100px;
+            min-width: 110px;
             justify-content: space-between;
+            height: 35px;
+            background-color: #ffffff;
         }
         
         .qty-btn {
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: white;
             cursor: pointer;
             border: none;
-            font-size: 16px;
+            font-size: 18px;
             color: #666;
+            transition: background-color 0.2s;
+        }
+        
+        .qty-btn:hover {
+            background-color: #f0f0f0;
         }
         
         .qty-number {
             padding: 0 8px;
-            font-size: 14px;
-            min-width: 20px;
+            font-size: 15px;
+            min-width: 25px;
             text-align: center;
-        }
-        
-        .qty-btn:hover {
-            background-color: #f5f5f5;
+            font-weight: 500;
         }
         
         .remove-link {
             font-size: 14px;
             color: #941212;
             text-decoration: none;
-            margin-left: 20px;
+            margin-left: 18px;
+            transition: color 0.2s;
         }
         
         .remove-link:hover {
+            color: #6b0d0d;
             text-decoration: underline;
         }
         
         .item-price {
             font-weight: 600;
             color: #333;
-            font-size: 14px;
+            font-size: 16px;
             margin-top: 5px;
         }
         
@@ -680,25 +774,26 @@
         
         .fee-value {
             font-weight: 500;
+            color: #333;
         }
         
         .total {
             font-weight: 600;
-            margin-top: 4px;
+            margin-top: 6px;
             border-top: none;
-            margin-bottom: 15px;
-            font-size: 16px;
+            margin-bottom: 22px;
+            font-size: 18px;
         }
         
         .total-value {
             color: #941212;
             font-weight: 700;
-            font-size: 20px;
+            font-size: 22px;
         }
         
         /* Custom checkbox styling */
         .terms {
-            margin-top: 5px;
+            margin-top: 10px;
             margin-bottom: 20px;
         }
         
@@ -727,7 +822,7 @@
             width: 20px;
             background-color: white;
             border: 1px solid #ccc;
-            border-radius: 3px;
+            border-radius: 6px;
         }
         
         .check-box:hover input ~ .checkbox-custom {
@@ -770,16 +865,17 @@
         
         .checkout-btn {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             background-color: #941212;
             color: white;
             border: none;
-            border-radius: 4px;
-            font-size: 14px;
+            border-radius: 12px;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin-bottom: 0; /* Remove bottom margin */
+            height: auto;
+            margin-bottom: 0;
         }
         
         .checkout-btn:hover {
@@ -1010,6 +1106,101 @@
             height: 0;
             width: 0;
         }
+        
+        /* Product Summary Styles */
+        .product-summary {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .product-items {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        
+        .product-item {
+            display: flex;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .product-item:last-child {
+            border-bottom: none;
+        }
+        
+        .product-img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        
+        .product-details {
+            flex-grow: 1;
+        }
+        
+        .product-name {
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0 0 2px 0;
+            color: #333;
+        }
+        
+        .product-variant {
+            font-size: 11px;
+            color: #777;
+            margin-bottom: 2px;
+        }
+        
+        .product-price {
+            font-weight: 500;
+            color: #333;
+            font-size: 13px;
+        }
+        
+        /* Terms Agreement Styles */
+        .terms-agreement {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+        }
+        
+        .terms-agreement input[type="checkbox"] {
+            margin-right: 8px;
+            margin-top: 2px;
+        }
+        
+        .terms-agreement label {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        .terms-agreement a {
+            color: #941212;
+            text-decoration: none;
+        }
+        
+        .checkout-button {
+            width: 100%;
+            padding: 8px;
+            background-color: #941212;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            height: 36px;
+        }
+        
+        .checkout-button:hover {
+            background-color: #6b0d0d;
+        }
     </style>
 </head>
 <body>
@@ -1035,28 +1226,28 @@
                 <a href="index.html" class="nav__logo">
                     <img class="nav__logo-img" src="assets/img/logo_red.svg" alt="Sunkissed logo" />
                 </a>
-                
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="index.html" class="nav__link">Trang chủ</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="shop.html" class="nav__link">Cửa hàng</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="aboutus.html" class="nav__link">Về chúng tôi</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="lienhe.html" class="nav__link">Liên hệ</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="accounts.html" class="nav__link">Tài khoản</a>
-                    </li>
-                </ul>
-
+                    
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Trang chủ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="shop.html" class="nav__link">Cửa hàng</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="aboutus.html" class="nav__link">Về chúng tôi</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="lienhe.html" class="nav__link">Liên hệ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="accounts.html" class="nav__link">Tài khoản</a>
+                        </li>
+                    </ul>
+                    
                 <!-- Search box -->
-                <div class="header__search">
-                    <input type="text" placeholder="Tìm kiếm sản phẩm" class="form__input" />
+                    <div class="header__search">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm" class="form__input" />
                 </div>
 
                 <!-- Wishlist và Giỏ hàng -->
@@ -1069,8 +1260,8 @@
                         <img src="assets/img/icon-cart.svg" alt="Cart" />
                         <span class="count">2</span>
                     </a>
+                    </div>
                 </div>
-            </div>
         </div>
     </header>
 
@@ -1113,7 +1304,7 @@
                                         <div class="phone-country-code">
                                             <button type="button" class="phone-dropdown-btn" id="country-selector">
                                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png" alt="VN" class="country-flag">
-                                                <span>+84</span>
+                                            <span>+84</span>
                                                 <span class="dropdown-arrow">&#9662;</span>
                                             </button>
                                             <div class="country-dropdown" id="country-dropdown">
@@ -1267,30 +1458,30 @@
                         </div>
                         <div class="section">
                             <h3>3. Phương thức thanh toán</h3>
-                            <div class="payment-methods">
-                                <div class="payment-method">
-                                    <button type="button" class="payment-btn active" data-method="visa">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa">
-                                    </button>
-                                    <span>Visa</span>
-                                </div>
-                                <div class="payment-method">
-                                    <button type="button" class="payment-btn" data-method="mastercard">
+                            <div class="payment-options-container">
+                                <div class="payment-option-wrapper">
+                                    <button type="button" class="payment-option" data-method="mastercard">
                                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard">
                                     </button>
-                                    <span>Mastercard</span>
+                                    <span class="payment-label">Mastercard</span>
                                 </div>
-                                <div class="payment-method">
-                                    <button type="button" class="payment-btn" data-method="momo">
+                                <div class="payment-option-wrapper">
+                                    <button type="button" class="payment-option active" data-method="visa">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa">
+                                    </button>
+                                    <span class="payment-label">Visa</span>
+                                </div>
+                                <div class="payment-option-wrapper">
+                                    <button type="button" class="payment-option" data-method="momo">
                                         <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" alt="Momo">
                                     </button>
-                                    <span>Momo E-wallet</span>
+                                    <span class="payment-label">Momo E-wallet</span>
                                 </div>
-                                <div class="payment-method">
-                                    <button type="button" class="payment-btn" data-method="cod">
+                                <div class="payment-option-wrapper">
+                                    <button type="button" class="payment-option" data-method="cod">
                                         <img src="https://cdn-icons-png.flaticon.com/512/1554/1554401.png" alt="COD">
                                     </button>
-                                    <span>Thanh toán khi nhận hàng</span>
+                                    <span class="payment-label">COD</span>
                                 </div>
                             </div>
                         </div>
@@ -1298,56 +1489,56 @@
                 </section>
 
                 <aside class="order-summary">
-                    <h3>Đơn hàng của bạn</h3>
+                    <h3><strong>Đơn hàng của bạn</strong></h3>
                     
                     <div class="cart-items-container">
-                        <div class="cart-item" data-price="35000">
+                    <div class="cart-item" data-price="35000">
                             <img src="./assets/img/td_p1_bg.png" alt="Tropical Hương Cam" class="product-image">
-                            <div class="cart-item-details">
-                                <div class="item-title">Tropical Hương Cam</div>
+                        <div class="cart-item-details">
+                            <div class="item-title">Tropical Hương Cam</div>
                                 <div class="item-info">
                                     <span class="item-info-label">Số lượng</span>
                                     <div class="qty-controls">
                                         <button class="qty-btn" aria-label="Giảm">-</button>
                                         <span class="qty-number">1</span>
                                         <button class="qty-btn" aria-label="Tăng">+</button>
-                                    </div>
-                                    <a href="#" class="remove-link">Xóa</a>
+                            </div>
+                            <a href="#" class="remove-link">Xóa</a>
                                 </div>
                                 <div class="item-price">35.000 đ</div>
-                            </div>
                         </div>
-                        
-                        <div class="cart-item" data-price="35000">
+                    </div>
+                    
+                    <div class="cart-item" data-price="35000">
                             <img src="./assets/img/td_p1_bg.png" alt="Tropical Hương Cam" class="product-image">
-                            <div class="cart-item-details">
-                                <div class="item-title">Tropical Hương Cam</div>
+                        <div class="cart-item-details">
+                            <div class="item-title">Tropical Hương Cam</div>
                                 <div class="item-info">
                                     <span class="item-info-label">Số lượng</span>
                                     <div class="qty-controls">
                                         <button class="qty-btn" aria-label="Giảm">-</button>
                                         <span class="qty-number">1</span>
                                         <button class="qty-btn" aria-label="Tăng">+</button>
-                                    </div>
-                                    <a href="#" class="remove-link">Xóa</a>
+                            </div>
+                            <a href="#" class="remove-link">Xóa</a>
                                 </div>
                                 <div class="item-price">35.000 đ</div>
-                            </div>
                         </div>
-                        
-                        <div class="cart-item" data-price="35000">
+                    </div>
+                    
+                    <div class="cart-item" data-price="35000">
                             <img src="./assets/img/td_p1_bg.png" alt="Tropical Hương Cam" class="product-image">
-                            <div class="cart-item-details">
-                                <div class="item-title">Tropical Hương Cam</div>
+                        <div class="cart-item-details">
+                            <div class="item-title">Tropical Hương Cam</div>
                                 <div class="item-info">
                                     <span class="item-info-label">Số lượng</span>
                                     <div class="qty-controls">
                                         <button class="qty-btn" aria-label="Giảm">-</button>
                                         <span class="qty-number">1</span>
                                         <button class="qty-btn" aria-label="Tăng">+</button>
-                                    </div>
+                            </div>
                                     <a href="#" class="remove-link">Xóa</a>
-                                </div>
+                        </div>
                                 <div class="item-price">35.000 đ</div>
                             </div>
                         </div>
@@ -1367,7 +1558,7 @@
                             <span class="checkbox-custom"></span>
                             <span>Tôi đồng ý với <a href="#">Điều khoản và dịch vụ</a></span>
                         </label>
-                    </div>
+                            </div>
                     <button class="checkout-btn">Tiến hành thanh toán</button>
                 </aside>
             </div>
@@ -1519,19 +1710,19 @@
         const deliveryContainer = document.querySelector('.delivery-container');
         
         if (storeBtn && deliveryBtn) {
-            storeBtn.addEventListener('click', function() {
-                storeBtn.classList.add('active');
-                deliveryBtn.classList.remove('active');
-                storeContainer.style.display = 'block';
-                deliveryContainer.style.display = 'none';
-            });
-            
-            deliveryBtn.addEventListener('click', function() {
-                deliveryBtn.classList.add('active');
-                storeBtn.classList.remove('active');
-                deliveryContainer.style.display = 'block';
-                storeContainer.style.display = 'none';
-            });
+        storeBtn.addEventListener('click', function() {
+            storeBtn.classList.add('active');
+            deliveryBtn.classList.remove('active');
+            storeContainer.style.display = 'block';
+            deliveryContainer.style.display = 'none';
+        });
+        
+        deliveryBtn.addEventListener('click', function() {
+            deliveryBtn.classList.add('active');
+            storeBtn.classList.remove('active');
+            deliveryContainer.style.display = 'block';
+            storeContainer.style.display = 'none';
+        });
         }
         
         // Xử lý phương thức thanh toán
@@ -1542,6 +1733,18 @@
                 // Bỏ active tất cả các nút
                 paymentBtns.forEach(b => b.classList.remove('active'));
                 // Thêm active cho nút được chọn
+                this.classList.add('active');
+            });
+        });
+        
+        // Handle new payment options
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove active from all options
+                paymentOptions.forEach(o => o.classList.remove('active'));
+                // Add active to selected option
                 this.classList.add('active');
             });
         });
