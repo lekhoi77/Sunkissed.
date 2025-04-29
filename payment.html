@@ -18,7 +18,190 @@
 
     <title>Sunkissed | Thanh toán</title>
     <style>
-       
+        /* Header styling */
+        .header__top {
+            background-color: #941212;
+            padding: 8px 0;
+            color: white;
+        }
+
+        /* Update payment button color to #26551D */
+        .payment-left-side {
+          background-color: #26551D;
+          width: 80px;
+          height: 80px;
+          border-radius: 12px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: 0.3s;
+          flex-shrink: 0;
+          overflow: hidden;
+        }
+
+        /* Update card colors to match new green theme */
+        .payment-card {
+          width: 50px;
+          height: 34px;
+          background-color: #78e997;
+          border-radius: 6px;
+          position: absolute;
+          display: flex;
+          z-index: 10;
+          flex-direction: column;
+          align-items: center;
+          box-shadow: 7px 7px 7px -2px rgba(38, 85, 29, 0.4);
+        }
+
+        .payment-card-line {
+          width: 45px;
+          height: 8px;
+          background-color: #55d97c;
+          border-radius: 2px;
+          margin-top: 6px;
+        }
+
+        .payment-buttons {
+          width: 6px;
+          height: 6px;
+          background-color: #1f9e45;
+          box-shadow: 0 -8px 0 0 #0e850c, 0 8px 0 0 #3ebe50;
+          border-radius: 50%;
+          margin-top: 4px;
+          transform: rotate(90deg);
+          margin: 8px 0 0 -25px;
+        }
+
+        /* Update dollar color */
+        .payment-dollar {
+          position: absolute;
+          font-size: 12px;
+          font-family: inherit;
+          width: 100%;
+          left: 0;
+          top: 3px;
+          color: #26551D;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        /* Increase spacing between store options by 1.5x (from 20px to 30px) */
+        .store-options {
+          display: grid;
+          gap: 30px;
+        }
+
+        /* Improve store option selection behavior */
+        .store-option {
+          border: 1.6px solid #ddd;
+          border-radius: 12px;
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          transition: border-color 0.3s ease, background-color 0.2s ease;
+          cursor: pointer;
+          position: relative;
+        }
+
+        .store-option:hover {
+          border-color: #26551D;
+          background-color: rgba(38, 85, 29, 0.05);
+        }
+
+        /* Hide the default radio button */
+        .store-option input[type="radio"] {
+          position: absolute;
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        /* Custom radio button */
+        .store-option .custom-radio {
+          width: 18px;
+          height: 18px;
+          border: 1.6px solid #e0e0e0;
+          border-radius: 50%;
+          display: inline-block;
+          position: relative;
+          margin-right: 15px;
+          flex-shrink: 0;
+        }
+
+        /* The dot inside the custom radio button when selected */
+        .store-option input[type="radio"]:checked ~ .custom-radio:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #26551D;
+        }
+
+        /* Style for when radio is checked */
+        .store-option input[type="radio"]:checked ~ .custom-radio {
+          border-color: #26551D;
+        }
+
+        .store-option input[type="radio"]:checked ~ .store-info .store-name {
+          color: #26551D;
+        }
+
+        .store-option input[type="radio"]:checked {
+          border-color: #26551D;
+          background-color: white;
+        }
+
+        .store-option:hover .custom-radio {
+          border-color: #26551D;
+        }
+
+        /* Selected store option */
+        .store-option.selected {
+          border-color: #26551D;
+          background-color: rgba(38, 85, 29, 0.05);
+        }
+
+        /* New payment button styles */
+        .payment-container {
+          background-color: #ffffff;
+          display: flex;
+          width: 80%;
+          max-width: 300px;
+          height: 80px;
+          position: relative;
+          border-radius: 12px;
+          transition: 0.3s ease-in-out;
+          margin: 20px auto;
+          border: 1px solid #e0e0e0;
+        }
+
+        .payment-container:hover {
+          transform: scale(1.02);
+          width: 140px;
+          margin: 20px auto;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .payment-container:hover .payment-left-side {
+          width: 100%;
+        }
+
+        .payment-right-side {
+          width: calc(100% - 80px);
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          cursor: pointer;
+          justify-content: space-between;
+          white-space: nowrap;
+          transition: 0.3s;
+        }
     </style>
 </head>
 <body>
@@ -222,6 +405,7 @@
                                     <div class="store-options">
                                         <div class="store-option">
                                             <input type="radio" id="store1" name="store" checked>
+                                            <span class="custom-radio"></span>
                                             <div class="store-info">
                                                 <div class="store-name">Sunkissed - Chi nhánh 1</div>
                                                 <div class="store-address">219 Nguyễn Tri Phương, Quận 10, TP. HCM</div>
@@ -230,6 +414,7 @@
                                         </div>
                                         <div class="store-option">
                                             <input type="radio" id="store2" name="store">
+                                            <span class="custom-radio"></span>
                                             <div class="store-info">
                                                 <div class="store-name">Sunkissed - Chi nhánh 2</div>
                                                 <div class="store-address">78 Nguyễn Văn Linh, Quận 7, TP. HCM</div>
@@ -388,7 +573,7 @@
                       <div class="payment-post">
                        <div class="payment-post-line"></div>
                        <div class="payment-screen">
-                        <div class="payment-dollar">$</div>
+                        <div class="payment-dollar">VND</div>
                        </div>
                        <div class="payment-numbers"></div>
                        <div class="payment-numbers-line2"></div>
@@ -679,6 +864,64 @@
                 if (e.target !== termsCheckbox) {
                     e.preventDefault();
                     termsCheckbox.checked = !termsCheckbox.checked;
+                }
+            });
+        }
+        
+        // Make entire store option clickable
+        const storeOptions = document.querySelectorAll('.store-option');
+        
+        storeOptions.forEach(option => {
+            option.addEventListener('click', function(e) {
+                // Find the radio button within this store option
+                const radio = this.querySelector('input[type="radio"]');
+                
+                // Check the radio button
+                radio.checked = true;
+                
+                // Remove selected class from all options
+                storeOptions.forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked option
+                this.classList.add('selected');
+                
+                // Prevent click event if clicking on the radio button directly
+                // (to prevent double toggling)
+                if (e.target !== radio) {
+                    e.preventDefault();
+                }
+            });
+        });
+        
+        // Initialize selected state for pre-checked radio
+        storeOptions.forEach(option => {
+            const radio = option.querySelector('input[type="radio"]');
+            if (radio.checked) {
+                option.classList.add('selected');
+            }
+        });
+        
+        // Make entire payment button clickable
+        const paymentContainer = document.querySelector('.payment-container');
+        if (paymentContainer) {
+            paymentContainer.addEventListener('click', function() {
+                // Here you can add form submission logic
+                const termsCheckbox = document.getElementById('terms-checkbox');
+                if (termsCheckbox && termsCheckbox.checked) {
+                    // Submit the form or redirect to payment processing
+                    const form = document.querySelector('form');
+                    if (form) {
+                        form.submit();
+                    }
+                } else {
+                    // Alert user to accept terms
+                    alert('Vui lòng đồng ý với Điều khoản dịch vụ trước khi thanh toán');
+                    const termsElement = document.querySelector('.terms');
+                    if (termsElement) {
+                        termsElement.scrollIntoView({ behavior: 'smooth' });
+                    }
                 }
             });
         }
