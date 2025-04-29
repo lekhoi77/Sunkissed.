@@ -122,7 +122,7 @@
         .form__input {
             width: 100%;
             padding: 8px 15px;
-            border: 1px solid #ddd;
+            border: 1.6px solid #ddd;
             border-radius: 12px;
             font-size: 14px;
             outline: none;
@@ -336,13 +336,19 @@
         }
         
         .section {
-            margin-bottom: 25px;
+            padding: 25px 0;
+            margin-bottom: 0;
+            border-bottom: 1.6px solid #f5f5f5;
         }
         
         .section h3 {
             font-size: 18px;
             margin-bottom: 18px;
             color: #333;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .form-row {
@@ -353,7 +359,9 @@
         }
         
         label {
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 8px;
             font-size: 14px;
             font-weight: 500;
@@ -362,7 +370,6 @@
         .required {
             font-size: 12px;
             color: #941212;
-            margin-left: 5px;
             font-weight: normal;
         }
         
@@ -376,7 +383,7 @@
         .phone-country-code {
             position: relative;
             min-width: 95px;
-            border: 1px solid #ddd;
+            border: 1.6px solid #ddd;
             border-radius: 12px 0 0 12px;
             border-right: none;
             overflow: visible;
@@ -509,15 +516,45 @@
         }
         
         .store-option {
-            border: 1px solid #ddd;
+            border: 1.6px solid #ddd;
             border-radius: 12px;
             padding: 15px;
             display: flex;
+            align-items: center;
             transition: border-color 0.3s ease;
         }
         
-        .store-option input {
-            margin-right: 10px;
+        .store-option input[type="radio"] {
+            margin-right: 15px;
+        }
+        
+        .store-info {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .store-name {
+            font-weight: 600;
+            color: #26551D;
+            margin-bottom: 5px;
+            grid-column: 1 / -1;
+            font-size: 16px;
+        }
+        
+        .store-address {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+            white-space: nowrap;
+        }
+        
+        .store-hours {
+            font-size: 14px;
+            color: #333;
+            text-align: right;
+            white-space: nowrap;
         }
         
         .store-option:hover {
@@ -601,7 +638,7 @@
             height: 60px;
             padding: 8px 10px;
             background-color: #ffffff;
-            border: 1px solid #e6e6e6;
+            border: 1.6px solid #e6e6e6;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -613,7 +650,7 @@
         
         .payment-option.active {
             border-color: #26551D;
-            border-width: 2px;
+            border-width: 1.6px;
             box-shadow: none;
             background-color: #ffffff;
         }
@@ -708,12 +745,12 @@
             display: flex;
             align-items: center;
             margin-left: auto;
-            border: 1px solid #e0e0e0;
+            border: 1.6px solid #e0e0e0;
             border-radius: 12px;
             overflow: hidden;
-            min-width: 110px;
+            min-width: 100px;
             justify-content: space-between;
-            height: 35px;
+            height: 32px;
             background-color: #ffffff;
         }
         
@@ -1201,6 +1238,41 @@
         .checkout-button:hover {
             background-color: #6b0d0d;
         }
+        
+        /* Custom radio button styling */
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 1.6px solid #e0e0e0;
+            border-radius: 50%;
+            outline: none;
+            transition: all 0.2s ease;
+            margin-right: 10px;
+            position: relative;
+        }
+        
+        input[type="radio"]:checked {
+            border-color: #941212;
+            background-color: white;
+        }
+        
+        input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #941212;
+        }
+        
+        input[type="radio"]:hover {
+            border-color: #941212;
+        }
     </style>
 </head>
 <body>
@@ -1404,19 +1476,19 @@
                                     <div class="store-options">
                                         <div class="store-option">
                                             <input type="radio" id="store1" name="store" checked>
-                                            <label for="store1">
-                                                <strong>Sunkissed - Chi nhánh 1</strong>
-                                                <p>219 Nguyễn Tri Phương, Quận 10, Tp. Hồ Chí Minh</p>
-                                                <p>Giờ mở cửa: 8:00 - 21:00, Thứ 2 - Thứ 7</p>
-                                            </label>
+                                            <div class="store-info">
+                                                <div class="store-name">Sunkissed - Chi nhánh 1</div>
+                                                <div class="store-address">219 Nguyễn Tri Phương, Quận 10, TP. HCM</div>
+                                                <div class="store-hours">Giờ mở cửa: 8:00 - 21:00, Thứ 2 - Thứ 7</div>
+                                            </div>
                                         </div>
                                         <div class="store-option">
                                             <input type="radio" id="store2" name="store">
-                                            <label for="store2">
-                                                <strong>Sunkissed - Chi nhánh 2</strong>
-                                                <p>78 Nguyễn Văn Linh, Quận 7, Tp. Hồ Chí Minh</p>
-                                                <p>Giờ mở cửa: 8:00 - 21:00, Thứ 2 - Chủ Nhật</p>
-                                            </label>
+                                            <div class="store-info">
+                                                <div class="store-name">Sunkissed - Chi nhánh 2</div>
+                                                <div class="store-address">78 Nguyễn Văn Linh, Quận 7, TP. HCM</div>
+                                                <div class="store-hours">Giờ mở cửa: 8:00 - 21:00, Thứ 2 - Chủ Nhật</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
